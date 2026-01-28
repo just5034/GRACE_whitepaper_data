@@ -1,0 +1,30 @@
+{
+  "tungsten_performance": {
+    "energy_resolution": 0.05004014375821937,
+    "energy_resolution_error": 0.0011189316304724031,
+    "mean_energy_deposit": 9178.656931954169,
+    "std_energy_deposit": 459.30131238236334
+  },
+  "compactness_analysis": {
+    "compactness_factor": 5.028571428571429,
+    "effective_depth_reduction_percent": 80.11363636363636,
+    "radiation_length_ratio": 5.028571428571429
+  },
+  "high_density_effects": {
+    "resolution_improvement_percent": 80.54426759011689,
+    "density_benefit_factor": 80.54426759011689,
+    "material_efficiency_gain": 5.028571428571429
+  },
+  "resolution_tradeoffs": {
+    "tradeoff_percent": 80.54426759011689,
+    "tradeoff_direction": "improvement",
+    "baseline_comparison": {
+      "baseline_resolution": 0.2572,
+      "tungsten_resolution": 0.05004014375821937
+    }
+  },
+  "summary": {
+    "compactness_vs_performance_ratio": 0.9946534838621667,
+    "overall_benefit_score": 80.32895197687662
+  }
+}

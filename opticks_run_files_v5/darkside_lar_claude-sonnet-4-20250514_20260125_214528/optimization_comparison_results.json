@@ -1,0 +1,10 @@
+{
+  "baseline_resolution": 0.0308,
+  "optimized_resolution": 0.0529,
+  "resolution_improvement_percent": -71.75324675324676,
+  "light_yield_improvement_percent": 66.50943396226413,
+  "containment_improvement_percent": 75.0,
+  "statistical_significance_sigma": 5.09,
+  "comparison_plots": "optimization_comparison_plots.png",
+  "summary_table": "optimization_summary_table.png"
+}

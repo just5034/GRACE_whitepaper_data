@@ -1,0 +1,28 @@
+{
+  "optimized_thickness": {
+    "energy_resolution": 0.4674856171541493,
+    "energy_resolution_error": 0.010453296184601196,
+    "hit_efficiency": 1.0,
+    "hit_efficiency_error": 0.0,
+    "material_budget": 0.00854,
+    "mean_energy_deposit": 0.3934192448346766
+  },
+  "comparisons": {
+    "material_reduction_vs_baseline_percent": 36.57159833630421,
+    "material_reduction_vs_cylindrical_percent": 36.57159833630421,
+    "resolution_change_vs_baseline_percent": 34.7714054291194,
+    "resolution_change_vs_cylindrical_percent": 7.219012672679368,
+    "efficiency_change_vs_baseline_percent": 0.10010010010010019,
+    "efficiency_change_vs_cylindrical_percent": 0.0
+  },
+  "baseline_reference": {
+    "energy_resolution": 0.346873,
+    "hit_efficiency": 0.999,
+    "material_budget": 0.013464
+  },
+  "cylindrical_reference": {
+    "energy_resolution": 0.43601,
+    "hit_efficiency": 1.0,
+    "material_budget": 0.013464
+  }
+}

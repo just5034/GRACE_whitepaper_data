@@ -1,0 +1,219 @@
+{
+  "original_features": 30,
+  "engineered_features": 25,
+  "total_features": 55,
+  "events": 818238,
+  "decay_channel": "H->tau tau",
+  "feature_categories": {
+    "momentum_ratios": [
+      "pt_ratio_lep_met",
+      "pt_asymmetry_tau",
+      "pt_h_over_met"
+    ],
+    "angular_features": [
+      "cos_deltar_tau_lep",
+      "sin_deltar_tau_lep",
+      "acoplanarity_approx"
+    ],
+    "missing_energy": [
+      "met_significance",
+      "pt_h_significance"
+    ],
+    "jet_features": [
+      "jet1_pt_frac",
+      "jet2_pt_frac",
+      "dijet_pt_balance"
+    ],
+    "mass_features": [
+      "mt_lep_met_squared",
+      "mass_vis_over_mmc"
+    ],
+    "topology": [
+      "centrality",
+      "visible_energy_frac"
+    ],
+    "log_transforms": [
+      "log_der_mass_mmc",
+      "log_der_mass_vis",
+      "log_pri_met",
+      "log_der_pt_h"
+    ]
+  },
+  "feature_stats": {
+    "DER_sum_pt": {
+      "mean": 158.59615892808694,
+      "std": 116.08980949202831,
+      "min": 46.103,
+      "max": 2079.162,
+      "missing": 0
+    },
+    "DER_pt_ratio_lep_tau": {
+      "mean": 1.4387755445237205,
+      "std": 0.8451093113398219,
+      "min": 0.047,
+      "max": 32.228,
+      "missing": 0
+    },
+    "DER_met_phi_centrality": {
+      "mean": -0.12727721763105598,
+      "std": 1.1942348304383958,
+      "min": -1.414,
+      "max": 1.414,
+      "missing": 0
+    },
+    "DER_lep_eta_centrality": {
+      "mean": -708.3069176119905,
+      "std": 453.9091274797464,
+      "min": -999.0,
+      "max": 1.0,
+      "missing": 0
+    },
+    "Weight": {
+      "mean": 0.5031443613343832,
+      "std": 0.572199772705172,
+      "min": 0.000461025356734,
+      "max": 2.38631583084,
+      "missing": 0
+    },
+    "pt_ratio_lep_met": {
+      "mean": 1.9745287480986866,
+      "std": 3.8515746120904675,
+      "min": 0.010478372566378668,
+      "max": 612.471445216099,
+      "missing": 0
+    },
+    "pt_asymmetry_tau": {
+      "mean": -0.10263124524324146,
+      "std": 0.252394082948614,
+      "min": -0.9398110039845566,
+      "max": 0.909474531516415,
+      "missing": 0
+    },
+    "cos_deltar_tau_lep": {
+      "mean": -0.5402114070779066,
+      "std": 0.517391739510456,
+      "min": -0.9999999170344522,
+      "max": 0.9784458781847165,
+      "missing": 0
+    },
+    "sin_deltar_tau_lep": {
+      "mean": 0.4975303283424535,
+      "std": 0.4392511341924141,
+      "min": -0.9999999243471311,
+      "max": 0.9999999792586128,
+      "missing": 0
+    },
+    "met_significance": {
+      "mean": 2.987182045620028,
+      "std": 1.8848774927400138,
+      "min": 0.005417139244792867,
+      "max": 312.52082349524807,
+      "missing": 0
+    },
+    "pt_h_over_met": {
+      "mean": 1.746488018113085,
+      "std": 3.5599016735654465,
+      "min": 0.0,
+      "max": 926.702995550661,
+      "missing": 0
+    },
+    "pt_h_significance": {
+      "mean": 3.5760696279234665,
+      "std": 3.0616686013660566,
+      "min": 0.0,
+      "max": 311.6832911673309,
+      "missing": 0
+    },
+    "jet1_pt_frac": {
+      "mean": 303.83428922796253,
+      "std": 147454.9117267451,
+      "min": 0.060954359593430214,
+      "max": 101201000.0,
+      "missing": 0
+    },
+    "jet2_pt_frac": {
+      "mean": 0.6460818301860572,
+      "std": 1.796329757570799,
+      "min": 0.04966266461545297,
+      "max": 641.4661350495506,
+      "missing": 0
+    },
+    "dijet_pt_balance": {
+      "mean": 0.23019298153115814,
+      "std": 0.10249382499591086,
+      "min": 0.0,
+      "max": 0.9096124523930695,
+      "missing": 0
+    },
+    "mt_lep_met_squared": {
+      "mean": 3677.474278525053,
+      "std": 6292.26607302247,
+      "min": 0.0,
+      "max": 938319.631561,
+      "missing": 0
+    },
+    "mass_vis_over_mmc": {
+      "mean": 0.5689610594613854,
+      "std": 0.29165110949571943,
+      "min": -1.3507017030537556,
+      "max": 1.235899413622414,
+      "missing": 0
+    },
+    "centrality": {
+      "mean": 11778.742961658612,
+      "std": 984416.297103749,
+      "min": 0.022397891490473935,
+      "max": 147176000.0,
+      "missing": 0
+    },
+    "acoplanarity_approx": {
+      "mean": 0.31899791810022476,
+      "std": 0.30944875305894753,
+      "min": 8.296554776521248e-08,
+      "max": 0.9997963267963048,
+      "missing": 0
+    },
+    "total_visible_pt": {
+      "mean": 158.59615979580514,
+      "std": 116.08980999060812,
+      "min": 46.102999999999994,
+      "max": 2079.162,
+      "missing": 0
+    },
+    "visible_energy_frac": {
+      "mean": 0.7757662010117365,
+      "std": 0.11336549653340985,
+      "min": 0.021849789143977515,
+      "max": 0.9995192931704323,
+      "missing": 0
+    },
+    "log_der_mass_mmc": {
+      "mean": 4.734464463771936,
+      "std": 0.3494724745871504,
+      "min": 2.3069754412953385,
+      "max": 7.575718488755041,
+      "missing": 0
+    },
+    "log_der_mass_vis": {
+      "mean": 4.319410594275697,
+      "std": 0.4131829587579012,
+      "min": 1.991839080943713,
+      "max": 7.208119837638333,
+      "missing": 0
+    },
+    "log_pri_met": {
+      "mean": 3.5163137317459685,
+      "std": 0.7132549139612328,
+      "min": 0.04974209189481407,
+      "max": 7.952832112374777,
+      "missing": 0
+    },
+    "log_der_pt_h": {
+      "mean": 3.404144658551977,
+      "std": 1.3562223954600399,
+      "min": 0.0,
+      "max": 7.950149535042647,
+      "missing": 0
+    }
+  }
+}

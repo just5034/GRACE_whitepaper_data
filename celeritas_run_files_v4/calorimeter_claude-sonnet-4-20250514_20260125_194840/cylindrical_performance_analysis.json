@@ -1,0 +1,28 @@
+{
+  "cylindrical_geometry": {
+    "topology": "cylinder_barrel",
+    "absorber_material": "brass",
+    "energy_resolution": 0.1518557176373224,
+    "energy_resolution_error": 0.003395597074090666,
+    "containment_90_radius_mm": 2081.6326530612246,
+    "azimuthal_uniformity_cv": 1.811862091066978
+  },
+  "baseline_geometry": {
+    "topology": "box",
+    "absorber_material": "steel",
+    "energy_resolution": 0.25720113848278947,
+    "energy_resolution_error": 0.005751192295378543,
+    "containment_90_radius_mm": 122.44897959183673,
+    "azimuthal_uniformity_cv": 0.3494004975573468
+  },
+  "comparisons": {
+    "material_effect_improvement_percent": 40.958380459313645,
+    "hermeticity_improvement_percent": -1600.0000000000005,
+    "uniformity_improvement_percent": -418.5631113102804
+  },
+  "analysis_focus": [
+    "hermeticity",
+    "material_effects",
+    "coverage_uniformity"
+  ]
+}

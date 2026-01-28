@@ -1,0 +1,27 @@
+{
+  "best_model": "none",
+  "best_ams_score": 0.0,
+  "best_cv_mean": 0.0,
+  "best_cv_std": 0.0,
+  "all_results": {
+    "rf_simple": {
+      "error": "got an unexpected keyword argument 'fit_params'"
+    },
+    "gb_simple": {
+      "error": "got an unexpected keyword argument 'fit_params'"
+    }
+  },
+  "num_features": 34,
+  "num_events": 572767,
+  "cv_folds": 3,
+  "training_modifications": [
+    "timeout",
+    "reduce_model_complexity",
+    "limit_hyperparameter_search",
+    "use_early_stopping",
+    "reduce_cv_folds",
+    "sample_data_fraction",
+    "max_models",
+    "quick_training_mode"
+  ]
+}

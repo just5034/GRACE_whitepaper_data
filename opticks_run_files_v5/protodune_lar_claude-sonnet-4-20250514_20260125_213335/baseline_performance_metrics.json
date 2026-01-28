@@ -1,0 +1,17 @@
+{
+  "baseline_performance": {
+    "energy_resolution": 3.1728578453837883,
+    "energy_resolution_error": 0.31728578453837886,
+    "detection_efficiency": 0.1,
+    "detection_efficiency_error": 0.042426406871192854,
+    "light_yield_pe_per_mev": 0.6922908823534147,
+    "spatial_uniformity_index": 0.4036308965756751,
+    "mean_energy_deposit_mev": 0.01730727205883537,
+    "total_events": 50,
+    "analysis_plots": {
+      "energy_distribution": "baseline_energy_distribution.png",
+      "spatial_uniformity": "baseline_spatial_uniformity.png",
+      "longitudinal_profile": "baseline_longitudinal_profile.png"
+    }
+  }
+}

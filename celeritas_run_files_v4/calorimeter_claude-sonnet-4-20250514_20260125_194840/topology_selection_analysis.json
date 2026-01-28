@@ -1,0 +1,60 @@
+{
+  "topology_analysis": {
+    "box": {
+      "hermeticity": 2,
+      "crack_effects": 1,
+      "jet_energy_measurement": 2,
+      "shower_containment": 4,
+      "description": "Planar layers - simple but limited coverage"
+    },
+    "cylinder_barrel": {
+      "hermeticity": 4,
+      "crack_effects": 3,
+      "jet_energy_measurement": 3,
+      "shower_containment": 4,
+      "description": "Cylindrical layers - excellent for barrel region"
+    },
+    "projective_tower": {
+      "hermeticity": 5,
+      "crack_effects": 5,
+      "jet_energy_measurement": 5,
+      "shower_containment": 3,
+      "description": "Towers pointing to IP - optimal for collider physics"
+    }
+  },
+  "recommended_topology": "projective_tower",
+  "physics_rationale": {
+    "hermeticity": {
+      "definition": "Solid angle coverage around interaction point",
+      "box": "Limited to forward direction, large uncovered regions",
+      "cylinder_barrel": "Full azimuthal coverage in barrel region (|eta| < 1.5)",
+      "projective_tower": "Excellent coverage with minimal gaps due to pointing geometry"
+    },
+    "crack_effects": {
+      "definition": "Energy loss in gaps between detector modules",
+      "box": "Severe - planar boundaries create large dead regions",
+      "cylinder_barrel": "Moderate - only gaps at barrel-endcap boundaries",
+      "projective_tower": "Minimal - towers point toward vertex, reducing shower leakage"
+    },
+    "jet_energy_measurement": {
+      "definition": "Accuracy of measuring jet energy and direction",
+      "box": "Poor - jets spread across module boundaries, energy loss",
+      "cylinder_barrel": "Good - uniform response in phi, but eta boundaries problematic",
+      "projective_tower": "Excellent - jet axis aligned with tower pointing, minimal spreading"
+    },
+    "shower_containment": {
+      "definition": "Fraction of shower energy captured within detector",
+      "box": "Good - uniform material thickness, predictable containment",
+      "cylinder_barrel": "Good - consistent radial depth for all particles",
+      "projective_tower": "Variable - path length depends on eta, requires careful design"
+    }
+  },
+  "selection_criteria": {
+    "primary": "jet_energy_measurement",
+    "secondary": [
+      "hermeticity",
+      "crack_effects"
+    ],
+    "rationale": "Hadronic shower measurement and jet reconstruction require minimal energy loss and accurate direction measurement"
+  }
+}

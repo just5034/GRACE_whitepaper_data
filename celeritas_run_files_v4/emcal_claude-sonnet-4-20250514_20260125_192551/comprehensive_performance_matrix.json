@@ -1,0 +1,76 @@
+{
+  "performance_matrix": {
+    "Baseline (CsI Box)": {
+      "energy_resolution": 0.034363,
+      "energy_resolution_error": 0.000768,
+      "linearity": 0.467007,
+      "linearity_error": 0.000507,
+      "containment_90_radius": 40.82,
+      "containment_95_radius": 53.06,
+      "material": "CsI",
+      "topology": "box"
+    },
+    "Projective (PbWO4)": {
+      "energy_resolution": 0.021387,
+      "energy_resolution_error": 0.000478,
+      "linearity": 0.978699,
+      "linearity_error": 0.000662,
+      "containment_90_radius": 100.0,
+      "containment_95_radius": 100.0,
+      "material": "PbWO4",
+      "topology": "projective_tower"
+    },
+    "Shashlik (BGO)": {
+      "energy_resolution": 0.036765,
+      "energy_resolution_error": 0.000822,
+      "linearity": 4.72437,
+      "linearity_error": 0.005493,
+      "containment_90_radius": 24.2,
+      "containment_95_radius": 36.4,
+      "material": "BGO",
+      "topology": "shashlik"
+    },
+    "Accordion (CsI)": {
+      "energy_resolution": 0.0211837290157072,
+      "energy_resolution_error": 0.0004736825809605601,
+      "linearity": 0.9800127338752247,
+      "linearity_error": 0.02076032418635514,
+      "containment_90_radius": 200.0,
+      "containment_95_radius": 200.0,
+      "material": "CsI",
+      "topology": "accordion"
+    }
+  },
+  "best_resolution": "Accordion (CsI)",
+  "best_linearity": "Accordion (CsI)",
+  "best_containment": "Shashlik (BGO)",
+  "best_overall": "Accordion (CsI)",
+  "overall_scores": {
+    "Baseline (CsI Box)": 2.8000000000000003,
+    "Projective (PbWO4)": 2.2,
+    "Shashlik (BGO)": 3.4000000000000004,
+    "Accordion (CsI)": 1.6
+  },
+  "ranking_matrix": [
+    [
+      3.0,
+      3.0,
+      2.0
+    ],
+    [
+      2.0,
+      2.0,
+      3.0
+    ],
+    [
+      4.0,
+      4.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0,
+      4.0
+    ]
+  ]
+}

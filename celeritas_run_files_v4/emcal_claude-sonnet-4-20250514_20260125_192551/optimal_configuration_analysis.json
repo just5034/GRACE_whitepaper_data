@@ -1,0 +1,58 @@
+{
+  "optimal_configuration": "Accordion (CsI)",
+  "optimal_score": 8.46502275,
+  "target_criteria": {
+    "resolution_range_percent": [
+      2.0,
+      3.0
+    ],
+    "max_linearity_deviation": 1.0,
+    "min_containment_90_mm": 30
+  },
+  "optimal_performance": {
+    "resolution_percent": 2.1184000000000003,
+    "resolution_error_percent": 0.0474,
+    "linearity": 0.980013,
+    "linearity_error": 0.02076,
+    "containment_90_mm": 200,
+    "material": "CsI",
+    "topology": "accordion"
+  },
+  "meets_resolution_target": true,
+  "meets_linearity_target": true,
+  "meets_containment_target": true,
+  "all_configurations_scores": {
+    "Baseline (CsI box)": {
+      "total_score": 4.189628916666667,
+      "details": [
+        "Resolution: 3.44% (MISSES TARGET) +3.5",
+        "Linearity: 0.467 +7.3",
+        "Containment: 40.8mm +0.8"
+      ]
+    },
+    "Projective (PbWO4)": {
+      "total_score": 7.96272325,
+      "details": [
+        "Resolution: 2.14% (MEETS TARGET) +10",
+        "Linearity: 0.979 +9.9",
+        "Containment: 100.0mm +2.0"
+      ]
+    },
+    "Shashlik (BGO)": {
+      "total_score": 1.098,
+      "details": [
+        "Resolution: 3.68% (MISSES TARGET) +2.7",
+        "Linearity: 4.724 +0.0",
+        "Containment: 24.2mm (TOO LOW) +0"
+      ]
+    },
+    "Accordion (CsI)": {
+      "total_score": 8.46502275,
+      "details": [
+        "Resolution: 2.12% (MEETS TARGET) +10",
+        "Linearity: 0.980 +9.9",
+        "Containment: 200.0mm +4.0"
+      ]
+    }
+  }
+}

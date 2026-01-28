@@ -1,0 +1,24 @@
+{
+  "overall_muon_efficiency": 1.0,
+  "overall_muon_efficiency_error": 0.0,
+  "overall_pion_rejection": 0.979,
+  "overall_pion_rejection_error": 0.00226710167394407,
+  "energy_dependent_muon_efficiency": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "energy_dependent_pion_rejection": [
+    0.979,
+    0.979,
+    0.979,
+    0.979
+  ],
+  "energies_gev": [
+    5,
+    20,
+    50,
+    100
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "optimal_threshold": 0.39,
+  "optimal_ams_score": 1.236894130706787,
+  "b_reg_parameter": 10,
+  "num_thresholds_scanned": 81,
+  "threshold_range": [
+    0.1,
+    0.9
+  ],
+  "weighted_signal_optimal": 283.01190185546875,
+  "weighted_background_optimal": 52110.9921875,
+  "scan_results": [
+    {
+      "threshold": 0.1,
+      "weighted_signal": 

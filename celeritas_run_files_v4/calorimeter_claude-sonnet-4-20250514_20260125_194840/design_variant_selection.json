@@ -1,0 +1,53 @@
+{
+  "selected_variants": [
+    {
+      "variant_id": 1,
+      "topology": "projective_tower",
+      "absorber_material": "tungsten",
+      "absorber_thickness": 20.0,
+      "active_thickness": 5.0,
+      "total_depth": 8.0,
+      "composite_score": 5.09,
+      "selection_rationale": "Topology: projective_tower (score: 4.5), Material: tungsten (score: 4.8)"
+    },
+    {
+      "variant_id": 2,
+      "topology": "cylinder_barrel",
+      "absorber_material": "tungsten",
+      "absorber_thickness": 20.0,
+      "active_thickness": 5.0,
+      "total_depth": 8.0,
+      "composite_score": 4.64,
+      "selection_rationale": "Topology: cylinder_barrel (score: 4.0), Material: tungsten (score: 4.8)"
+    },
+    {
+      "variant_id": 3,
+      "topology": "projective_tower",
+      "absorber_material": "steel",
+      "absorber_thickness": 20.0,
+      "active_thickness": 5.0,
+      "total_depth": 8.0,
+      "composite_score": 4.55,
+      "selection_rationale": "Topology: projective_tower (score: 4.5), Material: steel (score: 3.0)"
+    },
+    {
+      "variant_id": 4,
+      "topology": "projective_tower",
+      "absorber_material": "iron",
+      "absorber_thickness": 20.0,
+      "active_thickness": 5.0,
+      "total_depth": 8.0,
+      "composite_score": 4.49,
+      "selection_rationale": "Topology: projective_tower (score: 4.5), Material: iron (score: 2.8)"
+    }
+  ],
+  "selection_criteria": {
+    "topology_diversity": 0.4,
+    "material_optimization": 0.3,
+    "physics_performance": 0.3
+  },
+  "topology_diversity_achieved": 2,
+  "physics_rationale": "Based on topology analysis recommending projective_tower (score: 4.5)",
+  "material_optimization": "Tungsten selected for high density, steel for baseline comparison",
+  "systematic_exploration": "Evaluated 12 total combinations"
+}

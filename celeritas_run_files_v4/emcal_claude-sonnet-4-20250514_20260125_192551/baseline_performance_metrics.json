@@ -1,0 +1,12 @@
+{
+  "energy_resolution": 0.03436285488823915,
+  "energy_resolution_error": 0.0007683767943106367,
+  "mean_energy_mev": 467.0072846999923,
+  "energy_std_mev": 16.047703555896423,
+  "linearity": 0.4670072846999923,
+  "linearity_error": 0.0005074729445181592,
+  "containment_90_radius_mm": 40.816326530612244,
+  "containment_95_radius_mm": 53.06122448979592,
+  "num_events": 1000,
+  "num_hits_analyzed": 500000
+}

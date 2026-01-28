@@ -1,0 +1,30 @@
+{
+  "baseline_planar": {
+    "muon_efficiency": 1.0,
+    "muon_efficiency_err": 0.0,
+    "total_muons": 1000,
+    "detected_muons": 1000,
+    "pion_rejection": 0.0,
+    "pion_rejection_err": 0.0,
+    "total_pions": 1000,
+    "stopped_pions": 0,
+    "performance_score": 0.0
+  },
+  "cylindrical_barrel": {
+    "muon_efficiency": 1.0,
+    "muon_efficiency_err": 0.0,
+    "total_muons": 1000,
+    "detected_muons": 1000,
+    "pion_rejection": 0.0,
+    "pion_rejection_err": 0.0,
+    "total_pions": 1000,
+    "stopped_pions": 0,
+    "performance_score": 0.0
+  },
+  "thick_absorber": {
+    "error": "[Errno 2] No such file or directory: '/projects/bgde/grace/work/benchmarks/celeritas_20260125_192529/muon_claude-sonnet-4-20250514_20260125_210505/thick_absorber_muon_spectrometer_pim_hits.root'"
+  },
+  "thin_absorber": {
+    "error": "[Errno 2] No such file or directory: '/projects/bgde/grace/work/benchmarks/celeritas_20260125_192529/muon_claude-sonnet-4-20250514_20260125_210505/thin_absorber_muon_spectrometer_pim_hits.root'"
+  }
+}

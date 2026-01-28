@@ -1,0 +1,52 @@
+{
+  "configurations": {
+    "baseline_planar": {
+      "muon_efficiency": 1.0,
+      "pion_rejection": 0.979,
+      "absorber_thickness": 200,
+      "num_layers": 4,
+      "total_depth": 0.88,
+      "topology": "box",
+      "muon_eff_err": 0.0,
+      "pion_rej_err": 0.00453420334788814
+    },
+    "cylindrical_barrel": {
+      "muon_efficiency": 1.0,
+      "pion_rejection": 0.98,
+      "absorber_thickness": 200,
+      "num_layers": 4,
+      "total_depth": 0.88,
+      "topology": "cylinder_barrel",
+      "muon_eff_err": 0.0,
+      "pion_rej_err": 0.0044271887242357325
+    },
+    "thick_absorber": {
+      "muon_efficiency": 0.95,
+      "pion_rejection": 0.99,
+      "absorber_thickness": 300,
+      "num_layers": 3,
+      "total_depth": 0.96,
+      "topology": "box",
+      "muon_eff_err": 0.006892024376045114,
+      "pion_rej_err": 0.003146426544510456
+    },
+    "thin_absorber": {
+      "muon_efficiency": 1.0,
+      "pion_rejection": 0.95,
+      "absorber_thickness": 150,
+      "num_layers": 5,
+      "total_depth": 0.85,
+      "topology": "box",
+      "muon_eff_err": 0.0,
+      "pion_rej_err": 0.006892024376045114
+    }
+  },
+  "best_configuration": "baseline_planar",
+  "best_performance_score": 0,
+  "analysis_summary": {
+    "highest_muon_efficiency": 1.0,
+    "highest_pion_rejection": 0.99,
+    "recommended_config": "baseline_planar",
+    "rationale": "Good balance of efficiency and rejection with proven planar design"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "configurations": {
+    "baseline_planar": {
+      "energy_resolution": 0.346873,
+      "energy_resolution_error": 0.007756,
+      "hit_efficiency": 0.999,
+      "hit_efficiency_error": 0.000999,
+      "material_budget": 0.013464,
+      "mean_energy_deposit": 0.437058
+    },
+    "cylindrical_barrel": {
+      "energy_resolution": 0.43601,
+      "energy_resolution_error": 0.009749,
+      "hit_efficiency": 1.0,
+      "hit_efficiency_error": 0.0,
+      "material_budget": 0.013464,
+      "mean_energy_deposit": 0.554646
+    },
+    "optimized_thickness": {
+      "energy_resolution": 0.467486,
+      "energy_resolution_error": 0.010453,
+      "hit_efficiency": 1.0,
+      "hit_efficiency_error": 0.0,
+      "material_budget": 0.00854,
+      "mean_energy_deposit": 0.393419
+    },
+    "optimized_spacing": {
+      "energy_resolution": 0.212969362545291,
+      "energy_resolution_error": 0.004762139717760683,
+      "hit_efficiency": 1.0,
+      "hit_efficiency_error": 0.0,
+      "material_budget": 0.8547091343741864,
+      "mean_energy_deposit": 36.27041161689081
+    }
+  },
+  "optimal_design": {
+    "best_resolution_config": "Optimized\nSpacing",
+    "best_resolution_value": 0.212969362545291,
+    "best_efficiency_config": "Cylindrical\nBarrel",
+    "best_efficiency_value": 1.0,
+    "lowest_material_config": "Optimized\nThickness",
+    "lowest_material_value": 0.00854
+  }
+}

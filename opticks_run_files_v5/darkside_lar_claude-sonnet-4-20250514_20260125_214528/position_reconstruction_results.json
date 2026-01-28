@@ -1,0 +1,19 @@
+{
+  "baseline_position_resolution": {
+    "x_mm": 5.756059576813638,
+    "y_mm": 5.788230486898268,
+    "z_mm": 5.304145622110908,
+    "3d_mm": 9.734977904538093
+  },
+  "optimized_position_resolution": {
+    "x_mm": 5.0278272478739305,
+    "y_mm": 5.395683249054346,
+    "z_mm": 4.843024198986414,
+    "3d_mm": 8.823113279934539
+  },
+  "improvement_percent": 9.366889514751502,
+  "num_events_analyzed": {
+    "baseline": 100,
+    "optimized": 100
+  }
+}

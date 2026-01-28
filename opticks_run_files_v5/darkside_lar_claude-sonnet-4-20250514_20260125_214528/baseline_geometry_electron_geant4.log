@@ -1,0 +1,2557 @@
+Command: ['singularity', 'exec', '--nv', '--bind', '/u/jhill5/grace/work/benchmarks/opticks_20260125_211816/darkside_lar_claude-sonnet-4-20250514_20260125_214528:/geometry:ro', '--bind', '/u/jhill5/grace/work/benchmarks/opticks_20260125_211816/darkside_lar_claude-sonnet-4-20250514_20260125_214528:/work', '--bind', '/u/jhill5/grace/containers/geant4-app/build-opticks:/app:ro', '--bind', '/projects/bgde/opticks-install:/opticks:ro', '--bind', '/projects/bgde/optix/7.7.0:/optix:ro', '--bind', '/opt/nvidia/hpc_sdk/Linux_x86_64/25.3/cuda/12.8:/cuda:ro', '--bind', '/opt/cray/pe/mpich/8.1.32/gtl/lib:/craylib:ro', '--bind', '/u/jhill5/spack/opt/spack:/u/jhill5/spack/opt/spack:ro', '--pwd', '/work', '/u/jhill5/grace/containers/geant4_g4v11.3.2-fedora40.sif', 'bash', '-c', 'export G4DATA=/cvmfs/oasis.opensciencegrid.org/jlab/geant4/fedora40-gcc14/geant4/11.3.2/data/Geant4-11.3.2/data && export G4ENSDFSTATEDATA=$G4DATA/G4ENSDFSTATE3.0 && export G4LEDATA=$G4DATA/G4EMLOW8.6.1 && export G4LEVELGAMMADATA=$G4DATA/PhotonEvaporation6.1 && export G4RADIOACTIVEDATA=$G4DATA/RadioactiveDecay6.1.2 && export G4PARTICLEXSDATA=$G4DATA/G4PARTICLEXS4.1 && export G4SAIDXSDATA=$G4DATA/G4SAIDDATA2.0 && export G4NEUTRONHPDATA=$G4DATA/G4NDL4.7.1 && export G4ABLADATA=$G4DATA/G4ABLA3.3 && export G4REALSURFACEDATA=$G4DATA/RealSurface2.2 && export LD_LIBRARY_PATH=/opticks/lib64:/cuda/lib64:/craylib:/u/jhill5/spack/opt/spack/linux-zen3/berkeley-db-18.1.40-xzq5bgm5qoomgai6tda7ho5bhnby4cqg/lib:/u/jhill5/spack/opt/spack/linux-zen3/boost-1.89.0-3sueda3bgmryrtd2bnuqdymwchao23s4/lib:/u/jhill5/spack/opt/spack/linux-zen3/bzip2-1.0.8-fpnhxc3cksmjff6ikwdxyftvpgmulrp5/lib:/u/jhill5/spack/opt/spack/linux-zen3/celeritas-0.6.3-6ljnzdllpzhknusoji4z4t5ibyba6xen/lib64:/u/jhill5/spack/opt/spack/linux-zen3/clhep-2.4.7.2-oprlroyj574esvcgsby4g7c2pzyf5hpc/lib:/u/jhill5/spack/opt/spack/linux-zen3/curl-8.17.0-mone2cmxw57l2eoxymezc46u65r6nhnj/lib:/u/jhill5/spack/opt/spack/linux-zen3/expat-2.7.3-komlofneigkywzpaxw2lsrjlik6dwf7q/lib:/u/jhill5/spack/opt/spack/linux-zen3/g4vg-1.0.6-frlx3lgpe7kh45ssqnnon4vjhshnccfx/lib64:/u/jhill5/spack/opt/spack/linux-zen3/gcc-runtime-13.3.1-fl2eer2yfa7npiagsgjjhs5xrtevcjnq/lib:/u/jhill5/spack/opt/spack/linux-zen3/gdbm-1.25-se2a6sw2aljxi54ry6vt4v6h5zwit5un/lib:/u/jhill5/spack/opt/spack/linux-zen3/geant4-11.4.0-4jixcikyrcbxeamy7wnc2dayy3fs6uqh/lib64:/u/jhill5/spack/opt/spack/linux-zen3/gettext-0.23.1-2ydfp2mep3lalm54mfi5tvbop654sarj/lib:/u/jhill5/spack/opt/spack/linux-zen3/glm-1.0.1-3wce34rjlucrwsiimrj3ivdrexmezk4h/lib64:/u/jhill5/spack/opt/spack/linux-zen3/hepmc3-3.3.1-cvbrknrdxfikul3dju4fi7ztunuaqgk7/lib64:/u/jhill5/spack/opt/spack/linux-zen3/libbsd-0.12.2-qowr3dvwxltgzhwlogjyekgdlusoayhh/lib:/u/jhill5/spack/opt/spack/linux-zen3/libffi-3.5.2-7w2zxn3liqqubjufc43bopgk57rooni2/lib64:/u/jhill5/spack/opt/spack/linux-zen3/libiconv-1.18-ghlrxwytxxumsjwmdaeisbewscbskawb/lib:/u/jhill5/spack/opt/spack/linux-zen3/libmd-1.1.0-wef4l4juixnmi4272mlvnffj7hbggznt/lib:/u/jhill5/spack/opt/spack/linux-zen3/libxml2-2.13.5-7hn3jxntlmiq4zlnmau5goudostito7s/lib:/u/jhill5/spack/opt/spack/linux-zen3/ncurses-6.5-20250705-pphhpl46kakyux2hwldkisxeggf64qhg/lib:/u/jhill5/spack/opt/spack/linux-zen3/nghttp2-1.67.1-mytlypfv3d2cxjw7nfndnzgru2rm6ouc/lib:/u/jhill5/spack/opt/spack/linux-zen3/openssl-3.6.0-pqtoawcmk33fze4ar2pdrwg5ef4vt2sv/lib64:/u/jhill5/spack/opt/spack/linux-zen3/perl-5.42.0-tdtx7yxshfhwrguh3zpulabq7oxv3ggi/lib:/u/jhill5/spack/opt/spack/linux-zen3/pkgconf-2.5.1-3hwkzbsfzyswpddk7absccfws7k2scu7/lib:/u/jhill5/spack/opt/spack/linux-zen3/python-3.14.2-nmlehy74wj7al6v5y4uzq7ocrakmmka5/lib:/u/jhill5/spack/opt/spack/linux-zen3/readline-8.3-qpx2eedu3tgyke5dtoegclgi6ivnprdr/lib:/u/jhill5/spack/opt/spack/linux-zen3/sqlite-3.50.4-6d37pv3f3uubtsidr5xxqfdbhu7rr6od/lib:/u/jhill5/spack/opt/spack/linux-zen3/thrust-1.17.2-ro6xdqbmcmbfna5p524i2t2y2mp7kvcp/lib64:/u/jhill5/spack/opt/spack/linux-zen3/util-linux-uuid-2.41-szfoqddjgk5bxcfwbn5ihjqjw7ffz6yd/lib:/u/jhill5/spack/opt/spack/linux-zen3/veccore-0.8.2-lodpayaarg6mooouxmwhan4egyubmz34/lib64:/u/jhill5/spack/opt/spack/linux-zen3/vecgeom-1.2.11-istcx37wilobypng4wsg2s25l2o6ys6n/lib64:/u/jhill5/spack/opt/spack/linux-zen3/xerces-c-3.3.0-cy4m3c3ax3jdz5nu2zr6v2kjbvxyaqcl/lib:/u/jhill5/spack/opt/spack/linux-zen3/xz-5.6.3-xbbnz46zup6hydwgxtl54rni7khbbyfi/lib:/u/jhill5/spack/opt/spack/linux-zen3/zlib-ng-2.3.2-natxgqclsxsfgapmchfdbhxzsunbhrk4/lib:/u/jhill5/spack/opt/spack/linux-zen3/zstd-1.5.7-r7r6lutdjvvwxxgjjmoyl3ue6cy7rrrr/lib:/cvmfs/oasis.opensciencegrid.org/jlab/geant4/fedora40-gcc14/geant4/11.3.2/lib64:$LD_LIBRARY_PATH && export OPTICKS_PREFIX=/opticks && export OPTICKS_HOME=/opticks && export OPTICKS_CUDA_PREFIX=/cuda && export OPTICKS_OPTIX_PREFIX=/optix && export OPTICKS_COMPUTE_CAPABILITY=80 && /app/grace-g4 --geometry /geometry/baseline_geometry.gdml --output /work/baseline_geometry_electron_hits.root --macro /work/particle_gun_em_54321.mac --seed 54321 --threads 1 --use-gpu']
+Return code: 0
+Physics list: FTFP_BERT_HP
+Seed: 54321
+
+=== STDOUT ===
+GPU acceleration: ENABLED (Opticks)
+GRACE Geant4 Simulation
+=======================
+Geometry: /geometry/baseline_geometry.gdml
+Output:   /work/baseline_geometry_electron_hits.root
+Macro:    /work/particle_gun_em_54321.mac
+Seed:     54321
+Threads:  1
+GPU:      ENABLED (Opticks)
+
+Opticks: Configured for up to 10M photons per GPU launch
+Opticks: U4Recorder initialized
+Opticks: SEvt will be created by G4CXOpticks::SetGeometry()
+
+**************************************************************
+ Geant4 version Name: geant4-11-04 [MT]   (5-December-2025)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+Opticks: Using standard G4OpticalPhysics with CaTS-style genstep collection
+TrackingAction: CaTS-style Opticks (gensteps collected in SteppingAction)
+Loading GDML geometry from: /geometry/baseline_geometry.gdml
+G4GDML: Reading '/geometry/baseline_geometry.gdml'...
+G4GDML: Reading definitions...
+G4GDML: Reading materials...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading setup...
+G4GDML: Reading '/geometry/baseline_geometry.gdml' done!
+Stripping off GDML names of materials, solids and volumes ...
+Geometry loaded successfully.
+World volume: world_log_PV
+Daughter volumes: 1
+Initializing Opticks GPU acceleration...
+Opticks: SensorIdentifier set for sensor_* volumes
+U4Surface::PrepareBorderSurfaceVector
+SNameOrder::Desc tail 0x
+
+U4Surface::PrepareSkinSurfaceVector
+SNameOrder::Desc tail 0x
+   0 :                                         SensorSkin :                                         SensorSkin
+
+[U4Tree::initSolids
+]U4Tree::initSolids
+U4Tree::init U4Tree::desc
+ st Y
+ top Y
+ sid Y
+ level 0
+ lvidx 4
+ pvs 33
+ materials 4
+ surfaces 1
+ solids 4
+ enable_osur YES
+ enable_isur YES
+
+GraceSensorIdentifier::getGlobalIdentity: sensor_0 -> ID 0
+GraceSensorIdentifier::getGlobalIdentity: sensor_1 -> ID 1
+GraceSensorIdentifier::getGlobalIdentity: sensor_2 -> ID 2
+GraceSensorIdentifier::getGlobalIdentity: sensor_3 -> ID 3
+GraceSensorIdentifier::getGlobalIdentity: sensor_4 -> ID 4
+GraceSensorIdentifier::getGlobalIdentity: sensor_5 -> ID 5
+GraceSensorIdentifier::getGlobalIdentity: sensor_6 -> ID 6
+GraceSensorIdentifier::getGlobalIdentity: sensor_7 -> ID 7
+GraceSensorIdentifier::getGlobalIdentity: sensor_8 -> ID 8
+GraceSensorIdentifier::getGlobalIdentity: sensor_9 -> ID 9
+GraceSensorIdentifier::getGlobalIdentity: sensor_10 -> ID 10
+GraceSensorIdentifier::getGlobalIdentity: sensor_11 -> ID 11
+GraceSensorIdentifier::getGlobalIdentity: sensor_12 -> ID 12
+GraceSensorIdentifier::getGlobalIdentity: sensor_13 -> ID 13
+GraceSensorIdentifier::getGlobalIdentity: sensor_14 -> ID 14
+GraceSensorIdentifier::getGlobalIdentity: sensor_15 -> ID 15
+GraceSensorIdentifier::getGlobalIdentity: sensor_16 -> ID 16
+GraceSensorIdentifier::getGlobalIdentity: sensor_17 -> ID 17
+GraceSensorIdentifier::getGlobalIdentity: sensor_18 -> ID 18
+GraceSensorIdentifier::getGlobalIdentity: sensor_19 -> ID 19
+GraceSensorIdentifier::getGlobalIdentity: sensor_20 -> ID 20
+GraceSensorIdentifier::getGlobalIdentity: sensor_21 -> ID 21
+GraceSensorIdentifier::getGlobalIdentity: sensor_22 -> ID 22
+GraceSensorIdentifier::getGlobalIdentity: sensor_23 -> ID 23
+GraceSensorIdentifier::getGlobalIdentity: sensor_24 -> ID 24
+GraceSensorIdentifier::getGlobalIdentity: sensor_25 -> ID 25
+GraceSensorIdentifier::getGlobalIdentity: sensor_26 -> ID 26
+GraceSensorIdentifier::getGlobalIdentity: sensor_27 -> ID 27
+GraceSensorIdentifier::getGlobalIdentity: sensor_28 -> ID 28
+GraceSensorIdentifier::getGlobalIdentity: sensor_29 -> ID 29
+[stree::postcreate
+stree::desc_sensor
+ sensor_id.size 30
+ sensor_count 30
+ sensor_name.size 30
+sensor_name[
+sensor_0
+sensor_1
+sensor_2
+sensor_3
+sensor_4
+sensor_5
+sensor_6
+sensor_7
+sensor_8
+sensor_9
+sensor_10
+sensor_11
+sensor_12
+sensor_13
+sensor_14
+sensor_15
+sensor_16
+sensor_17
+sensor_18
+sensor_19
+sensor_20
+sensor_21
+sensor_22
+sensor_23
+sensor_24
+sensor_25
+sensor_26
+sensor_27
+sensor_28
+sensor_29
+]
+[stree::desc_sensor_nd
+ edge            0
+ num_nd          33
+ num_nd_sensor   30
+ num_sid         30
+...
+ nidx      4 i      1 sensor_id      1 sensor_index      1 sensor_name      1
+ nidx      5 i      2 sensor_id      2 sensor_index      2 sensor_name      2
+ nidx      6 i      3 sensor_id      3 sensor_index      3 sensor_name      3
+ nidx      7 i      4 sensor_id      4 sensor_index      4 sensor_name      4
+]stree::desc_sensor_nd
+stree::desc_sensor_id sensor_id.size 30
+[
+      0 sid        0
+      1 sid        1
+      2 sid        2
+      3 sid        3
+      4 sid        4
+      5 sid        5
+      6 sid        6
+      7 sid        7
+      8 sid        8
+      9 sid        9
+...
+     21 sid       21
+     22 sid       22
+     23 sid       23
+     24 sid       24
+     25 sid       25
+     26 sid       26
+     27 sid       27
+     28 sid       28
+     29 sid       29
+]]stree::postcreate
+SScene::addFrames framespec path [$SScene__initFromTree_addFrames] does not exist 
+Opticks: Geometry translated to GPU
+Opticks: Optical photon transport will use GPU
+Attached sensitive detector to: sensor_log
+Attached sensitive detector to: fill_log
+Opticks: Optical physics will be handled on GPU
+Opticks: Photon hits will be collected from GPU after each event
+
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+### Birks coefficients used in run time
+   G4_lAr     0.032 mm/MeV     0.00448 g/cm^2/MeV  massFactor=  23.4875 effCharge= 324
+=======================================================================
+======                 Electromagnetic Physics Parameters      ========
+=======================================================================
+LPM effect enabled                                 1
+Enable creation and use of sampling tables         0
+Apply cuts on all EM processes                     0
+Use combined TransportationWithMsc                 Disabled
+Use general process                                1
+Enable linear polarisation for gamma               0
+Enable photoeffect sampling below K-shell          1
+Enable sampling of quantum entanglement            0
+X-section factor for integral approach             0.8
+Min kinetic energy for tables                      100 eV 
+Max kinetic energy for tables                      100 TeV
+Number of bins per decade of a table               7
+Verbose level                                      1
+Verbose level for worker thread                    0
+Bremsstrahlung energy threshold above which 
+  primary e+- is added to the list of secondary    100 TeV
+Bremsstrahlung energy threshold above which primary
+  muon/hadron is added to the list of secondary    100 TeV
+Positron annihilation at rest model                SimplePositronium
+Enable 3 gamma annihilation on fly                 0
+Lowest triplet kinetic energy                      1 MeV
+Enable sampling of gamma linear polarisation       0
+5D gamma conversion model type                     0
+5D gamma conversion model on isolated ion          0
+Use RiGe 5D e+e- pair production model by muons    0
+Livermore data directory                           epics_2017
+=======================================================================
+======                 Ionisation Parameters                   ========
+=======================================================================
+Step function for e+-                              (0.2, 1 mm)
+Step function for muons/hadrons                    (0.2, 0.1 mm)
+Step function for light ions                       (0.2, 0.1 mm)
+Step function for general ions                     (0.2, 0.1 mm)
+Lowest e+e- kinetic energy                         1 keV
+Lowest muon/hadron kinetic energy                  1 keV
+Use ICRU90 data                                    0
+Fluctuations of dE/dx are enabled                  1
+Type of fluctuation model for leptons and hadrons  Urban
+Use built-in Birks saturation                      1
+Build CSDA range enabled                           0
+Use cut as a final range enabled                   0
+Enable angular generator interface                 0
+Max kinetic energy for CSDA tables                 1 GeV
+Max kinetic energy for NIEL computation            0 eV 
+Linear loss limit                                  0.01
+Read data from file for e+e- pair production by mu 0
+=======================================================================
+======                 Multiple Scattering Parameters          ========
+=======================================================================
+Type of msc step limit algorithm for e+-           1
+Type of msc step limit algorithm for muons/hadrons 0
+Msc lateral displacement for e+- enabled           1
+Msc lateral displacement for muons and hadrons     0
+Urban msc model lateral displacement alg96         1
+Range factor for msc step limit for e+-            0.04
+Range factor for msc step limit for muons/hadrons  0.2
+Geometry factor for msc step limitation of e+-     2.5
+Safety factor for msc step limit for e+-           0.6
+Skin parameter for msc step limitation of e+-      1
+Lambda limit for msc step limit for e+-            1 mm
+Use Mott correction for e- scattering              0
+Factor used for dynamic computation of angular 
+  limit between single and multiple scattering     1
+Fixed angular limit between single 
+  and multiple scattering                          3.1416 rad
+Upper energy limit for e+- multiple scattering     100 MeV
+Type of electron single scattering model           0
+Type of nuclear form-factor                        1
+Screening factor                                   1
+=======================================================================
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 150 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 150 keV to 100 TeV in 62 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e- XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+ XStype:2 SubType=5 AtRestModel:Simple BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001, from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for GenericIon  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for alpha  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for anti_proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001, from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001, from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001, from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001, from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001, from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001, from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001, from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+-----------------------------------------------------------------------
+                           Hadronic Processes for neutron
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+  Process: nKiller
+-----------------------------------------------------------------------
+                           Hadronic Processes for B-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for D-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for GenericIon
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-------------------------------------------------------------------------
+                           Hadronic Processes for anti_hypertriton
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_neutron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_proton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e-
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for gamma
+  Process: photonNuclear
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            GammaNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu-
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+  Process: muMinusCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi-
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for proton
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for sigma-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+=======================================================================
+======       Geant4 Native Pre-compound Model Parameters       ========
+=======================================================================
+Type of pre-compound model                          0
+Type of pre-compound inverse x-section              1
+Pre-compound model active                           1
+Pre-compound excitation low energy                  0.1 MeV 
+Pre-compound excitation high energy                 15 MeV 
+Angular generator for pre-compound model            1
+Use NeverGoBack option for pre-compound model       0
+Use SoftCutOff option for pre-compound model        0
+Use CEM transitions for pre-compound model          1
+Use GNASH transitions for pre-compound model        0
+Use HETC submodel for pre-compound model            0
+=======================================================================
+======       Nuclear De-excitation Module Parameters           ========
+=======================================================================
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Type of Fermi BreakUp model                         ModelVI
+Min excitation energy                               0.01 keV 
+Min energy per nucleon for multifragmentation       2e+05 MeV
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres                  1 ns 
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   1
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
+### Run 0 start.
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : Analysis_W001
+      issued by : G4RootNtupleFileManager::SetNtupleMergingMode
+Merging ntuples is not applicable in sequential application.
+Setting was ignored.
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+... set ntuple merging row mode : row-wise - done
+... create file : /work/baseline_geometry_electron_hits.root - done
+... open analysis file : /work/baseline_geometry_electron_hits.root - done
+... open analysis file : /work/baseline_geometry_electron_hits.root - done
+Output file: /work/baseline_geometry_electron_hits.root
+[Opticks] Event 0 BeginOfEvent
+[Opticks-Debug] Step 1 secondaries: 11765
+[Opticks-Debug] Found optical secondaries: 11693 scint, 71 cerenkov
+[Opticks] Collected Cerenkov genstep: 71 photons, total=71 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11693 photons, total=11764 (SEvt=0xcb1730)
+[Opticks-Debug] Step 2 secondaries: 6473
+[Opticks-Debug] Found optical secondaries: 6442 scint, 31 cerenkov
+[Opticks] Collected Cerenkov genstep: 31 photons, total=11795 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6442 photons, total=18237 (SEvt=0xcb1730)
+[Opticks-Debug] Step 3 secondaries: 11733
+[Opticks-Debug] Found optical secondaries: 11692 scint, 41 cerenkov
+[Opticks] Collected Cerenkov genstep: 41 photons, total=18278 (SEvt=0xcb1730)
+[Opticks-Debug] Step 4 secondaries: 5883
+[Opticks-Debug] Found optical secondaries: 5878 scint, 5 cerenkov
+[Opticks-Debug] Step 5 secondaries: 2602
+[Opticks-Debug] Found optical secondaries: 2602 scint, 0 cerenkov
+[Opticks-Debug] Step 6 secondaries: 5540
+[Opticks-Debug] Step 7 secondaries: 0
+[Opticks-Debug] Step 8 secondaries: 12395
+[Opticks-Debug] Step 9 secondaries: 11514
+[Opticks-Debug] Step 10 secondaries: 9981
+[Opticks] Triggering GPU simulation: 103838 photons, 20 gensteps
+[Opticks] GPU result: 0 photons simulated, 101131 hits
+[Opticks] Collected Cerenkov genstep: 33 photons, total=33 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4811 photons, total=4844 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 46 photons, total=4890 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 43 photons, total=4933 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 45 photons, total=4978 (SEvt=0xcb1730)
+[Opticks] Event 0 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 9
+[Opticks] Event 0 calling simulate(0, false)...
+[Opticks] Event 0 simulate() returned
+[Opticks] Event 0 result: 0 photons simulated, 5120 hits detected
+Event 0 processed: 20 hits, 5 MeV total energy deposit, 15120 optical photons detected
+[Opticks] Event 1 BeginOfEvent
+[Opticks] Event 0 ended with 5232 photons, 9 gensteps pending
+[Opticks] Collected Cerenkov genstep: 73 photons, total=73 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12197 photons, total=12270 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 83 photons, total=12353 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7119 photons, total=19472 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 88 photons, total=19560 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 104366 photons, 27 gensteps
+[Opticks] GPU result: 0 photons simulated, 99983 hits
+[Opticks] Collected Cerenkov genstep: 84 photons, total=84 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12148 photons, total=12232 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 66 photons, total=12298 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9661 photons, total=21959 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=22060 (SEvt=0xcb1730)
+[Opticks] Event 1 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 18
+[Opticks] Event 1 calling simulate(1, false)...
+[Opticks] Event 1 simulate() returned
+[Opticks] Event 1 result: 0 photons simulated, 85308 hits detected
+[Opticks] Event 2 BeginOfEvent
+[Opticks] Event 1 ended with 87999 photons, 18 gensteps pending
+[Opticks] Collected Cerenkov genstep: 99 photons, total=99 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12775 photons, total=12874 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 124 photons, total=12998 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11859 photons, total=24857 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=24952 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 107095 photons, 18 gensteps
+[Opticks] GPU result: 0 photons simulated, 104315 hits
+[Opticks] Collected Cerenkov genstep: 70 photons, total=70 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7646 photons, total=7716 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 80 photons, total=7796 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7010 photons, total=14806 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 40 photons, total=14846 (SEvt=0xcb1730)
+[Opticks] Event 2 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 19
+[Opticks] Event 2 calling simulate(2, false)...
+[Opticks] Event 2 simulate() returned
+[Opticks] Event 2 result: 0 photons simulated, 28253 hits detected
+[Opticks] Event 3 BeginOfEvent
+[Opticks] Event 2 ended with 29035 photons, 19 gensteps pending
+[Opticks] Collected Cerenkov genstep: 106 photons, total=106 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 23629 photons, total=23735 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=23838 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8897 photons, total=32735 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 6 photons, total=32741 (SEvt=0xcb1730)
+[Opticks] Event 3 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 37
+[Opticks] Event 3 calling simulate(3, false)...
+[Opticks] Event 3 simulate() returned
+[Opticks] Event 3 result: 0 photons simulated, 85510 hits detected
+[Opticks] Event 4 BeginOfEvent
+[Opticks] Event 3 ended with 87488 photons, 37 gensteps pending
+[Opticks] Collected Cerenkov genstep: 108 photons, total=108 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 91 photons, total=199 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=304 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 102 photons, total=406 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=504 (SEvt=0xcb1730)
+[Opticks] Event 4 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 13
+[Opticks] Event 4 calling simulate(4, false)...
+[Opticks] Event 4 simulate() returned
+[Opticks] Event 4 result: 0 photons simulated, 979 hits detected
+[Opticks] Event 5 BeginOfEvent
+[Opticks] Event 4 ended with 979 photons, 13 gensteps pending
+[Opticks] Collected Cerenkov genstep: 101 photons, total=101 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12089 photons, total=12190 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 94 photons, total=12284 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 16588 photons, total=28872 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=28969 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 100702 photons, 41 gensteps
+[Opticks] GPU result: 0 photons simulated, 95974 hits
+[Opticks] Collected Scintillation genstep: 1614 photons, total=1614 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 22 photons, total=1636 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 2948 photons, total=4584 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 27 photons, total=4611 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3066 photons, total=7677 (SEvt=0xcb1730)
+[Opticks] Event 5 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 13
+[Opticks] Event 5 calling simulate(5, false)...
+[Opticks] Event 5 simulate() returned
+[Opticks] Event 5 result: 0 photons simulated, 34571 hits detected
+[Opticks] Event 6 BeginOfEvent
+[Opticks] Event 5 ended with 36702 photons, 13 gensteps pending
+[Opticks] Collected Cerenkov genstep: 103 photons, total=103 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 91 photons, total=194 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=290 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 14 photons, total=304 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 119 photons, total=423 (SEvt=0xcb1730)
+[Opticks] Event 6 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 22
+[Opticks] Event 6 calling simulate(6, false)...
+[Opticks] Event 6 simulate() returned
+[Opticks] Event 6 result: 0 photons simulated, 6595 hits detected
+[Opticks] Event 7 BeginOfEvent
+[Opticks] Event 6 ended with 7254 photons, 22 gensteps pending
+[Opticks] Collected Cerenkov genstep: 112 photons, total=112 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11985 photons, total=12097 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 83 photons, total=12180 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8976 photons, total=21156 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 67 photons, total=21223 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 104604 photons, 19 gensteps
+[Opticks] GPU result: 0 photons simulated, 101721 hits
+[Opticks] Collected Cerenkov genstep: 28 photons, total=28 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4460 photons, total=4488 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 1 photons, total=4489 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 101 photons, total=4590 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 100 photons, total=4690 (SEvt=0xcb1730)
+[Opticks] Event 7 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 38
+[Opticks] Event 7 calling simulate(7, false)...
+[Opticks] Event 7 simulate() returned
+[Opticks] Event 7 result: 0 photons simulated, 23326 hits detected
+[Opticks] Event 8 BeginOfEvent
+[Opticks] Event 7 ended with 23904 photons, 38 gensteps pending
+[Opticks] Collected Cerenkov genstep: 100 photons, total=100 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12090 photons, total=12190 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 94 photons, total=12284 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9255 photons, total=21539 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=21644 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 102353 photons, 28 gensteps
+[Opticks] GPU result: 0 photons simulated, 99583 hits
+[Opticks] Collected Cerenkov genstep: 40 photons, total=40 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3272 photons, total=3312 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 26 photons, total=3338 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10097 photons, total=13435 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 45 photons, total=13480 (SEvt=0xcb1730)
+[Opticks] Event 8 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 16
+[Opticks] Event 8 calling simulate(8, false)...
+[Opticks] Event 8 simulate() returned
+[Opticks] Event 8 result: 0 photons simulated, 68168 hits detected
+[Opticks] Event 9 BeginOfEvent
+[Opticks] Event 8 ended with 70361 photons, 16 gensteps pending
+[Opticks] Collected Cerenkov genstep: 111 photons, total=111 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 2 photons, total=113 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 27 photons, total=140 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 20 photons, total=160 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 22 photons, total=182 (SEvt=0xcb1730)
+[Opticks] Event 9 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 47
+[Opticks] Event 9 calling simulate(9, false)...
+[Opticks] Event 9 simulate() returned
+[Opticks] Event 9 result: 0 photons simulated, 77041 hits detected
+[Opticks] Event 10 BeginOfEvent
+[Opticks] Event 9 ended with 78934 photons, 47 gensteps pending
+[Opticks] Collected Cerenkov genstep: 102 photons, total=102 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10499 photons, total=10601 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=10694 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9652 photons, total=20346 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 110 photons, total=20456 (SEvt=0xcb1730)
+[Opticks] Event 10 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 19
+[Opticks] Event 10 calling simulate(10, false)...
+[Opticks] Event 10 simulate() returned
+[Opticks] Event 10 result: 0 photons simulated, 41931 hits detected
+[Opticks] Event 11 BeginOfEvent
+[Opticks] Event 10 ended with 42941 photons, 19 gensteps pending
+[Opticks] Collected Cerenkov genstep: 111 photons, total=111 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 104 photons, total=215 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 116 photons, total=331 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 24 photons, total=355 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 3 photons, total=358 (SEvt=0xcb1730)
+[Opticks] Event 11 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 43
+[Opticks] Event 11 calling simulate(11, false)...
+[Opticks] Event 11 simulate() returned
+[Opticks] Event 11 result: 0 photons simulated, 12346 hits detected
+[Opticks] Event 12 BeginOfEvent
+[Opticks] Event 11 ended with 12649 photons, 43 gensteps pending
+[Opticks] Collected Cerenkov genstep: 103 photons, total=103 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9200 photons, total=9303 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=9404 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12229 photons, total=21633 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 104 photons, total=21737 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 102022 photons, 18 gensteps
+[Opticks] GPU result: 0 photons simulated, 99225 hits
+[Opticks] Collected Cerenkov genstep: 105 photons, total=105 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9892 photons, total=9997 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=10094 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9960 photons, total=20054 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 61 photons, total=20115 (SEvt=0xcb1730)
+[Opticks] Event 12 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 24
+[Opticks] Event 12 calling simulate(12, false)...
+[Opticks] Event 12 simulate() returned
+[Opticks] Event 12 result: 0 photons simulated, 95304 hits detected
+[Opticks] Event 13 BeginOfEvent
+[Opticks] Event 12 ended with 98118 photons, 24 gensteps pending
+[Opticks] Collected Cerenkov genstep: 98 photons, total=98 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 22159 photons, total=22257 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=22358 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9714 photons, total=32072 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 60 photons, total=32132 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 105259 photons, 22 gensteps
+[Opticks] GPU result: 0 photons simulated, 102698 hits
+[Opticks] Collected Scintillation genstep: 116 photons, total=116 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 207 photons, total=323 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=434 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10246 photons, total=10680 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 77 photons, total=10757 (SEvt=0xcb1730)
+[Opticks] Event 13 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 21
+[Opticks] Event 13 calling simulate(13, false)...
+[Opticks] Event 13 simulate() returned
+[Opticks] Event 13 result: 0 photons simulated, 92260 hits detected
+[Opticks] Event 14 BeginOfEvent
+[Opticks] Event 13 ended with 95079 photons, 21 gensteps pending
+[Opticks] Collected Cerenkov genstep: 113 photons, total=113 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10039 photons, total=10152 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=10247 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13822 photons, total=24069 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 116 photons, total=24185 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 105799 photons, 18 gensteps
+[Opticks] GPU result: 0 photons simulated, 102957 hits
+[Opticks] Collected Cerenkov genstep: 91 photons, total=91 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 19149 photons, total=19240 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 119 photons, total=19359 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10939 photons, total=30298 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 109 photons, total=30407 (SEvt=0xcb1730)
+[Opticks] Event 14 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 32
+[Opticks] Event 14 calling simulate(14, false)...
+[Opticks] Event 14 simulate() returned
+[Opticks] Event 14 result: 0 photons simulated, 81638 hits detected
+[Opticks] Event 15 BeginOfEvent
+[Opticks] Event 14 ended with 84162 photons, 32 gensteps pending
+[Opticks] Collected Cerenkov genstep: 106 photons, total=106 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9192 photons, total=9298 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=9398 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13069 photons, total=22467 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=22572 (SEvt=0xcb1730)
+[Opticks] Event 15 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 24
+[Opticks] Event 15 calling simulate(15, false)...
+[Opticks] Event 15 simulate() returned
+[Opticks] Event 15 result: 0 photons simulated, 60668 hits detected
+[Opticks] Event 16 BeginOfEvent
+[Opticks] Event 15 ended with 62187 photons, 24 gensteps pending
+[Opticks] Collected Cerenkov genstep: 100 photons, total=100 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=193 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=304 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 88 photons, total=392 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 116 photons, total=508 (SEvt=0xcb1730)
+[Opticks] Event 16 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 11
+[Opticks] Event 16 calling simulate(16, false)...
+[Opticks] Event 16 simulate() returned
+[Opticks] Event 16 result: 0 photons simulated, 984 hits detected
+[Opticks] Event 17 BeginOfEvent
+[Opticks] Event 16 ended with 984 photons, 11 gensteps pending
+[Opticks] Collected Cerenkov genstep: 103 photons, total=103 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14352 photons, total=14455 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 46 photons, total=14501 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7005 photons, total=21506 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 4 photons, total=21510 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 105496 photons, 26 gensteps
+[Opticks] GPU result: 0 photons simulated, 102821 hits
+[Opticks] Collected Cerenkov genstep: 95 photons, total=95 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11847 photons, total=11942 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=12039 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12691 photons, total=24730 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 39 photons, total=24769 (SEvt=0xcb1730)
+[Opticks] Event 17 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 21
+[Opticks] Event 17 calling simulate(17, false)...
+[Opticks] Event 17 simulate() returned
+[Opticks] Event 17 result: 0 photons simulated, 88277 hits detected
+[Opticks] Event 18 BeginOfEvent
+[Opticks] Event 17 ended with 90935 photons, 21 gensteps pending
+[Opticks] Collected Cerenkov genstep: 122 photons, total=122 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8865 photons, total=8987 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 107 photons, total=9094 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9314 photons, total=18408 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=18503 (SEvt=0xcb1730)
+[Opticks] Event 18 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 22
+[Opticks] Event 18 calling simulate(18, false)...
+[Opticks] Event 18 simulate() returned
+[Opticks] Event 18 result: 0 photons simulated, 59128 hits detected
+[Opticks] Event 19 BeginOfEvent
+[Opticks] Event 18 ended with 60676 photons, 22 gensteps pending
+[Opticks] Collected Cerenkov genstep: 103 photons, total=103 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9349 photons, total=9452 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 65 photons, total=9517 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6409 photons, total=15926 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 71 photons, total=15997 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 102055 photons, 28 gensteps
+[Opticks] GPU result: 0 photons simulated, 99371 hits
+[Opticks] Collected Cerenkov genstep: 99 photons, total=99 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13033 photons, total=13132 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 82 photons, total=13214 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9585 photons, total=22799 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=22895 (SEvt=0xcb1730)
+[Opticks] Event 19 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 25
+[Opticks] Event 19 calling simulate(19, false)...
+[Opticks] Event 19 simulate() returned
+[Opticks] Event 19 result: 0 photons simulated, 94932 hits detected
+[Opticks] Event 20 BeginOfEvent
+[Opticks] Event 19 ended with 97769 photons, 25 gensteps pending
+[Opticks] Collected Cerenkov genstep: 108 photons, total=108 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10434 photons, total=10542 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 4 photons, total=10546 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3819 photons, total=14365 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 2922 photons, total=17287 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 109048 photons, 24 gensteps
+[Opticks] GPU result: 0 photons simulated, 106174 hits
+[Opticks] Collected Cerenkov genstep: 66 photons, total=66 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7478 photons, total=7544 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 66 photons, total=7610 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6837 photons, total=14447 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 112 photons, total=14559 (SEvt=0xcb1730)
+[Opticks] Event 20 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 19
+[Opticks] Event 20 calling simulate(20, false)...
+[Opticks] Event 20 simulate() returned
+[Opticks] Event 20 result: 0 photons simulated, 89258 hits detected
+[Opticks] Event 21 BeginOfEvent
+[Opticks] Event 20 ended with 92075 photons, 19 gensteps pending
+[Opticks] Collected Cerenkov genstep: 123 photons, total=123 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 119 photons, total=242 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 118 photons, total=360 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=450 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 102 photons, total=552 (SEvt=0xcb1730)
+[Opticks] Event 21 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 34
+[Opticks] Event 21 calling simulate(21, false)...
+[Opticks] Event 21 simulate() returned
+[Opticks] Event 21 result: 0 photons simulated, 66574 hits detected
+[Opticks] Event 22 BeginOfEvent
+[Opticks] Event 21 ended with 68298 photons, 34 gensteps pending
+[Opticks] Collected Cerenkov genstep: 113 photons, total=113 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=216 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=308 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 128 photons, total=436 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 110 photons, total=546 (SEvt=0xcb1730)
+[Opticks] Event 22 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 17
+[Opticks] Event 22 calling simulate(22, false)...
+[Opticks] Event 22 simulate() returned
+[Opticks] Event 22 result: 0 photons simulated, 3161 hits detected
+[Opticks] Event 23 BeginOfEvent
+[Opticks] Event 22 ended with 3254 photons, 17 gensteps pending
+[Opticks] Collected Cerenkov genstep: 81 photons, total=81 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14231 photons, total=14312 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=14417 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 15775 photons, total=30192 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=30289 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 107425 photons, 21 gensteps
+[Opticks] GPU result: 0 photons simulated, 104772 hits
+[Opticks] Collected Cerenkov genstep: 62 photons, total=62 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8335 photons, total=8397 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 53 photons, total=8450 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6624 photons, total=15074 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 37 photons, total=15111 (SEvt=0xcb1730)
+[Opticks] Event 23 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 28
+[Opticks] Event 23 calling simulate(23, false)...
+[Opticks] Event 23 simulate() returned
+[Opticks] Event 23 result: 0 photons simulated, 78278 hits detected
+[Opticks] Event 24 BeginOfEvent
+[Opticks] Event 23 ended with 80358 photons, 28 gensteps pending
+[Opticks] Collected Cerenkov genstep: 102 photons, total=102 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 16051 photons, total=16153 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=16243 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12266 photons, total=28509 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=28601 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 103050 photons, 27 gensteps
+[Opticks] GPU result: 0 photons simulated, 100591 hits
+[Opticks] Collected Cerenkov genstep: 29 photons, total=29 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 2706 photons, total=2735 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 51 photons, total=2786 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8999 photons, total=11785 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 42 photons, total=11827 (SEvt=0xcb1730)
+[Opticks] Event 24 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 12
+[Opticks] Event 24 calling simulate(24, false)...
+[Opticks] Event 24 simulate() returned
+[Opticks] Event 24 result: 0 photons simulated, 50422 hits detected
+[Opticks] Event 25 BeginOfEvent
+[Opticks] Event 24 ended with 51797 photons, 12 gensteps pending
+[Opticks] Collected Cerenkov genstep: 78 photons, total=78 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11765 photons, total=11843 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 13 photons, total=11856 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1512 photons, total=13368 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=13468 (SEvt=0xcb1730)
+[Opticks] Event 25 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 30
+[Opticks] Event 25 calling simulate(25, false)...
+[Opticks] Event 25 simulate() returned
+[Opticks] Event 25 result: 0 photons simulated, 49558 hits detected
+[Opticks] Event 26 BeginOfEvent
+[Opticks] Event 25 ended with 55500 photons, 30 gensteps pending
+[Opticks] Collected Cerenkov genstep: 96 photons, total=96 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8994 photons, total=9090 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=9187 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10227 photons, total=19414 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 12 photons, total=19426 (SEvt=0xcb1730)
+[Opticks] Event 26 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 25
+[Opticks] Event 26 calling simulate(26, false)...
+[Opticks] Event 26 simulate() returned
+[Opticks] Event 26 result: 0 photons simulated, 24961 hits detected
+[Opticks] Event 27 BeginOfEvent
+[Opticks] Event 26 ended with 25518 photons, 25 gensteps pending
+[Opticks] Collected Cerenkov genstep: 95 photons, total=95 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=192 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=282 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 79 photons, total=361 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=454 (SEvt=0xcb1730)
+[Opticks] Event 27 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 77
+[Opticks] Event 27 calling simulate(27, false)...
+[Opticks] Event 27 simulate() returned
+[Opticks] Event 27 result: 0 photons simulated, 24602 hits detected
+[Opticks] Event 28 BeginOfEvent
+[Opticks] Event 27 ended with 25167 photons, 77 gensteps pending
+[Opticks] Collected Cerenkov genstep: 85 photons, total=85 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 26 photons, total=111 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 1 photons, total=112 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 5 photons, total=117 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 4 photons, total=121 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 107668 photons, 72 gensteps
+[Opticks] GPU result: 0 photons simulated, 105196 hits
+[Opticks] Collected Cerenkov genstep: 70 photons, total=70 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7667 photons, total=7737 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 79 photons, total=7816 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10366 photons, total=18182 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 75 photons, total=18257 (SEvt=0xcb1730)
+[Opticks] Event 28 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 13
+[Opticks] Event 28 calling simulate(28, false)...
+[Opticks] Event 28 simulate() returned
+[Opticks] Event 28 result: 0 photons simulated, 56676 hits detected
+[Opticks] Event 29 BeginOfEvent
+[Opticks] Event 28 ended with 58238 photons, 13 gensteps pending
+[Opticks] Collected Cerenkov genstep: 86 photons, total=86 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=184 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=285 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 116 photons, total=401 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 108 photons, total=509 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 101207 photons, 38 gensteps
+[Opticks] GPU result: 0 photons simulated, 98491 hits
+[Opticks] Collected Scintillation genstep: 1718 photons, total=1718 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 390 photons, total=2108 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7 photons, total=2115 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 2 photons, total=2117 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9 photons, total=2126 (SEvt=0xcb1730)
+[Opticks] Event 29 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 6
+[Opticks] Event 29 calling simulate(29, false)...
+[Opticks] Event 29 simulate() returned
+[Opticks] Event 29 result: 0 photons simulated, 7478 hits detected
+[Opticks] Event 30 BeginOfEvent
+[Opticks] Event 29 ended with 7684 photons, 6 gensteps pending
+[Opticks] Collected Cerenkov genstep: 48 photons, total=48 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 26 photons, total=74 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 3 photons, total=77 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=175 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=275 (SEvt=0xcb1730)
+[Opticks] Event 30 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 13
+[Opticks] Event 30 calling simulate(30, false)...
+[Opticks] Event 30 simulate() returned
+[Opticks] Event 30 result: 0 photons simulated, 897 hits detected
+[Opticks] Event 31 BeginOfEvent
+[Opticks] Event 30 ended with 897 photons, 13 gensteps pending
+[Opticks] Collected Cerenkov genstep: 108 photons, total=108 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14297 photons, total=14405 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=14504 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 22303 photons, total=36807 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=36908 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 109892 photons, 20 gensteps
+[Opticks] GPU result: 0 photons simulated, 106988 hits
+[Opticks] Collected Cerenkov genstep: 100 photons, total=100 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9323 photons, total=9423 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 109 photons, total=9532 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10264 photons, total=19796 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 65 photons, total=19861 (SEvt=0xcb1730)
+[Opticks] Event 31 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 28
+[Opticks] Event 31 calling simulate(31, false)...
+[Opticks] Event 31 simulate() returned
+[Opticks] Event 31 result: 0 photons simulated, 49051 hits detected
+[Opticks] Event 32 BeginOfEvent
+[Opticks] Event 31 ended with 50498 photons, 28 gensteps pending
+[Opticks] Collected Cerenkov genstep: 82 photons, total=82 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10920 photons, total=11002 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=11101 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 15782 photons, total=26883 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=26986 (SEvt=0xcb1730)
+[Opticks] Event 32 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 26
+[Opticks] Event 32 calling simulate(32, false)...
+[Opticks] Event 32 simulate() returned
+[Opticks] Event 32 result: 0 photons simulated, 85224 hits detected
+[Opticks] Event 33 BeginOfEvent
+[Opticks] Event 32 ended with 87454 photons, 26 gensteps pending
+[Opticks] Collected Cerenkov genstep: 103 photons, total=103 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11704 photons, total=11807 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=11910 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10831 photons, total=22741 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=22842 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 105516 photons, 18 gensteps
+[Opticks] GPU result: 0 photons simulated, 102910 hits
+[Opticks] Collected Cerenkov genstep: 69 photons, total=69 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8101 photons, total=8170 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 73 photons, total=8243 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8313 photons, total=16556 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 94 photons, total=16650 (SEvt=0xcb1730)
+[Opticks] Event 33 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 20
+[Opticks] Event 33 calling simulate(33, false)...
+[Opticks] Event 33 simulate() returned
+[Opticks] Event 33 result: 0 photons simulated, 92087 hits detected
+[Opticks] Event 34 BeginOfEvent
+[Opticks] Event 33 ended with 94743 photons, 20 gensteps pending
+[Opticks] Collected Cerenkov genstep: 93 photons, total=93 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 27 photons, total=120 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 106 photons, total=226 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=324 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=422 (SEvt=0xcb1730)
+[Opticks] Event 34 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 39
+[Opticks] Event 34 calling simulate(34, false)...
+[Opticks] Event 34 simulate() returned
+[Opticks] Event 34 result: 0 photons simulated, 96287 hits detected
+[Opticks] Event 35 BeginOfEvent
+[Opticks] Event 34 ended with 99090 photons, 39 gensteps pending
+[Opticks] Collected Cerenkov genstep: 95 photons, total=95 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=188 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 114 photons, total=302 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=398 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 109 photons, total=507 (SEvt=0xcb1730)
+[Opticks] Event 35 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 30
+[Opticks] Event 35 calling simulate(35, false)...
+[Opticks] Event 35 simulate() returned
+[Opticks] Event 35 result: 0 photons simulated, 93532 hits detected
+[Opticks] Event 36 BeginOfEvent
+[Opticks] Event 35 ended with 96067 photons, 30 gensteps pending
+[Opticks] Collected Cerenkov genstep: 101 photons, total=101 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10267 photons, total=10368 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 114 photons, total=10482 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9751 photons, total=20233 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=20325 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 101298 photons, 24 gensteps
+[Opticks] GPU result: 0 photons simulated, 98617 hits
+[Opticks] Collected Cerenkov genstep: 98 photons, total=98 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9440 photons, total=9538 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 74 photons, total=9612 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5326 photons, total=14938 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 50 photons, total=14988 (SEvt=0xcb1730)
+[Opticks] Event 36 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 26
+[Opticks] Event 36 calling simulate(36, false)...
+[Opticks] Event 36 simulate() returned
+[Opticks] Event 36 result: 0 photons simulated, 88957 hits detected
+[Opticks] Event 37 BeginOfEvent
+[Opticks] Event 36 ended with 91832 photons, 26 gensteps pending
+[Opticks] Collected Cerenkov genstep: 102 photons, total=102 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10849 photons, total=10951 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 30 photons, total=10981 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3822 photons, total=14803 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 30 photons, total=14833 (SEvt=0xcb1730)
+[Opticks] Event 37 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 32
+[Opticks] Event 37 calling simulate(37, false)...
+[Opticks] Event 37 simulate() returned
+[Opticks] Event 37 result: 0 photons simulated, 39065 hits detected
+[Opticks] Event 38 BeginOfEvent
+[Opticks] Event 37 ended with 39914 photons, 32 gensteps pending
+[Opticks] Collected Cerenkov genstep: 92 photons, total=92 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 16571 photons, total=16663 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=16760 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14181 photons, total=30941 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=31039 (SEvt=0xcb1730)
+[Opticks] Event 38 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 18
+[Opticks] Event 38 calling simulate(38, false)...
+[Opticks] Event 38 simulate() returned
+[Opticks] Event 38 result: 0 photons simulated, 48575 hits detected
+[Opticks] Event 39 BeginOfEvent
+[Opticks] Event 38 ended with 49730 photons, 18 gensteps pending
+[Opticks] Collected Cerenkov genstep: 104 photons, total=104 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 26 photons, total=130 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4653 photons, total=4783 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=4876 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=4966 (SEvt=0xcb1730)
+[Opticks] Event 39 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 42
+[Opticks] Event 39 calling simulate(39, false)...
+[Opticks] Event 39 simulate() returned
+[Opticks] Event 39 result: 0 photons simulated, 63049 hits detected
+[Opticks] Event 40 BeginOfEvent
+[Opticks] Event 39 ended with 64914 photons, 42 gensteps pending
+[Opticks] Collected Cerenkov genstep: 85 photons, total=85 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=188 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 112 photons, total=300 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1800 photons, total=2100 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1200 photons, total=3300 (SEvt=0xcb1730)
+[Opticks] Event 40 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 17
+[Opticks] Event 40 calling simulate(40, false)...
+[Opticks] Event 40 simulate() returned
+[Opticks] Event 40 result: 0 photons simulated, 12110 hits detected
+[Opticks] Event 41 BeginOfEvent
+[Opticks] Event 40 ended with 12737 photons, 17 gensteps pending
+[Opticks] Collected Cerenkov genstep: 99 photons, total=99 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13685 photons, total=13784 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 60 photons, total=13844 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6960 photons, total=20804 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 129 photons, total=20933 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 106600 photons, 22 gensteps
+[Opticks] GPU result: 0 photons simulated, 103803 hits
+[Opticks] Collected Cerenkov genstep: 25 photons, total=25 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4022 photons, total=4047 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 52 photons, total=4099 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12570 photons, total=16669 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 4 photons, total=16673 (SEvt=0xcb1730)
+[Opticks] Event 41 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 25
+[Opticks] Event 41 calling simulate(41, false)...
+[Opticks] Event 41 simulate() returned
+[Opticks] Event 41 result: 0 photons simulated, 90776 hits detected
+[Opticks] Event 42 BeginOfEvent
+[Opticks] Event 41 ended with 93501 photons, 25 gensteps pending
+[Opticks] Collected Cerenkov genstep: 118 photons, total=118 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11740 photons, total=11858 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=11953 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11844 photons, total=23797 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 115 photons, total=23912 (SEvt=0xcb1730)
+[Opticks] Event 42 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 31
+[Opticks] Event 42 calling simulate(42, false)...
+[Opticks] Event 42 simulate() returned
+[Opticks] Event 42 result: 0 photons simulated, 84550 hits detected
+[Opticks] Event 43 BeginOfEvent
+[Opticks] Event 42 ended with 86799 photons, 31 gensteps pending
+[Opticks] Collected Cerenkov genstep: 103 photons, total=103 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10049 photons, total=10152 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=10250 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9991 photons, total=20241 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 87 photons, total=20328 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 107585 photons, 20 gensteps
+[Opticks] GPU result: 0 photons simulated, 104746 hits
+[Opticks] Collected Cerenkov genstep: 62 photons, total=62 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14617 photons, total=14679 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 24 photons, total=14703 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3375 photons, total=18078 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 28 photons, total=18106 (SEvt=0xcb1730)
+[Opticks] Event 43 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 11
+[Opticks] Event 43 calling simulate(43, false)...
+[Opticks] Event 43 simulate() returned
+[Opticks] Event 43 result: 0 photons simulated, 17926 hits detected
+[Opticks] Event 44 BeginOfEvent
+[Opticks] Event 43 ended with 18387 photons, 11 gensteps pending
+[Opticks] Collected Cerenkov genstep: 118 photons, total=118 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=229 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=329 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=428 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 19 photons, total=447 (SEvt=0xcb1730)
+[Opticks] Event 44 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 14
+[Opticks] Event 44 calling simulate(44, false)...
+[Opticks] Event 44 simulate() returned
+[Opticks] Event 44 result: 0 photons simulated, 2794 hits detected
+[Opticks] Event 45 BeginOfEvent
+[Opticks] Event 44 ended with 2835 photons, 14 gensteps pending
+[Opticks] Collected Cerenkov genstep: 106 photons, total=106 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 110 photons, total=216 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=319 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=415 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=512 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 102108 photons, 26 gensteps
+[Opticks] GPU result: 0 photons simulated, 99244 hits
+[Opticks] Collected Scintillation genstep: 1628 photons, total=1628 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1010 photons, total=2638 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5216 photons, total=7854 (SEvt=0xcb1730)
+[Opticks] Event 45 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 3
+[Opticks] Event 45 calling simulate(45, false)...
+[Opticks] Event 45 simulate() returned
+[Opticks] Event 45 result: 0 photons simulated, 7595 hits detected
+[Opticks] Event 46 BeginOfEvent
+[Opticks] Event 45 ended with 7854 photons, 3 gensteps pending
+[Opticks] Collected Cerenkov genstep: 92 photons, total=92 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11518 photons, total=11610 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 38 photons, total=11648 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5568 photons, total=17216 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 8 photons, total=17224 (SEvt=0xcb1730)
+[Opticks] Event 46 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 35
+[Opticks] Event 46 calling simulate(46, false)...
+[Opticks] Event 46 simulate() returned
+[Opticks] Event 46 result: 0 photons simulated, 89049 hits detected
+[Opticks] Event 47 BeginOfEvent
+[Opticks] Event 46 ended with 91223 photons, 35 gensteps pending
+[Opticks] Collected Cerenkov genstep: 85 photons, total=85 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13122 photons, total=13207 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 106 photons, total=13313 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9012 photons, total=22325 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=22430 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 114460 photons, 29 gensteps
+[Opticks] GPU result: 0 photons simulated, 111543 hits
+[Opticks] Collected Cerenkov genstep: 102 photons, total=102 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11070 photons, total=11172 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 13 photons, total=11185 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1639 photons, total=12824 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 81 photons, total=12905 (SEvt=0xcb1730)
+[Opticks] Event 47 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 22
+[Opticks] Event 47 calling simulate(47, false)...
+[Opticks] Event 47 simulate() returned
+[Opticks] Event 47 result: 0 photons simulated, 82747 hits detected
+[Opticks] Event 48 BeginOfEvent
+[Opticks] Event 47 ended with 85322 photons, 22 gensteps pending
+[Opticks] Collected Cerenkov genstep: 101 photons, total=101 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 107 photons, total=208 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=298 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=397 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=490 (SEvt=0xcb1730)
+[Opticks] Event 48 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 14
+[Opticks] Event 48 calling simulate(48, false)...
+[Opticks] Event 48 simulate() returned
+[Opticks] Event 48 result: 0 photons simulated, 1068 hits detected
+[Opticks] Event 49 BeginOfEvent
+[Opticks] Event 48 ended with 1071 photons, 14 gensteps pending
+[Opticks] Collected Cerenkov genstep: 96 photons, total=96 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 5 photons, total=101 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 119 photons, total=220 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1843 photons, total=2063 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 438 photons, total=2501 (SEvt=0xcb1730)
+[Opticks] Event 49 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 43
+[Opticks] Event 49 calling simulate(49, false)...
+[Opticks] Event 49 simulate() returned
+[Opticks] Event 49 result: 0 photons simulated, 50016 hits detected
+[Opticks] Event 50 BeginOfEvent
+[Opticks] Event 49 ended with 51384 photons, 43 gensteps pending
+[Opticks] Collected Cerenkov genstep: 83 photons, total=83 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 116 photons, total=199 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5024 photons, total=5223 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1341 photons, total=6564 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 2486 photons, total=9050 (SEvt=0xcb1730)
+[Opticks] Event 50 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 20
+[Opticks] Event 50 calling simulate(50, false)...
+[Opticks] Event 50 simulate() returned
+[Opticks] Event 50 result: 0 photons simulated, 12216 hits detected
+[Opticks] Event 51 BeginOfEvent
+[Opticks] Event 50 ended with 12922 photons, 20 gensteps pending
+[Opticks] Collected Cerenkov genstep: 116 photons, total=116 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9633 photons, total=9749 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=9841 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 23783 photons, total=33624 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=33722 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 100644 photons, 16 gensteps
+[Opticks] GPU result: 0 photons simulated, 98042 hits
+[Opticks] Collected Cerenkov genstep: 76 photons, total=76 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10706 photons, total=10782 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 108 photons, total=10890 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12638 photons, total=23528 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 108 photons, total=23636 (SEvt=0xcb1730)
+[Opticks] Event 51 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 36
+[Opticks] Event 51 calling simulate(51, false)...
+[Opticks] Event 51 simulate() returned
+[Opticks] Event 51 result: 0 photons simulated, 96506 hits detected
+[Opticks] Event 52 BeginOfEvent
+[Opticks] Event 51 ended with 99065 photons, 36 gensteps pending
+[Opticks] Collected Cerenkov genstep: 105 photons, total=105 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10926 photons, total=11031 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=11127 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13089 photons, total=24216 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=24308 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 108049 photons, 20 gensteps
+[Opticks] GPU result: 0 photons simulated, 105186 hits
+[Opticks] Collected Cerenkov genstep: 91 photons, total=91 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9607 photons, total=9698 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 117 photons, total=9815 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10760 photons, total=20575 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=20667 (SEvt=0xcb1730)
+[Opticks] Event 52 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 23
+[Opticks] Event 52 calling simulate(52, false)...
+[Opticks] Event 52 simulate() returned
+[Opticks] Event 52 result: 0 photons simulated, 89058 hits detected
+[Opticks] Event 53 BeginOfEvent
+[Opticks] Event 52 ended with 92455 photons, 23 gensteps pending
+[Opticks] Collected Cerenkov genstep: 101 photons, total=101 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9728 photons, total=9829 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 113 photons, total=9942 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10086 photons, total=20028 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 7 photons, total=20035 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 108774 photons, 34 gensteps
+[Opticks] GPU result: 0 photons simulated, 105961 hits
+[Opticks] Collected Cerenkov genstep: 96 photons, total=96 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7924 photons, total=8020 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 61 photons, total=8081 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4780 photons, total=12861 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 103 photons, total=12964 (SEvt=0xcb1730)
+[Opticks] Event 53 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 34
+[Opticks] Event 53 calling simulate(53, false)...
+[Opticks] Event 53 simulate() returned
+[Opticks] Event 53 result: 0 photons simulated, 87331 hits detected
+[Opticks] Event 54 BeginOfEvent
+[Opticks] Event 53 ended with 90022 photons, 34 gensteps pending
+[Opticks] Collected Cerenkov genstep: 110 photons, total=110 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8878 photons, total=8988 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=9083 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12402 photons, total=21485 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=21581 (SEvt=0xcb1730)
+[Opticks] Event 54 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 73
+[Opticks] Event 54 calling simulate(54, false)...
+[Opticks] Event 54 simulate() returned
+[Opticks] Event 54 result: 0 photons simulated, 87998 hits detected
+[Opticks] Event 55 BeginOfEvent
+[Opticks] Event 54 ended with 90337 photons, 73 gensteps pending
+[Opticks] Collected Cerenkov genstep: 111 photons, total=111 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 102 photons, total=213 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 106 photons, total=319 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=411 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=504 (SEvt=0xcb1730)
+[Opticks] Event 55 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 25
+[Opticks] Event 55 calling simulate(55, false)...
+[Opticks] Event 55 simulate() returned
+[Opticks] Event 55 result: 0 photons simulated, 22848 hits detected
+[Opticks] Event 56 BeginOfEvent
+[Opticks] Event 55 ended with 23381 photons, 25 gensteps pending
+[Opticks] Collected Cerenkov genstep: 114 photons, total=114 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=215 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=311 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 84 photons, total=395 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 91 photons, total=486 (SEvt=0xcb1730)
+[Opticks] Event 56 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 39
+[Opticks] Event 56 calling simulate(56, false)...
+[Opticks] Event 56 simulate() returned
+[Opticks] Event 56 result: 0 photons simulated, 91026 hits detected
+[Opticks] Event 57 BeginOfEvent
+[Opticks] Event 56 ended with 93498 photons, 39 gensteps pending
+[Opticks] Collected Cerenkov genstep: 99 photons, total=99 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10292 photons, total=10391 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=10490 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12176 photons, total=22666 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 79 photons, total=22745 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 107829 photons, 21 gensteps
+[Opticks] GPU result: 0 photons simulated, 105028 hits
+[Opticks] Collected Scintillation genstep: 20 photons, total=20 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 50 photons, total=70 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 38 photons, total=108 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 33 photons, total=141 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 43 photons, total=184 (SEvt=0xcb1730)
+[Opticks] Event 57 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 9
+[Opticks] Event 57 calling simulate(57, false)...
+[Opticks] Event 57 simulate() returned
+[Opticks] Event 57 result: 0 photons simulated, 371 hits detected
+[Opticks] Event 58 BeginOfEvent
+[Opticks] Event 57 ended with 371 photons, 9 gensteps pending
+[Opticks] Collected Cerenkov genstep: 78 photons, total=78 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6805 photons, total=6883 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 96 photons, total=6979 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 154 photons, total=7133 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=7226 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 108789 photons, 22 gensteps
+[Opticks] GPU result: 0 photons simulated, 105772 hits
+[Opticks] Collected Cerenkov genstep: 83 photons, total=83 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6715 photons, total=6798 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 34 photons, total=6832 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3162 photons, total=9994 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 36 photons, total=10030 (SEvt=0xcb1730)
+[Opticks] Event 58 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 14
+[Opticks] Event 58 calling simulate(58, false)...
+[Opticks] Event 58 simulate() returned
+[Opticks] Event 58 result: 0 photons simulated, 9996 hits detected
+[Opticks] Event 59 BeginOfEvent
+[Opticks] Event 58 ended with 10293 photons, 14 gensteps pending
+[Opticks] Collected Cerenkov genstep: 121 photons, total=121 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=221 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 89 photons, total=310 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 88 photons, total=398 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 91 photons, total=489 (SEvt=0xcb1730)
+[Opticks] Event 59 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 21
+[Opticks] Event 59 calling simulate(59, false)...
+[Opticks] Event 59 simulate() returned
+[Opticks] Event 59 result: 0 photons simulated, 14063 hits detected
+[Opticks] Event 60 BeginOfEvent
+[Opticks] Event 59 ended with 14634 photons, 21 gensteps pending
+[Opticks] Collected Cerenkov genstep: 72 photons, total=72 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9317 photons, total=9389 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 107 photons, total=9496 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 200 photons, total=9696 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 122 photons, total=9818 (SEvt=0xcb1730)
+[Opticks] Event 60 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 22
+[Opticks] Event 60 calling simulate(60, false)...
+[Opticks] Event 60 simulate() returned
+[Opticks] Event 60 result: 0 photons simulated, 46894 hits detected
+[Opticks] Event 61 BeginOfEvent
+[Opticks] Event 60 ended with 48043 photons, 22 gensteps pending
+[Opticks] Collected Cerenkov genstep: 97 photons, total=97 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11360 photons, total=11457 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=11555 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12009 photons, total=23564 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 4 photons, total=23568 (SEvt=0xcb1730)
+[Opticks] Event 61 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 16
+[Opticks] Event 61 calling simulate(61, false)...
+[Opticks] Event 61 simulate() returned
+[Opticks] Event 61 result: 0 photons simulated, 24682 hits detected
+[Opticks] Event 62 BeginOfEvent
+[Opticks] Event 61 ended with 25232 photons, 16 gensteps pending
+[Opticks] Collected Cerenkov genstep: 62 photons, total=62 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7132 photons, total=7194 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 103 photons, total=7297 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1113 photons, total=8410 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=8510 (SEvt=0xcb1730)
+[Opticks] Event 62 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 31
+[Opticks] Event 62 calling simulate(62, false)...
+[Opticks] Event 62 simulate() returned
+[Opticks] Event 62 result: 0 photons simulated, 93916 hits detected
+[Opticks] Event 63 BeginOfEvent
+[Opticks] Event 62 ended with 96273 photons, 31 gensteps pending
+[Opticks] Collected Cerenkov genstep: 91 photons, total=91 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9885 photons, total=9976 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=10075 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13883 photons, total=23958 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 78 photons, total=24036 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 108500 photons, 24 gensteps
+[Opticks] GPU result: 0 photons simulated, 105558 hits
+[Opticks] Collected Cerenkov genstep: 88 photons, total=88 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11050 photons, total=11138 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 54 photons, total=11192 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5553 photons, total=16745 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 48 photons, total=16793 (SEvt=0xcb1730)
+[Opticks] Event 63 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 23
+[Opticks] Event 63 calling simulate(63, false)...
+[Opticks] Event 63 simulate() returned
+[Opticks] Event 63 result: 0 photons simulated, 31965 hits detected
+[Opticks] Event 64 BeginOfEvent
+[Opticks] Event 63 ended with 32744 photons, 23 gensteps pending
+[Opticks] Collected Cerenkov genstep: 105 photons, total=105 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 23 photons, total=128 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 106 photons, total=234 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1663 photons, total=1897 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 326 photons, total=2223 (SEvt=0xcb1730)
+[Opticks] Event 64 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 88
+[Opticks] Event 64 calling simulate(64, false)...
+[Opticks] Event 64 simulate() returned
+[Opticks] Event 64 result: 0 photons simulated, 38560 hits detected
+[Opticks] Event 65 BeginOfEvent
+[Opticks] Event 64 ended with 73565 photons, 88 gensteps pending
+[Opticks] Collected Cerenkov genstep: 110 photons, total=110 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=221 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=313 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 22 photons, total=335 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 7 photons, total=342 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 100315 photons, 51 gensteps
+[Opticks] GPU result: 0 photons simulated, 97996 hits
+[Opticks] Collected Scintillation genstep: 1729 photons, total=1729 (SEvt=0xcb1730)
+[Opticks] Event 65 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 1
+[Opticks] Event 65 calling simulate(65, false)...
+[Opticks] Event 65 simulate() returned
+[Opticks] Event 65 result: 0 photons simulated, 1693 hits detected
+[Opticks] Event 66 BeginOfEvent
+[Opticks] Event 65 ended with 1729 photons, 1 gensteps pending
+[Opticks] Collected Cerenkov genstep: 100 photons, total=100 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 75 photons, total=175 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 113 photons, total=288 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=388 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 102 photons, total=490 (SEvt=0xcb1730)
+[Opticks] Event 66 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 35
+[Opticks] Event 66 calling simulate(66, false)...
+[Opticks] Event 66 simulate() returned
+[Opticks] Event 66 result: 0 photons simulated, 23999 hits detected
+[Opticks] Event 67 BeginOfEvent
+[Opticks] Event 66 ended with 24646 photons, 35 gensteps pending
+[Opticks] Collected Cerenkov genstep: 98 photons, total=98 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11828 photons, total=11926 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 69 photons, total=11995 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4767 photons, total=16762 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=16873 (SEvt=0xcb1730)
+[Opticks] Event 67 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 46
+[Opticks] Event 67 calling simulate(67, false)...
+[Opticks] Event 67 simulate() returned
+[Opticks] Event 67 result: 0 photons simulated, 22517 hits detected
+[Opticks] Event 68 BeginOfEvent
+[Opticks] Event 67 ended with 23032 photons, 46 gensteps pending
+[Opticks] Collected Cerenkov genstep: 97 photons, total=97 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10828 photons, total=10925 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=11028 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 16210 photons, total=27238 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 107 photons, total=27345 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 109456 photons, 24 gensteps
+[Opticks] GPU result: 0 photons simulated, 106457 hits
+[Opticks] Collected Cerenkov genstep: 63 photons, total=63 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6008 photons, total=6071 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 67 photons, total=6138 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6687 photons, total=12825 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 52 photons, total=12877 (SEvt=0xcb1730)
+[Opticks] Event 68 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 20
+[Opticks] Event 68 calling simulate(68, false)...
+[Opticks] Event 68 simulate() returned
+[Opticks] Event 68 result: 0 photons simulated, 21009 hits detected
+[Opticks] Event 69 BeginOfEvent
+[Opticks] Event 68 ended with 21586 photons, 20 gensteps pending
+[Opticks] Collected Cerenkov genstep: 92 photons, total=92 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 16988 photons, total=17080 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=17185 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10260 photons, total=27445 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=27545 (SEvt=0xcb1730)
+[Opticks] Event 69 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 19
+[Opticks] Event 69 calling simulate(69, false)...
+[Opticks] Event 69 simulate() returned
+[Opticks] Event 69 result: 0 photons simulated, 69741 hits detected
+[Opticks] Event 70 BeginOfEvent
+[Opticks] Event 69 ended with 71488 photons, 19 gensteps pending
+[Opticks] Collected Cerenkov genstep: 84 photons, total=84 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 115 photons, total=199 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1181 photons, total=1380 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 117 photons, total=1497 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=1587 (SEvt=0xcb1730)
+[Opticks] Event 70 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 17
+[Opticks] Event 70 calling simulate(70, false)...
+[Opticks] Event 70 simulate() returned
+[Opticks] Event 70 result: 0 photons simulated, 2406 hits detected
+[Opticks] Event 71 BeginOfEvent
+[Opticks] Event 70 ended with 2455 photons, 17 gensteps pending
+[Opticks] Collected Cerenkov genstep: 83 photons, total=83 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 20101 photons, total=20184 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 94 photons, total=20278 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10324 photons, total=30602 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=30713 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 100816 photons, 26 gensteps
+[Opticks] GPU result: 0 photons simulated, 98348 hits
+[Opticks] Collected Scintillation genstep: 393 photons, total=393 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5624 photons, total=6017 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=6122 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10370 photons, total=16492 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 103 photons, total=16595 (SEvt=0xcb1730)
+[Opticks] Event 71 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 19
+[Opticks] Event 71 calling simulate(71, false)...
+[Opticks] Event 71 simulate() returned
+[Opticks] Event 71 result: 0 photons simulated, 79977 hits detected
+[Opticks] Event 72 BeginOfEvent
+[Opticks] Event 71 ended with 82296 photons, 19 gensteps pending
+[Opticks] Collected Cerenkov genstep: 86 photons, total=86 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=197 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 108 photons, total=305 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=400 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 104 photons, total=504 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 104967 photons, 34 gensteps
+[Opticks] GPU result: 0 photons simulated, 102076 hits
+[Opticks] Event 72 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 0
+[Opticks] No gensteps - skipping simulate
+[Opticks] Event 73 BeginOfEvent
+[Opticks] Collected Cerenkov genstep: 109 photons, total=109 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=206 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 108 photons, total=314 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 121 photons, total=435 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=535 (SEvt=0xcb1730)
+[Opticks] Event 73 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 13
+[Opticks] Event 73 calling simulate(73, false)...
+[Opticks] Event 73 simulate() returned
+[Opticks] Event 73 result: 0 photons simulated, 1145 hits detected
+[Opticks] Event 74 BeginOfEvent
+[Opticks] Event 73 ended with 1146 photons, 13 gensteps pending
+[Opticks] Collected Cerenkov genstep: 93 photons, total=93 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10351 photons, total=10444 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=10540 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13463 photons, total=24003 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 94 photons, total=24097 (SEvt=0xcb1730)
+[Opticks] Event 74 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 47
+[Opticks] Event 74 calling simulate(74, false)...
+[Opticks] Event 74 simulate() returned
+[Opticks] Event 74 result: 0 photons simulated, 83120 hits detected
+[Opticks] Event 75 BeginOfEvent
+[Opticks] Event 74 ended with 85186 photons, 47 gensteps pending
+[Opticks] Collected Cerenkov genstep: 76 photons, total=76 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 31 photons, total=107 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 20 photons, total=127 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 1 photons, total=128 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 83 photons, total=211 (SEvt=0xcb1730)
+[Opticks] Event 75 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 27
+[Opticks] Event 75 calling simulate(75, false)...
+[Opticks] Event 75 simulate() returned
+[Opticks] Event 75 result: 0 photons simulated, 10794 hits detected
+[Opticks] Event 76 BeginOfEvent
+[Opticks] Event 75 ended with 12155 photons, 27 gensteps pending
+[Opticks] Collected Cerenkov genstep: 108 photons, total=108 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 14 photons, total=122 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 33 photons, total=155 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 30 photons, total=185 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 8 photons, total=193 (SEvt=0xcb1730)
+[Opticks] Event 76 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 38
+[Opticks] Event 76 calling simulate(76, false)...
+[Opticks] Event 76 simulate() returned
+[Opticks] Event 76 result: 0 photons simulated, 12304 hits detected
+[Opticks] Event 77 BeginOfEvent
+[Opticks] Event 76 ended with 12582 photons, 38 gensteps pending
+[Opticks] Collected Cerenkov genstep: 97 photons, total=97 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9378 photons, total=9475 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 107 photons, total=9582 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9480 photons, total=19062 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=19158 (SEvt=0xcb1730)
+[Opticks] Event 77 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 31
+[Opticks] Event 77 calling simulate(77, false)...
+[Opticks] Event 77 simulate() returned
+[Opticks] Event 77 result: 0 photons simulated, 59673 hits detected
+[Opticks] Event 78 BeginOfEvent
+[Opticks] Event 77 ended with 61182 photons, 31 gensteps pending
+[Opticks] Collected Cerenkov genstep: 100 photons, total=100 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10027 photons, total=10127 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 86 photons, total=10213 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9981 photons, total=20194 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 106 photons, total=20300 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 101381 photons, 18 gensteps
+[Opticks] GPU result: 0 photons simulated, 98987 hits
+[Opticks] Collected Cerenkov genstep: 65 photons, total=65 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 59 photons, total=124 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 28 photons, total=152 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 17 photons, total=169 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 28 photons, total=197 (SEvt=0xcb1730)
+[Opticks] Event 78 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 43
+[Opticks] Event 78 calling simulate(78, false)...
+[Opticks] Event 78 simulate() returned
+[Opticks] Event 78 result: 0 photons simulated, 1333 hits detected
+[Opticks] Event 79 BeginOfEvent
+[Opticks] Event 78 ended with 1357 photons, 43 gensteps pending
+[Opticks] Collected Cerenkov genstep: 112 photons, total=112 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 56 photons, total=168 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 110 photons, total=278 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14221 photons, total=14499 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=14596 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 101651 photons, 33 gensteps
+[Opticks] GPU result: 0 photons simulated, 99162 hits
+[Opticks] Collected Cerenkov genstep: 85 photons, total=85 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 7490 photons, total=7575 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 90 photons, total=7665 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14492 photons, total=22157 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 47 photons, total=22204 (SEvt=0xcb1730)
+[Opticks] Event 79 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 11
+[Opticks] Event 79 calling simulate(79, false)...
+[Opticks] Event 79 simulate() returned
+[Opticks] Event 79 result: 0 photons simulated, 45171 hits detected
+[Opticks] Event 80 BeginOfEvent
+[Opticks] Event 79 ended with 46338 photons, 11 gensteps pending
+[Opticks] Collected Cerenkov genstep: 85 photons, total=85 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 15786 photons, total=15871 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 242 photons, total=16113 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 245 photons, total=16358 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 7 photons, total=16365 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 104208 photons, 27 gensteps
+[Opticks] GPU result: 0 photons simulated, 101098 hits
+[Opticks] Collected Cerenkov genstep: 94 photons, total=94 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12276 photons, total=12370 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 105 photons, total=12475 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 15356 photons, total=27831 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 99 photons, total=27930 (SEvt=0xcb1730)
+[Opticks] Event 80 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 22
+[Opticks] Event 80 calling simulate(80, false)...
+[Opticks] Event 80 simulate() returned
+[Opticks] Event 80 result: 0 photons simulated, 86161 hits detected
+[Opticks] Event 81 BeginOfEvent
+[Opticks] Event 80 ended with 88820 photons, 22 gensteps pending
+[Opticks] Collected Cerenkov genstep: 115 photons, total=115 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=215 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 84 photons, total=299 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 70 photons, total=369 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 103 photons, total=472 (SEvt=0xcb1730)
+[Opticks] Event 81 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 32
+[Opticks] Event 81 calling simulate(81, false)...
+[Opticks] Event 81 simulate() returned
+[Opticks] Event 81 result: 0 photons simulated, 92757 hits detected
+[Opticks] Event 82 BeginOfEvent
+[Opticks] Event 81 ended with 95274 photons, 32 gensteps pending
+[Opticks] Collected Cerenkov genstep: 90 photons, total=90 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 86 photons, total=176 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 13 photons, total=189 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 18 photons, total=207 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 35 photons, total=242 (SEvt=0xcb1730)
+[Opticks] Event 82 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 49
+[Opticks] Event 82 calling simulate(82, false)...
+[Opticks] Event 82 simulate() returned
+[Opticks] Event 82 result: 0 photons simulated, 8630 hits detected
+[Opticks] Event 83 BeginOfEvent
+[Opticks] Event 82 ended with 8811 photons, 49 gensteps pending
+[Opticks] Collected Cerenkov genstep: 98 photons, total=98 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10049 photons, total=10147 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 3 photons, total=10150 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 731 photons, total=10881 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=10977 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 103200 photons, 29 gensteps
+[Opticks] GPU result: 0 photons simulated, 100131 hits
+[Opticks] Collected Scintillation genstep: 16649 photons, total=16649 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 568 photons, total=17217 (SEvt=0xcb1730)
+[Opticks] Event 83 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 2
+[Opticks] Event 83 calling simulate(83, false)...
+[Opticks] Event 83 simulate() returned
+[Opticks] Event 83 result: 0 photons simulated, 16759 hits detected
+[Opticks] Event 84 BeginOfEvent
+[Opticks] Event 83 ended with 17217 photons, 2 gensteps pending
+[Opticks] Collected Cerenkov genstep: 100 photons, total=100 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 118 photons, total=218 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=310 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 81 photons, total=391 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 87 photons, total=478 (SEvt=0xcb1730)
+[Opticks] Event 84 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 12
+[Opticks] Event 84 calling simulate(84, false)...
+[Opticks] Event 84 simulate() returned
+[Opticks] Event 84 result: 0 photons simulated, 884 hits detected
+[Opticks] Event 85 BeginOfEvent
+[Opticks] Event 84 ended with 884 photons, 12 gensteps pending
+[Opticks] Collected Cerenkov genstep: 93 photons, total=93 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9375 photons, total=9468 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 1 photons, total=9469 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 72 photons, total=9541 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 13 photons, total=9554 (SEvt=0xcb1730)
+[Opticks] Event 85 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 55
+[Opticks] Event 85 calling simulate(85, false)...
+[Opticks] Event 85 simulate() returned
+[Opticks] Event 85 result: 0 photons simulated, 15159 hits detected
+[Opticks] Event 86 BeginOfEvent
+[Opticks] Event 85 ended with 15479 photons, 55 gensteps pending
+[Opticks] Collected Cerenkov genstep: 107 photons, total=107 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 68 photons, total=175 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10 photons, total=185 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 2563 photons, total=2748 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 808 photons, total=3556 (SEvt=0xcb1730)
+[Opticks] Event 86 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 19
+[Opticks] Event 86 calling simulate(86, false)...
+[Opticks] Event 86 simulate() returned
+[Opticks] Event 86 result: 0 photons simulated, 4234 hits detected
+[Opticks] Event 87 BeginOfEvent
+[Opticks] Event 86 ended with 4370 photons, 19 gensteps pending
+[Opticks] Collected Cerenkov genstep: 83 photons, total=83 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14766 photons, total=14849 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 85 photons, total=14934 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10445 photons, total=25379 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 89 photons, total=25468 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 108105 photons, 35 gensteps
+[Opticks] GPU result: 0 photons simulated, 105272 hits
+[Opticks] Collected Cerenkov genstep: 82 photons, total=82 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 8443 photons, total=8525 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=8621 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 12914 photons, total=21535 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 113 photons, total=21648 (SEvt=0xcb1730)
+[Opticks] Event 87 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 17
+[Opticks] Event 87 calling simulate(87, false)...
+[Opticks] Event 87 simulate() returned
+[Opticks] Event 87 result: 0 photons simulated, 88688 hits detected
+[Opticks] Event 88 BeginOfEvent
+[Opticks] Event 87 ended with 90994 photons, 17 gensteps pending
+[Opticks] Collected Cerenkov genstep: 61 photons, total=61 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 23 photons, total=84 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 24 photons, total=108 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 30 photons, total=138 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 41 photons, total=179 (SEvt=0xcb1730)
+[Opticks] Event 88 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 58
+[Opticks] Event 88 calling simulate(88, false)...
+[Opticks] Event 88 simulate() returned
+[Opticks] Event 88 result: 0 photons simulated, 51484 hits detected
+[Opticks] Event 89 BeginOfEvent
+[Opticks] Event 88 ended with 52733 photons, 58 gensteps pending
+[Opticks] Collected Cerenkov genstep: 2 photons, total=2 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 89 photons, total=91 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1987 photons, total=2078 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 441 photons, total=2519 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 226 photons, total=2745 (SEvt=0xcb1730)
+[Opticks] Event 89 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 17
+[Opticks] Event 89 calling simulate(89, false)...
+[Opticks] Event 89 simulate() returned
+[Opticks] Event 89 result: 0 photons simulated, 5158 hits detected
+[Opticks] Event 90 BeginOfEvent
+[Opticks] Event 89 ended with 5530 photons, 17 gensteps pending
+[Opticks] Collected Cerenkov genstep: 94 photons, total=94 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10011 photons, total=10105 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=10197 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 14547 photons, total=24744 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 123 photons, total=24867 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 113767 photons, 22 gensteps
+[Opticks] GPU result: 0 photons simulated, 110774 hits
+[Opticks] Collected Cerenkov genstep: 94 photons, total=94 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13831 photons, total=13925 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 21 photons, total=13946 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 6989 photons, total=20935 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9135 photons, total=30070 (SEvt=0xcb1730)
+[Opticks] Event 90 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 6
+[Opticks] Event 90 calling simulate(90, false)...
+[Opticks] Event 90 simulate() returned
+[Opticks] Event 90 result: 0 photons simulated, 33056 hits detected
+[Opticks] Event 91 BeginOfEvent
+[Opticks] Event 90 ended with 34015 photons, 6 gensteps pending
+[Opticks] Collected Cerenkov genstep: 82 photons, total=82 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 93 photons, total=175 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=286 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 1 photons, total=287 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 95 photons, total=382 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 109518 photons, 30 gensteps
+[Opticks] GPU result: 0 photons simulated, 106647 hits
+[Opticks] Collected Cerenkov genstep: 23 photons, total=23 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 26963 photons, total=26986 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 4736 photons, total=31722 (SEvt=0xcb1730)
+[Opticks] Event 91 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 3
+[Opticks] Event 91 calling simulate(91, false)...
+[Opticks] Event 91 simulate() returned
+[Opticks] Event 91 result: 0 photons simulated, 30861 hits detected
+[Opticks] Event 92 BeginOfEvent
+[Opticks] Event 91 ended with 31722 photons, 3 gensteps pending
+[Opticks] Collected Cerenkov genstep: 113 photons, total=113 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 30 photons, total=143 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 37 photons, total=180 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 31 photons, total=211 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 39 photons, total=250 (SEvt=0xcb1730)
+[Opticks] Event 92 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 18
+[Opticks] Event 92 calling simulate(92, false)...
+[Opticks] Event 92 simulate() returned
+[Opticks] Event 92 result: 0 photons simulated, 1297 hits detected
+[Opticks] Event 93 BeginOfEvent
+[Opticks] Event 92 ended with 1312 photons, 18 gensteps pending
+[Opticks] Collected Cerenkov genstep: 84 photons, total=84 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=185 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 100 photons, total=285 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=381 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 97 photons, total=478 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 103545 photons, 35 gensteps
+[Opticks] GPU result: 0 photons simulated, 100977 hits
+[Opticks] Collected Scintillation genstep: 2215 photons, total=2215 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 450 photons, total=2665 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 353 photons, total=3018 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 5709 photons, total=8727 (SEvt=0xcb1730)
+[Opticks] Event 93 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 4
+[Opticks] Event 93 calling simulate(93, false)...
+[Opticks] Event 93 simulate() returned
+[Opticks] Event 93 result: 0 photons simulated, 8504 hits detected
+[Opticks] Event 94 BeginOfEvent
+[Opticks] Event 93 ended with 8727 photons, 4 gensteps pending
+[Opticks] Collected Cerenkov genstep: 97 photons, total=97 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9436 photons, total=9533 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 98 photons, total=9631 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 9739 photons, total=19370 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 119 photons, total=19489 (SEvt=0xcb1730)
+[Opticks] Event 94 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 30
+[Opticks] Event 94 calling simulate(94, false)...
+[Opticks] Event 94 simulate() returned
+[Opticks] Event 94 result: 0 photons simulated, 48297 hits detected
+[Opticks] Event 95 BeginOfEvent
+[Opticks] Event 94 ended with 66415 photons, 30 gensteps pending
+[Opticks] Collected Cerenkov genstep: 88 photons, total=88 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 17286 photons, total=17374 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 96 photons, total=17470 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13563 photons, total=31033 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 104 photons, total=31137 (SEvt=0xcb1730)
+[Opticks] Event 95 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 21
+[Opticks] Event 95 calling simulate(95, false)...
+[Opticks] Event 95 simulate() returned
+[Opticks] Event 95 result: 0 photons simulated, 72487 hits detected
+[Opticks] Event 96 BeginOfEvent
+[Opticks] Event 95 ended with 74319 photons, 21 gensteps pending
+[Opticks] Collected Cerenkov genstep: 93 photons, total=93 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 109 photons, total=202 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 111 photons, total=313 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 108 photons, total=421 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 82 photons, total=503 (SEvt=0xcb1730)
+[Opticks] Event 96 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 27
+[Opticks] Event 96 calling simulate(96, false)...
+[Opticks] Event 96 simulate() returned
+[Opticks] Event 96 result: 0 photons simulated, 31279 hits detected
+[Opticks] Event 97 BeginOfEvent
+[Opticks] Event 96 ended with 33334 photons, 27 gensteps pending
+[Opticks] Collected Cerenkov genstep: 58 photons, total=58 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 114 photons, total=172 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 3463 photons, total=3635 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 1516 photons, total=5151 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 187 photons, total=5338 (SEvt=0xcb1730)
+[Opticks] Event 97 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 25
+[Opticks] Event 97 calling simulate(97, false)...
+[Opticks] Event 97 simulate() returned
+[Opticks] Event 97 result: 0 photons simulated, 9055 hits detected
+[Opticks] Event 98 BeginOfEvent
+[Opticks] Event 97 ended with 9473 photons, 25 gensteps pending
+[Opticks] Collected Cerenkov genstep: 101 photons, total=101 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10314 photons, total=10415 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 91 photons, total=10506 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10878 photons, total=21384 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 101 photons, total=21485 (SEvt=0xcb1730)
+[Opticks] Triggering GPU simulation: 103973 photons, 23 gensteps
+[Opticks] GPU result: 0 photons simulated, 101151 hits
+[Opticks] Collected Cerenkov genstep: 109 photons, total=109 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11494 photons, total=11603 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 87 photons, total=11690 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 10099 photons, total=21789 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 81 photons, total=21870 (SEvt=0xcb1730)
+[Opticks] Event 98 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 31
+[Opticks] Event 98 calling simulate(98, false)...
+[Opticks] Event 98 simulate() returned
+[Opticks] Event 98 result: 0 photons simulated, 92730 hits detected
+[Opticks] Event 99 BeginOfEvent
+[Opticks] Event 98 ended with 95635 photons, 31 gensteps pending
+[Opticks] Collected Cerenkov genstep: 73 photons, total=73 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 11273 photons, total=11346 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 92 photons, total=11438 (SEvt=0xcb1730)
+[Opticks] Collected Scintillation genstep: 13155 photons, total=24593 (SEvt=0xcb1730)
+[Opticks] Collected Cerenkov genstep: 110 photons, total=24703 (SEvt=0xcb1730)
+[Opticks] Event 99 EndOfEvent: SEvt at 0xcb1730
+[Opticks] SEvt->genstep.size() = 27
+[Opticks] Event 99 calling simulate(99, false)...
+[Opticks] Event 99 simulate() returned
+[Opticks] Event 99 result: 0 photons simulated, 91783 hits detected
+
+### Run 0 end.
+Number of events: 100
+... write file : /work/baseline_geometry_electron_hits.root - done
+... close file : /work/baseline_geometry_electron_hits.root - done
+Output file written successfully.
+Opticks: GPU resources released
+
+Simulation complete. Output written to: /work/baseline_geometry_electron_hits.root
+
+
+=== STDERR ===
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+SProf::Write DISABLED, enable[export SProf__WRITE=1] disable[unset SProf__WRITE]
+

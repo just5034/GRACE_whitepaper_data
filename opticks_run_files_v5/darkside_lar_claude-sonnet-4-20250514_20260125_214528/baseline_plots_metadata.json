@@ -1,0 +1,25 @@
+{
+  "energy_resolution": 0.0308,
+  "energy_resolution_error": 0.0022,
+  "mean_energy_mev": 4.966,
+  "light_yield_pe_kev": 2.12,
+  "containment_90_mm": 50,
+  "geometry": {
+    "detector_type": "optical",
+    "vessel_diameter_m": 0.5,
+    "vessel_height_m": 0.5,
+    "vessel_volume_m3": 0.0502655,
+    "sensor_count": 30,
+    "sensor_coverage": 1.25
+  },
+  "plots_generated": [
+    "baseline_distributions.png",
+    "baseline_distributions.pdf",
+    "baseline_energy_standalone.png",
+    "baseline_energy_standalone.pdf",
+    "baseline_light_yield.png",
+    "baseline_light_yield.pdf",
+    "baseline_pmt_pattern.png",
+    "baseline_pmt_pattern.pdf"
+  ]
+}

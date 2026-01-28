@@ -1,0 +1,28 @@
+{
+  "optimal_design": "thick_planar",
+  "overall_score": 3.5476000000000005,
+  "performance_metrics": {
+    "timing_resolution": 50,
+    "light_yield": 80000,
+    "pi_k_separation": 5.061,
+    "k_p_separation": 7.577,
+    "thickness": 40,
+    "complexity": "low"
+  },
+  "selection_criteria_weights": {
+    "timing_resolution": 0.3,
+    "particle_separation": 0.4,
+    "light_yield": 0.2,
+    "practical_implementation": 0.1
+  },
+  "all_scores": {
+    "baseline_planar": 0.635428,
+    "thick_planar": 3.5476000000000005,
+    "cylindrical": 1.69,
+    "segmented": 2.3200000000000003
+  },
+  "meets_requirements": {
+    "timing_resolution": true,
+    "particle_identification": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "light_collection_efficiency": 1.0,
+  "light_collection_efficiency_error": 0.0,
+  "spatial_uniformity": 0.7841327121857973,
+  "total_events": 100,
+  "detected_events": 100,
+  "analysis_type": "optical_efficiency",
+  "data_validation_checks": {
+    "check_data_variation": true,
+    "use_adaptive_binning": true,
+    "handle_constant_data": true,
+    "bins_parameter": 1
+  }
+}

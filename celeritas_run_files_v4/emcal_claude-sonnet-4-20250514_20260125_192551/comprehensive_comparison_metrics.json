@@ -1,0 +1,55 @@
+{
+  "configurations": [
+    "CsI_box",
+    "PbWO4_projective",
+    "BGO_shashlik",
+    "CsI_accordion"
+  ],
+  "energy_resolution": {
+    "values": [
+      0.034363,
+      0.021387,
+      0.036765,
+      0.021184
+    ],
+    "errors": [
+      0.000768,
+      0.000478,
+      0.000822,
+      0.000474
+    ],
+    "best_config": "CsI_accordion",
+    "best_value": 0.021184
+  },
+  "linearity": {
+    "values": [
+      0.467007,
+      0.978699,
+      4.72437,
+      0.980013
+    ],
+    "errors": [
+      0.000507,
+      0.000662,
+      0.005493,
+      0.02076
+    ],
+    "best_config": "BGO_shashlik",
+    "closest_to_ideal": 4.72437
+  },
+  "containment_90": {
+    "values": [
+      40.82,
+      100,
+      24.2,
+      200
+    ],
+    "best_config": "BGO_shashlik",
+    "best_value": 24.2
+  },
+  "overall_ranking": {
+    "best_resolution": "CsI_accordion",
+    "best_linearity": "BGO_shashlik",
+    "best_containment": "BGO_shashlik"
+  }
+}

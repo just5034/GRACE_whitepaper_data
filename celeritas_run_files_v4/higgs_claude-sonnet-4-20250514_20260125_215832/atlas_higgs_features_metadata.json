@@ -1,0 +1,42 @@
+{
+  "total_features": 48,
+  "new_features_count": 13,
+  "physics_features": {
+    "transverse_mass": [
+      "mt_lep_met"
+    ],
+    "momentum_ratios": [
+      "pt_ratio_tau_lep_h",
+      "met_pt_h_ratio",
+      "pt_mass_ratio"
+    ],
+    "angular_features": [
+      "deltar_tau_lep_sq"
+    ],
+    "jet_features": [
+      "is_0_jet",
+      "is_1_jet",
+      "is_2plus_jet",
+      "vbf_mass_eta_product"
+    ],
+    "mass_features": [
+      "mass_vis_higgs_diff"
+    ],
+    "energy_features": [
+      "met_significance"
+    ],
+    "composite_features": [
+      "tau_lep_pt_sum",
+      "jet_pt_sum"
+    ]
+  },
+  "feature_descriptions": {
+    "mt_lep_met": "Transverse mass of lepton-MET system (tau decay signature)",
+    "pt_ratio_tau_lep_h": "Ratio of tau+lepton pT to Higgs pT (momentum balance)",
+    "met_pt_h_ratio": "Missing ET to Higgs pT ratio (neutrino signature)",
+    "deltar_tau_lep_sq": "Squared angular separation of tau-lepton (decay topology)",
+    "vbf_mass_eta_product": "VBF discriminant (dijet mass \u00d7 eta separation)",
+    "mass_vis_higgs_diff": "Distance from Higgs mass peak (125 GeV)",
+    "met_significance": "MET significance relative to visible momentum"
+  }
+}

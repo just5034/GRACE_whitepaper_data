@@ -1,0 +1,17 @@
+{
+  "energy_deposit_mean_mev": 0.4370584347756718,
+  "energy_deposit_std_mev": 0.15160398155777188,
+  "energy_resolution": 0.34687348302884347,
+  "energy_resolution_error": 0.007756326876446136,
+  "hit_detection_efficiency": 0.999,
+  "hit_efficiency_error": 0.0009994998749374613,
+  "silicon_material_budget_x0": 0.012806830309498399,
+  "air_material_budget_x0": 0.0006574621959237344,
+  "total_material_budget_x0": 0.013464292505422134,
+  "num_events_analyzed": 1000,
+  "geometry_parameters": {
+    "num_layers": 4,
+    "active_thickness_mm": 0.3,
+    "absorber_thickness_mm": 50.0
+  }
+}

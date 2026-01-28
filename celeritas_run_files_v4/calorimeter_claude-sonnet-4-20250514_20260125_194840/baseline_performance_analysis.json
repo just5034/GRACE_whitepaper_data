@@ -1,0 +1,46 @@
+{
+  "10gev": {
+    "mean_energy_mev": 148903.94244230806,
+    "std_energy_mev": 38298.26352073739,
+    "resolution": 0.25720113848278947,
+    "resolution_error": 0.005751192295378543,
+    "num_events": 1000
+  },
+  "100gev": {
+    "mean_energy_mev": 148903.94244230806,
+    "std_energy_mev": 38298.26352073739,
+    "resolution": 0.25720113848278947,
+    "resolution_error": 0.005751192295378543,
+    "num_events": 1000
+  },
+  "200gev": {
+    "mean_energy_mev": 148903.94244230806,
+    "std_energy_mev": 38298.26352073739,
+    "resolution": 0.25720113848278947,
+    "resolution_error": 0.005751192295378543,
+    "num_events": 1000
+  },
+  "summary": {
+    "energies_gev": [
+      10,
+      100,
+      200
+    ],
+    "resolutions": [
+      0.25720113848278947,
+      0.25720113848278947,
+      0.25720113848278947
+    ],
+    "resolution_errors": [
+      0.005751192295378543,
+      0.005751192295378543,
+      0.005751192295378543
+    ],
+    "mean_energies_mev": [
+      148903.94244230806,
+      148903.94244230806,
+      148903.94244230806
+    ],
+    "analysis_type": "energy_resolution_linearity"
+  }
+}

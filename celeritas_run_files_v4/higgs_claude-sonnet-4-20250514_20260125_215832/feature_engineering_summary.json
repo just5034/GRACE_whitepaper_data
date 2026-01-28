@@ -1,0 +1,22 @@
+{
+  "original_features": 34,
+  "new_features": 18,
+  "total_features": 52,
+  "events": 818238,
+  "top_discriminative_features": {
+    "DER_mt_lep_met": 0.8247772692052199,
+    "DER_met_proj_lep": 0.6980216718284952,
+    "DER_pt_ratio_lep_tau": 0.42761945880580715,
+    "DER_met_significance": 0.2893993177073529,
+    "DER_phi_separation": 0.22652702771975478
+  },
+  "feature_categories": {
+    "kinematic_variables": 3,
+    "angular_separations": 2,
+    "transverse_masses": 2,
+    "tau_specific": 3,
+    "jet_related": 2,
+    "higgs_specific": 3,
+    "missing_energy": 3
+  }
+}

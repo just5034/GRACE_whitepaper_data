@@ -1,0 +1,26 @@
+{
+  "energy_response": {
+    "resolution": 4.040968030112849,
+    "resolution_error": 0.28573958966508406,
+    "mean_energy_deposit": 0.041431524537254766,
+    "energy_spread": 0.16742346609388256
+  },
+  "linearity": {
+    "coefficient": 0.041431524537254766,
+    "coefficient_error": 0.016742346609388257,
+    "input_energy_mev": 1.0,
+    "measured_energy_mev": 0.041431524537254766
+  },
+  "light_yield": {
+    "pe_per_mev": 22.61,
+    "scaling_factor": 0.01230683816045156,
+    "geometric_efficiency": 0.183719,
+    "quantum_efficiency": 0.25,
+    "detection_efficiency": 0.17
+  },
+  "detector_parameters": {
+    "sensor_count": 20,
+    "sensor_coverage": 0.183719,
+    "scintillation_yield_per_mev": 40000
+  }
+}

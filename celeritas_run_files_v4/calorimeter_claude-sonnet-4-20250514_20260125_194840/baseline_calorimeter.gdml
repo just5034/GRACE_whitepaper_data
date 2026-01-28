@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <constant name="PI" value="1.0*pi"/>
+    <constant name="TWOPI" value="2.0*pi"/>
+    <position name="center" x="0" y="0" z="0" unit="mm"/>
+    <position name="abs_pos_0" x="0" y="0" z="-490.0" unit="mm"/>
+    <position name="act_pos_0" x="0" y="0" z="-477.5" unit="mm"/>
+    <position name="abs_pos_1" x="0" y="0" z="-465.0" unit="mm"/>
+    <position name="act_pos_1" x="0" y="0" z="-452.5" unit="mm"/>
+    <position name="abs_pos_2" x="0" y="0" z="-440.0" unit="mm"/>
+    <position name="act_pos_2" x="0" y="0" z="-427.5" unit="mm"/>
+    <position name="abs_pos_3" x="0" y="0" z="-415.0" unit="mm"/>
+    <position name="act_pos_3" x="0" y="0" z="-402.5" unit="mm"/>
+    <position name="abs_pos_4" x="0" y="0" z="-390.0" unit="mm"/>
+    <position name="act_pos_4" x="0" y="0" z="-377.5" unit="mm"/>
+    <position name="abs_pos_5" x="0" y="0" z="-365.0" unit="mm"/>
+    <position name="act_pos_5" x="0" y="0" z="-352.5" unit="mm"/>
+    <position name="abs_pos_6" x="0" y="0" z="-340.0" unit="mm"/>
+    <position name="act_pos_6" x="0" y="0" z="-327.5" unit="mm"/>
+    <position name="abs_pos_7" x="0" y="0" z="-315.0" unit="mm"/>
+    <position name="act_pos_7" x="0" y="0" z="-302.5" unit="mm"/>
+    <position name="abs_pos_8" x="0" y="0" z="-290.0" unit="mm"/>
+    <position name="act_pos_8" x="0" y="0" z="-277.5" unit="mm"/>
+    <position name="abs_pos_9" x="0" y="0" z="-265.0" unit="mm"/>
+    <position name="act_pos_9" x="0" y="0" z="-252.5" unit="mm"/>
+    <position name="abs_pos_10" x="0" y="0" z="-240.0" unit="mm"/>
+    <position name="act_pos_10" x="0" y="0" z="-227.5" unit="mm"/>
+    <position name="abs_pos_11" x="0" y="0" z="-215.0" unit="mm"/>
+    <position name="act_pos_11" x="0" y="0" z="-202.5" unit="mm"/>
+    <position name="abs_pos_12" x="0" y="0" z="-190.0" unit="mm"/>
+    <position name="act_pos_12" x="0" y="0" z="-177.5" unit="mm"/>
+    <position name="abs_pos_13" x="0" y="0" z="-165.0" unit="mm"/>
+    <position name="act_pos_13" x="0" y="0" z="-152.5" unit="mm"/>
+    <position name="abs_pos_14" x="0" y="0" z="-140.0" unit="mm"/>
+    <position name="act_pos_14" x="0" y="0" z="-127.5" unit="mm"/>
+    <position name="abs_pos_15" x="0" y="0" z="-115.0" unit="mm"/>
+    <position name="act_pos_15" x="0" y="0" z="-102.5" unit="mm"/>
+    <position name="abs_pos_16" x="0" y="0" z="-90.0" unit="mm"/>
+    <position name="act_pos_16" x="0" y="0" z="-77.5" unit="mm"/>
+    <position name="abs_pos_17" x="0" y="0" z="-65.0" unit="mm"/>
+    <position name="act_pos_17" x="0" y="0" z="-52.5" unit="mm"/>
+    <position name="abs_pos_18" x="0" y="0" z="-40.0" unit="mm"/>
+    <position name="act_pos_18" x="0" y="0" z="-27.5" unit="mm"/>
+    <position name="abs_pos_19" x="0" y="0" z="-15.0" unit="mm"/>
+    <position name="act_pos_19" x="0" y="0" z="-2.5" unit="mm"/>
+    <position name="abs_pos_20" x="0" y="0" z="10.0" unit="mm"/>
+    <position name="act_pos_20" x="0" y="0" z="22.5" unit="mm"/>
+    <position name="abs_pos_21" x="0" y="0" z="35.0" unit="mm"/>
+    <position name="act_pos_21" x="0" y="0" z="47.5" unit="mm"/>
+    <position name="abs_pos_22" x="0" y="0" z="60.0" unit="mm"/>
+    <position name="act_pos_22" x="0" y="0" z="72.5" unit="mm"/>
+    <position name="abs_pos_23" x="0" y="0" z="85.0" unit="mm"/>
+    <position name="act_pos_23" x="0" y="0" z="97.5" unit="mm"/>
+    <position name="abs_pos_24" x="0" y="0" z="110.0" unit="mm"/>
+    <position name="act_pos_24" x="0" y="0" z="122.5" unit="mm"/>
+    <position name="abs_pos_25" x="0" y="0" z="135.0" unit="mm"/>
+    <position name="act_pos_25" x="0" y="0" z="147.5" unit="mm"/>
+    <position name="abs_pos_26" x="0" y="0" z="160.0" unit="mm"/>
+    <position name="act_pos_26" x="0" y="0" z="172.5" unit="mm"/>
+    <position name="abs_pos_27" x="0" y="0" z="185.0" unit="mm"/>
+    <position name="act_pos_27" x="0" y="0" z="197.5" unit="mm"/>
+    <position name="abs_pos_28" x="0" y="0" z="210.0" unit="mm"/>
+    <position name="act_pos_28" x="0" y="0" z="222.5" unit="mm"/>
+    <position name="abs_pos_29" x="0" y="0" z="235.0" unit="mm"/>
+    <position name="act_pos_29" x="0" y="0" z="247.5" unit="mm"/>
+    <position name="abs_pos_30" x="0" y="0" z="260.0" unit="mm"/>
+    <position name="act_pos_30" x="0" y="0" z="272.5" unit="mm"/>
+    <position name="abs_pos_31" x="0" y="0" z="285.0" unit="mm"/>
+    <position name="act_pos_31" x="0" y="0" z="297.5" unit="mm"/>
+    <position name="abs_pos_32" x="0" y="0" z="310.0" unit="mm"/>
+    <position name="act_pos_32" x="0" y="0" z="322.5" unit="mm"/>
+    <position name="abs_pos_33" x="0" y="0" z="335.0" unit="mm"/>
+    <position name="act_pos_33" x="0" y="0" z="347.5" unit="mm"/>
+    <position name="abs_pos_34" x="0" y="0" z="360.0" unit="mm"/>
+    <position name="act_pos_34" x="0" y="0" z="372.5" unit="mm"/>
+    <position name="abs_pos_35" x="0" y="0" z="385.0" unit="mm"/>
+    <position name="act_pos_35" x="0" y="0" z="397.5" unit="mm"/>
+    <position name="abs_pos_36" x="0" y="0" z="410.0" unit="mm"/>
+    <position name="act_pos_36" x="0" y="0" z="422.5" unit="mm"/>
+    <position name="abs_pos_37" x="0" y="0" z="435.0" unit="mm"/>
+    <position name="act_pos_37" x="0" y="0" z="447.5" unit="mm"/>
+    <position name="abs_pos_38" x="0" y="0" z="460.0" unit="mm"/>
+    <position name="act_pos_38" x="0" y="0" z="472.5" unit="mm"/>
+    <position name="abs_pos_39" x="0" y="0" z="485.0" unit="mm"/>
+    <position name="act_pos_39" x="0" y="0" z="497.5" unit="mm"/>
+  </define>
+
+  <materials>
+    <!-- Element definitions -->
+    <element name="Hydrogen" formula="H" Z="1">
+      <atom value="1.00794"/>
+    </element>
+    <element name="Carbon" formula="C" Z="6">
+      <atom value="12.0107"/>
+    </element>
+    <element name="Nitrogen" formula="N" Z="7">
+      <atom value="14.0067"/>
+    </element>
+    <element name="Oxygen" formula="O" Z="8">
+      <atom value="15.9994"/>
+    </element>
+    <element name="Iron_el" formula="Fe" Z="26">
+      <atom value="55.845"/>
+    </element>
+    <element name="Chromium" formula="Cr" Z="24">
+      <atom value="51.9961"/>
+    </element>
+    <element name="Nickel" formula="Ni" Z="28">
+      <atom value="58.6934"/>
+    </element>
+    <element name="Lead_el" formula="Pb" Z="82">
+      <atom value="207.2"/>
+    </element>
+    <element name="Tungsten_el" formula="W" Z="74">
+      <atom value="183.84"/>
+    </element>
+
+    <!-- Air -->
+    <material name="G4_AIR" formula="Air">
+      <D value="0.00120479" unit="g/cm3"/>
+      <fraction n="0.7" ref="Nitrogen"/>
+      <fraction n="0.3" ref="Oxygen"/>
+    </material>
+
+    <!-- Stainless Steel (typical 304) -->
+    <material name="G4_STAINLESS-STEEL" formula="Steel">
+      <D value="7.93" unit="g/cm3"/>
+      <fraction n="0.70" ref="Iron_el"/>
+      <fraction n="0.19" ref="Chromium"/>
+      <fraction n="0.10" ref="Nickel"/>
+      <fraction n="0.01" ref="Carbon"/>
+    </material>
+
+    <!-- Iron -->
+    <material name="G4_Fe" formula="Fe">
+      <D value="7.874" unit="g/cm3"/>
+      <fraction n="1.0" ref="Iron_el"/>
+    </material>
+
+    <!-- Lead -->
+    <material name="G4_Pb" formula="Pb">
+      <D value="11.35" unit="g/cm3"/>
+      <fraction n="1.0" ref="Lead_el"/>
+    </material>
+
+    <!-- Tungsten -->
+    <material name="G4_W" formula="W">
+      <D value="19.3" unit="g/cm3"/>
+      <fraction n="1.0" ref="Tungsten_el"/>
+    </material>
+
+    <!-- Plastic Scintillator (polyvinyltoluene based) -->
+    <material name="G4_PLASTIC_SC_VINYLTOLUENE" formula="C9H10">
+      <D value="1.032" unit="g/cm3"/>
+      <fraction n="0.915" ref="Carbon"/>
+      <fraction n="0.085" ref="Hydrogen"/>
+    </material>
+
+    <!-- Polystyrene -->
+    <material name="G4_POLYSTYRENE" formula="C8H8">
+      <D value="1.06" unit="g/cm3"/>
+      <fraction n="0.923" ref="Carbon"/>
+      <fraction n="0.077" ref="Hydrogen"/>
+    </material>
+
+    <!-- Silicon -->
+    <element name="Silicon_el" formula="Si" Z="14">
+      <atom value="28.0855"/>
+    </element>
+    <material name="G4_Si" formula="Si">
+      <D value="2.33" unit="g/cm3"/>
+      <fraction n="1.0" ref="Silicon_el"/>
+    </material>
+
+    <!-- Crystal calorimeter materials -->
+    <element name="Cesium" formula="Cs" Z="55">
+      <atom value="132.905"/>
+    </element>
+    <element name="Iodine" formula="I" Z="53">
+      <atom value="126.904"/>
+    </element>
+    <material name="G4_CESIUM_IODIDE" formula="CsI">
+      <D value="4.51" unit="g/cm3"/>
+      <fraction n="0.512" ref="Cesium"/>
+      <fraction n="0.488" ref="Iodine"/>
+    </material>
+
+    <element name="Bismuth" formula="Bi" Z="83">
+      <atom value="208.98"/>
+    </element>
+    <element name="Germanium" formula="Ge" Z="32">
+      <atom value="72.63"/>
+    </element>
+    <material name="G4_BGO" formula="Bi4Ge3O12">
+      <D value="7.13" unit="g/cm3"/>
+      <fraction n="0.671" ref="Bismuth"/>
+      <fraction n="0.175" ref="Germanium"/>
+      <fraction n="0.154" ref="Oxygen"/>
+    </material>
+
+    <material name="G4_PbWO4" formula="PbWO4">
+      <D value="8.28" unit="g/cm3"/>
+      <fraction n="0.455" ref="Lead_el"/>
+      <fraction n="0.404" ref="Tungsten_el"/>
+      <fraction n="0.141" ref="Oxygen"/>
+    </material>
+
+  </materials>
+
+  <solids>
+    <box name="world_solid" x="50000.0" y="50000.0" z="50000.0" lunit="mm"/>
+    <box name="calor_envelope" x="1000.0" y="1000.0" z="1000.0" lunit="mm"/>
+    <box name="absorber_solid" x="1000.0" y="1000.0" z="20.0" lunit="mm"/>
+    <box name="active_solid" x="1000.0" y="1000.0" z="5.0" lunit="mm"/>
+  </solids>
+
+  <structure>
+    <volume name="absorber_log">
+      <materialref ref="G4_STAINLESS-STEEL"/>
+      <solidref ref="absorber_solid"/>
+    </volume>
+    <volume name="active_log">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_solid"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="calor_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="calor_envelope"/>
+      <physvol name="absorber_0">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_0"/>
+      </physvol>
+      <physvol name="active_0">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_0"/>
+      </physvol>
+      <physvol name="absorber_1">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_1"/>
+      </physvol>
+      <physvol name="active_1">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_1"/>
+      </physvol>
+      <physvol name="absorber_2">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_2"/>
+      </physvol>
+      <physvol name="active_2">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_2"/>
+      </physvol>
+      <physvol name="absorber_3">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_3"/>
+      </physvol>
+      <physvol name="active_3">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_3"/>
+      </physvol>
+      <physvol name="absorber_4">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_4"/>
+      </physvol>
+      <physvol name="active_4">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_4"/>
+      </physvol>
+      <physvol name="absorber_5">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_5"/>
+      </physvol>
+      <physvol name="active_5">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_5"/>
+      </physvol>
+      <physvol name="absorber_6">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_6"/>
+      </physvol>
+      <physvol name="active_6">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_6"/>
+      </physvol>
+      <physvol name="absorber_7">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_7"/>
+      </physvol>
+      <physvol name="active_7">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_7"/>
+      </physvol>
+      <physvol name="absorber_8">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_8"/>
+      </physvol>
+      <physvol name="active_8">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_8"/>
+      </physvol>
+      <physvol name="absorber_9">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_9"/>
+      </physvol>
+      <physvol name="active_9">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_9"/>
+      </physvol>
+      <physvol name="absorber_10">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_10"/>
+      </physvol>
+      <physvol name="active_10">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_10"/>
+      </physvol>
+      <physvol name="absorber_11">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_11"/>
+      </physvol>
+      <physvol name="active_11">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_11"/>
+      </physvol>
+      <physvol name="absorber_12">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_12"/>
+      </physvol>
+      <physvol name="active_12">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_12"/>
+      </physvol>
+      <physvol name="absorber_13">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_13"/>
+      </physvol>
+      <physvol name="active_13">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_13"/>
+      </physvol>
+      <physvol name="absorber_14">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_14"/>
+      </physvol>
+      <physvol name="active_14">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_14"/>
+      </physvol>
+      <physvol name="absorber_15">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_15"/>
+      </physvol>
+      <physvol name="active_15">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_15"/>
+      </physvol>
+      <physvol name="absorber_16">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_16"/>
+      </physvol>
+      <physvol name="active_16">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_16"/>
+      </physvol>
+      <physvol name="absorber_17">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_17"/>
+      </physvol>
+      <physvol name="active_17">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_17"/>
+      </physvol>
+      <physvol name="absorber_18">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_18"/>
+      </physvol>
+      <physvol name="active_18">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_18"/>
+      </physvol>
+      <physvol name="absorber_19">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_19"/>
+      </physvol>
+      <physvol name="active_19">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_19"/>
+      </physvol>
+      <physvol name="absorber_20">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_20"/>
+      </physvol>
+      <physvol name="active_20">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_20"/>
+      </physvol>
+      <physvol name="absorber_21">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_21"/>
+      </physvol>
+      <physvol name="active_21">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_21"/>
+      </physvol>
+      <physvol name="absorber_22">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_22"/>
+      </physvol>
+      <physvol name="active_22">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_22"/>
+      </physvol>
+      <physvol name="absorber_23">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_23"/>
+      </physvol>
+      <physvol name="active_23">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_23"/>
+      </physvol>
+      <physvol name="absorber_24">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_24"/>
+      </physvol>
+      <physvol name="active_24">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_24"/>
+      </physvol>
+      <physvol name="absorber_25">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_25"/>
+      </physvol>
+      <physvol name="active_25">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_25"/>
+      </physvol>
+      <physvol name="absorber_26">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_26"/>
+      </physvol>
+      <physvol name="active_26">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_26"/>
+      </physvol>
+      <physvol name="absorber_27">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_27"/>
+      </physvol>
+      <physvol name="active_27">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_27"/>
+      </physvol>
+      <physvol name="absorber_28">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_28"/>
+      </physvol>
+      <physvol name="active_28">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_28"/>
+      </physvol>
+      <physvol name="absorber_29">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_29"/>
+      </physvol>
+      <physvol name="active_29">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_29"/>
+      </physvol>
+      <physvol name="absorber_30">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_30"/>
+      </physvol>
+      <physvol name="active_30">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_30"/>
+      </physvol>
+      <physvol name="absorber_31">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_31"/>
+      </physvol>
+      <physvol name="active_31">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_31"/>
+      </physvol>
+      <physvol name="absorber_32">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_32"/>
+      </physvol>
+      <physvol name="active_32">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_32"/>
+      </physvol>
+      <physvol name="absorber_33">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_33"/>
+      </physvol>
+      <physvol name="active_33">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_33"/>
+      </physvol>
+      <physvol name="absorber_34">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_34"/>
+      </physvol>
+      <physvol name="active_34">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_34"/>
+      </physvol>
+      <physvol name="absorber_35">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_35"/>
+      </physvol>
+      <physvol name="active_35">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_35"/>
+      </physvol>
+      <physvol name="absorber_36">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_36"/>
+      </physvol>
+      <physvol name="active_36">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_36"/>
+      </physvol>
+      <physvol name="absorber_37">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_37"/>
+      </physvol>
+      <physvol name="active_37">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_37"/>
+      </physvol>
+      <physvol name="absorber_38">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_38"/>
+      </physvol>
+      <physvol name="active_38">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_38"/>
+      </physvol>
+      <physvol name="absorber_39">
+        <volumeref ref="absorber_log"/>
+        <positionref ref="abs_pos_39"/>
+      </physvol>
+      <physvol name="active_39">
+        <volumeref ref="active_log"/>
+        <positionref ref="act_pos_39"/>
+      </physvol>
+    </volume>
+    <volume name="world_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="world_solid"/>
+      <physvol name="calorimeter">
+        <volumeref ref="calor_log"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="world_log"/>
+  </setup>
+
+</gdml>

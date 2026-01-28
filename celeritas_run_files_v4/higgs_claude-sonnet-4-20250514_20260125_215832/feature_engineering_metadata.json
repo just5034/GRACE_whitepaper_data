@@ -1,0 +1,34 @@
+{
+  "original_features": 35,
+  "new_features": 12,
+  "total_features": 47,
+  "created_features": [
+    "pt_ratio_tau_lep",
+    "met_significance",
+    "has_jets",
+    "multi_jet",
+    "deltar_tau_lep_binned",
+    "mass_vis_higgs_window",
+    "has_valid_mmc",
+    "mmc_higgs_window",
+    "pt_h_over_pt_tot",
+    "large_deltaeta_jets",
+    "high_mjj",
+    "higgs_discriminant"
+  ],
+  "decay_channel": "H->tau tau",
+  "feature_descriptions": {
+    "pt_ratio_tau_lep": "Ratio of tau to lepton transverse momentum",
+    "met_significance": "Missing ET significance (MET/sqrt(SumET))",
+    "has_jets": "Binary indicator for presence of jets",
+    "multi_jet": "Binary indicator for 2+ jets",
+    "deltar_tau_lep_binned": "Binned angular separation between tau and lepton",
+    "mass_vis_higgs_window": "Visible mass in Higgs mass window (100-150 GeV)",
+    "has_valid_mmc": "Binary indicator for valid MMC mass reconstruction",
+    "mmc_higgs_window": "MMC mass in Higgs mass window",
+    "pt_h_over_pt_tot": "Ratio of Higgs pT to total pT",
+    "large_deltaeta_jets": "Large rapidity gap between jets (VBF signature)",
+    "high_mjj": "High dijet invariant mass (VBF signature)",
+    "higgs_discriminant": "Combined discriminant score for Higgs identification"
+  }
+}

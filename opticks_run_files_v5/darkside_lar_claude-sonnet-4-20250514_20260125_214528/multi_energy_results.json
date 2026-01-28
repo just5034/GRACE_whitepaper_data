@@ -1,0 +1,17 @@
+{
+  "energy_points_mev": [
+    4.991216425412885
+  ],
+  "energy_resolutions": [
+    0.008002582409075637
+  ],
+  "resolution_errors": [
+    0.0005745519330606647
+  ],
+  "light_yields_pe_kev": [
+    199.64865701651541
+  ],
+  "linearity_deviation_percent": 0,
+  "total_events": 100,
+  "analysis_type": "single_energy"
+}

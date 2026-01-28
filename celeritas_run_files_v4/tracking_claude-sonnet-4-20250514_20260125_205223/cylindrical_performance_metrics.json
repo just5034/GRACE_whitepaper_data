@@ -1,0 +1,23 @@
+{
+  "cylindrical_performance": {
+    "energy_resolution": 0.43600981038289277,
+    "energy_resolution_error": 0.009749475748729418,
+    "hit_efficiency": 1.0,
+    "hit_efficiency_error": 0.0,
+    "mean_energy_deposit": 0.554645862731948,
+    "material_budget": 0.013464
+  },
+  "baseline_performance": {
+    "energy_resolution": 0.346873,
+    "energy_resolution_error": 0.007756,
+    "hit_efficiency": 0.999,
+    "hit_efficiency_error": 0.000999,
+    "mean_energy_deposit": 0.437058,
+    "material_budget": 0.013464
+  },
+  "comparison": {
+    "resolution_improvement_percent": -25.697246653066912,
+    "efficiency_change_percent": 0.10010010010010019,
+    "energy_change_percent": 26.904406905250116
+  }
+}

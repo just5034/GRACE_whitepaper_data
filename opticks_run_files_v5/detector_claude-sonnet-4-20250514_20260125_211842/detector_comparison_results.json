@@ -1,0 +1,33 @@
+{
+  "configurations": {
+    "baseline": {
+      "light_collection_efficiency": 1.0,
+      "light_collection_efficiency_error": 0.0,
+      "spatial_uniformity": 0.7841,
+      "spatial_uniformity_error": 0.07841000000000001,
+      "cost_effectiveness": 1.2753475322025252,
+      "cost_effectiveness_error": 0.1275347532202525,
+      "total_events": 100
+    },
+    "endcap": {
+      "light_collection_efficiency": 1.0,
+      "light_collection_efficiency_error": 0.0,
+      "spatial_uniformity": 3.2419,
+      "spatial_uniformity_error": 0.32419,
+      "cost_effectiveness": 0.30846108763379504,
+      "cost_effectiveness_error": 0.030846108763379506,
+      "total_events": 100
+    },
+    "barrel": {
+      "status": "FAILED_VALIDATION",
+      "light_collection_efficiency": 0.0,
+      "spatial_uniformity": 0.0,
+      "total_events": 0
+    }
+  },
+  "optimal_configuration": "Baseline (Uniform)",
+  "statistical_analysis": {
+    "significance_test": "Significant",
+    "t_statistic": 7.368885884866998
+  }
+}

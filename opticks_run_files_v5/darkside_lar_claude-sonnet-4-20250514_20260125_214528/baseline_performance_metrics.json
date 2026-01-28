@@ -1,0 +1,9 @@
+{
+  "energy_resolution": 0.03081701306041819,
+  "energy_resolution_error": 0.00217909189109361,
+  "mean_energy_deposit_mev": 4.965894527327388,
+  "light_yield_pe_per_kev": 2.122717255066873,
+  "containment_90_radius_mm": 50.0,
+  "total_events": 100,
+  "total_hits": 3062
+}

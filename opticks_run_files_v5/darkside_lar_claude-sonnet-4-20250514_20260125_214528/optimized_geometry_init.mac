@@ -1,0 +1,10 @@
+# Initialization macro for optimized_geometry
+/control/verbose 1
+/run/verbose 1
+
+# GDML geometry
+/persistency/gdml/read optimized_geometry.gdml
+
+# Physics list with optical processes
+/physics_list/em/standard
+/physics_list/decays/standard

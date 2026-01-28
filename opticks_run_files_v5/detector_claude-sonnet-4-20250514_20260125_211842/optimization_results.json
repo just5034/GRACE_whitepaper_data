@@ -1,0 +1,29 @@
+{
+  "optimal_configuration": "Baseline (Uniform)",
+  "optimal_score": 0.7274406983559024,
+  "all_scores": {
+    "Baseline (Uniform)": 0.7274406983559024,
+    "Endcap Heavy": 0.5244168682484652,
+    "Barrel Optimized": 0.0
+  },
+  "optimization_criteria": {
+    "light_collection_efficiency": 0.5,
+    "spatial_uniformity": 0.3,
+    "cost_effectiveness": 0.2
+  },
+  "trade_off_analysis": {
+    "baseline_advantages": [
+      "Better spatial uniformity (0.78 vs 3.24)",
+      "Proven reliable performance"
+    ],
+    "endcap_advantages": [
+      "Slightly better cost effectiveness",
+      "More compact design"
+    ],
+    "barrel_issues": [
+      "Complete failure - no valid data",
+      "Zero light collection efficiency"
+    ]
+  },
+  "quantitative_justification": "Baseline (Uniform) achieves the highest weighted score of 0.7274, combining excellent light collection efficiency (1.0) with reasonable spatial uniformity (0.78) and moderate cost effectiveness."
+}

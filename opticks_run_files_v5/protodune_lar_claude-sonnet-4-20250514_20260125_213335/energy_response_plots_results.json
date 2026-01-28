@@ -1,0 +1,9 @@
+{
+  "energy_resolution_percent": 4.041,
+  "energy_resolution_error": 0.2857,
+  "light_yield_pe_per_mev": 22.61,
+  "linearity_coefficient": 0.0414,
+  "linearity_coefficient_error": 0.0167,
+  "mean_energy_deposit_mev": 0.0414,
+  "total_events_analyzed": 100
+}

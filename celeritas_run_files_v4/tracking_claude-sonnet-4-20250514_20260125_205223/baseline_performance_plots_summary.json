@@ -1,0 +1,12 @@
+{
+  "energy_resolution": 0.346873,
+  "energy_resolution_error": 0.007756,
+  "hit_efficiency": 0.999,
+  "hit_efficiency_error": 0.000999,
+  "material_budget": 0.013464,
+  "mean_energy_deposit_mev": 0.437058,
+  "num_events_analyzed": 1000,
+  "detector_layers": 4,
+  "silicon_thickness_um": 300.0,
+  "layer_spacing_mm": 50.0
+}

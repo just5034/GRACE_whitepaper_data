@@ -1,0 +1,30 @@
+{
+  "original_features": 55,
+  "engineered_features": 19,
+  "total_features": 55,
+  "dataset_shape": [
+    818238,
+    55
+  ],
+  "missing_values_handled": 0,
+  "decay_channel": "H->tau tau",
+  "physics_features_added": [
+    "mass_vis_ratio_higgs",
+    "mass_mmc_ratio_higgs",
+    "pt_h_log",
+    "pt_tot_log",
+    "pt_ratio",
+    "deltar_tau_lep_squared",
+    "deltar_tau_lep_inv",
+    "has_jets",
+    "jet_multiplicity_high",
+    "deltaeta_jet_jet_abs",
+    "met_log",
+    "met_significance",
+    "mass_pt_ratio",
+    "met_pt_ratio",
+    "tau_pt_log",
+    "lep_pt_log",
+    "tau_lep_pt_ratio"
+  ]
+}

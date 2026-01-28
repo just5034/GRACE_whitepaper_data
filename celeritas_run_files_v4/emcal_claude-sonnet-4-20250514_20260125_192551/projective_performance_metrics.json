@@ -1,0 +1,23 @@
+{
+  "projective_metrics": {
+    "energy_resolution": 0.021386504328785853,
+    "energy_resolution_error": 0.0004782167748025868,
+    "linearity": 0.9786991052717481,
+    "linearity_error": 0.0006618948397579543,
+    "containment_90_radius": 100.0,
+    "containment_95_radius": 100.0
+  },
+  "baseline_metrics": {
+    "energy_resolution": 0.034363,
+    "energy_resolution_error": 0.000768,
+    "linearity": 0.467007,
+    "linearity_error": 0.000507,
+    "containment_90_radius": 40.82,
+    "containment_95_radius": 53.06
+  },
+  "performance_changes": {
+    "resolution_change_percent": -37.762988304903956,
+    "linearity_change_percent": 109.56840160249162,
+    "containment_90_change_percent": 144.9779519843214
+  }
+}

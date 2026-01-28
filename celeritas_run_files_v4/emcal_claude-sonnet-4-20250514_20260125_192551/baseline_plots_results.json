@@ -1,0 +1,14 @@
+{
+  "energy_distribution_plot": "baseline_energy_distribution_publication.png",
+  "resolution_curve_plot": "baseline_resolution_curve_publication.png",
+  "shower_profile_plot": "baseline_shower_profile_publication.png",
+  "summary_plot": "baseline_performance_summary.png",
+  "energy_resolution": 0.034363,
+  "energy_resolution_error": 0.000768,
+  "linearity": 0.467007,
+  "containment_90_radius": 40.82,
+  "containment_95_radius": 53.06,
+  "num_events": 1000,
+  "mean_energy": 467.0072846999923,
+  "rms_energy": 16.047703555896423
+}

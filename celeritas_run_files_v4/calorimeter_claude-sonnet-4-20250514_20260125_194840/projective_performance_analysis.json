@@ -1,0 +1,9 @@
+{
+  "projective_resolution": 0.15222835037241877,
+  "projective_resolution_error": 0.0034039293953538378,
+  "baseline_resolution": 0.25720113848278947,
+  "baseline_resolution_error": 0.005751192295378543,
+  "resolution_improvement_percent": 40.81350056597628,
+  "topology_comparison_completed": true,
+  "angular_response_analyzed": true,
+  "crack_effects_minimized": 

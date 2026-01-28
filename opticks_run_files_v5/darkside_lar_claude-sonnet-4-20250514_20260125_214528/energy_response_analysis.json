@@ -1,0 +1,26 @@
+{
+  "energy_points_mev": [
+    5.0
+  ],
+  "energy_resolution": [
+    0.04391698409230087
+  ],
+  "energy_resolution_errors": [
+    0.0031053997260927675
+  ],
+  "linearity_ratios": [
+    0.9908004597194113
+  ],
+  "linearity_errors": [
+    0.004351296802814177
+  ],
+  "light_yields_per_mev": [
+    199.65
+  ],
+  "light_yield_errors": [
+    9.982500000000002
+  ],
+  "mean_resolution": 0.04391698409230087,
+  "mean_linearity_deviation": 0.00919954028058867,
+  "mean_light_yield": 199.65
+}

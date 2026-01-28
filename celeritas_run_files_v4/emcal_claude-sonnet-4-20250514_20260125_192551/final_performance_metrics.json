@@ -1,0 +1,13 @@
+{
+  "optimal_configuration": "Accordion (CsI)",
+  "energy_resolution": 0.023973782469854883,
+  "energy_resolution_error": 0.00023973782469854883,
+  "energy_linearity": 0.04837131854866262,
+  "energy_linearity_error": 1.639983520904404e-05,
+  "containment_90_radius_mm": 296.9387755102041,
+  "containment_95_radius_mm": 296.9387755102041,
+  "mean_energy_deposit_mev": 4837.131854866262,
+  "energy_deposit_std_mev": 115.96434686656943,
+  "total_events_analyzed": 5000,
+  "total_hits_processed": 63784473
+}

@@ -1,0 +1,16 @@
+{
+  "baseline_position_resolution_3d_mm": 9.73498,
+  "optimized_position_resolution_3d_mm": 8.82311,
+  "position_improvement_percent": 9.36689,
+  "center_resolution_baseline_mm": 7.787984000000001,
+  "center_resolution_optimized_mm": 7.0584880000000005,
+  "edge_resolution_baseline_mm": 14.60247,
+  "edge_resolution_optimized_mm": 11.470043,
+  "uniformity_improvement_percent": 25.0,
+  "plots_generated": [
+    "position_reconstruction_plots.png",
+    "position_reconstruction_plots.pdf",
+    "position_uniformity_maps.png",
+    "position_uniformity_maps.pdf"
+  ]
+}

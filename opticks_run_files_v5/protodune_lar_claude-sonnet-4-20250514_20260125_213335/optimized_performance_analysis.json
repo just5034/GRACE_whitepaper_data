@@ -1,0 +1,24 @@
+{
+  "optimized_metrics": {
+    "energy_resolution": 3.08247527738151,
+    "energy_resolution_err": 0.21796391714763497,
+    "detection_efficiency": 0.17,
+    "detection_efficiency_err": 0.0375632799419859,
+    "light_yield_pe_per_mev": 22.605203298429416,
+    "mean_energy_deposit": 0.042910474513069057
+  },
+  "improvements": {
+    "energy_resolution_improvement_percent": 2.8499077379838633,
+    "detection_efficiency_improvement_percent": 70.0,
+    "light_yield_improvement_percent": 3129.314756918488
+  },
+  "statistical_significance": {
+    "resolution_significance_sigma": 0.23489907838147897,
+    "efficiency_significance_sigma": 1.2357465949140913
+  },
+  "baseline_comparison": {
+    "baseline_energy_resolution": 3.1729,
+    "baseline_detection_efficiency": 0.1,
+    "baseline_light_yield": 0.7
+  }
+}
