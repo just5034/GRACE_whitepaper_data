@@ -1,0 +1,39 @@
+{
+  "energy_points": [
+    {
+      "energy_gev": 10.0,
+      "beam_energy_mev": 10000.0,
+      "mean_edep_mev": 8175.352093566671,
+      "std_edep_mev": 781.4102747347019,
+      "resolution": 0.09558123806675035,
+      "resolution_err": 0.0009558123806675035,
+      "linearity": 0.8175352093566671,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 30.0,
+      "beam_energy_mev": 30000.0,
+      "mean_edep_mev": 25111.08530564893,
+      "std_edep_mev": 1940.2706090178217,
+      "resolution": 0.07726749303748107,
+      "resolution_err": 0.0007726749303748107,
+      "linearity": 0.8370361768549643,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 50.0,
+      "beam_energy_mev": 50000.0,
+      "mean_edep_mev": 42250.092946756195,
+      "std_edep_mev": 2987.8343066983857,
+      "resolution": 0.07071781618240867,
+      "resolution_err": 0.0007071781618240867,
+      "linearity": 0.8450018589351239,
+      "num_events": 5000
+    }
+  ],
+  "overall_metrics": {
+    "mean_resolution": 0.0811888490955467,
+    "resolution_std": 0.012887211178152013,
+    "linearity_deviation": 0.011538133218147941
+  }
+}

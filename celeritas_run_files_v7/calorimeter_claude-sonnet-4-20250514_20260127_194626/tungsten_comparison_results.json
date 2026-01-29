@@ -1,0 +1,15 @@
+{
+  "baseline_avg_resolution": 0.08118866666666667,
+  "tungsten_avg_resolution": 0.6739563333333334,
+  "projective_avg_resolution": 1.2664466666666667,
+  "baseline_avg_linearity": 0.8331909999999999,
+  "tungsten_avg_linearity": 0.4400453333333334,
+  "projective_avg_linearity": 0.12632600000000002,
+  "tungsten_compactness_factor": 7.2069902912621355,
+  "projective_compactness_factor": 9.971462686567163,
+  "tungsten_resolution_penalty": 8.30111345590107,
+  "projective_resolution_penalty": 15.598810999893253,
+  "baseline_depth_cm": 167.022,
+  "tungsten_depth_cm": 23.175,
+  "projective_depth_cm": 16.75
+}

@@ -1,0 +1,51 @@
+{
+  "box_geometry": {
+    "resolutions": [
+      0.033044,
+      0.014936,
+      0.019751
+    ],
+    "linearities": [
+      0.9678,
+      0.9674,
+      0.9637
+    ],
+    "mean_deposits": [
+      483.91,
+      1934.88,
+      4818.5
+    ],
+    "avg_resolution": 0.022577,
+    "avg_linearity": 0.9663
+  },
+  "projective_geometry": {
+    "resolutions": [
+      0.01684430257877582,
+      0.011556949216499206,
+      0.013103760061527844
+    ],
+    "linearities": [
+      0.9915714568209503,
+      0.9899734109358254,
+      0.9875928897617848
+    ],
+    "mean_deposits": [
+      495.78572841047514,
+      1979.9468218716506,
+      4937.964448808924
+    ],
+    "avg_resolution": 0.013835003952267624,
+    "avg_linearity": 0.9897125858395203
+  },
+  "improvements": {
+    "avg_resolution_improvement_percent": 38.72080456983822,
+    "linearity_difference": 0.023412585839520217,
+    "resolution_improvement_2gev_percent": 22.62353229446166,
+    "linearity_improvement_2gev": 0.022573410935825322
+  },
+  "energies_gev": [
+    0.5,
+    2.0,
+    5.0
+  ]
+}

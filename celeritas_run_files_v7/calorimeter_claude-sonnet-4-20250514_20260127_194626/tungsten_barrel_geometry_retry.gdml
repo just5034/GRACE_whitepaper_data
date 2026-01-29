@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <constant name="PI" value="1.0*pi"/>
+    <constant name="TWOPI" value="2.0*pi"/>
+    <position name="center" x="0" y="0" z="0" unit="mm"/>
+  </define>
+
+  <materials>
+    <!-- Element definitions -->
+    <element name="Hydrogen" formula="H" Z="1">
+      <atom value="1.00794"/>
+    </element>
+    <element name="Carbon" formula="C" Z="6">
+      <atom value="12.0107"/>
+    </element>
+    <element name="Nitrogen" formula="N" Z="7">
+      <atom value="14.0067"/>
+    </element>
+    <element name="Oxygen" formula="O" Z="8">
+      <atom value="15.9994"/>
+    </element>
+    <element name="Iron_el" formula="Fe" Z="26">
+      <atom value="55.845"/>
+    </element>
+    <element name="Chromium" formula="Cr" Z="24">
+      <atom value="51.9961"/>
+    </element>
+    <element name="Nickel" formula="Ni" Z="28">
+      <atom value="58.6934"/>
+    </element>
+    <element name="Lead_el" formula="Pb" Z="82">
+      <atom value="207.2"/>
+    </element>
+    <element name="Tungsten_el" formula="W" Z="74">
+      <atom value="183.84"/>
+    </element>
+
+    <!-- Air -->
+    <material name="G4_AIR" formula="Air">
+      <D value="0.00120479" unit="g/cm3"/>
+      <fraction n="0.7" ref="Nitrogen"/>
+      <fraction n="0.3" ref="Oxygen"/>
+    </material>
+
+    <!-- Stainless Steel (typical 304) -->
+    <material name="G4_STAINLESS-STEEL" formula="Steel">
+      <D value="7.93" unit="g/cm3"/>
+      <fraction n="0.70" ref="Iron_el"/>
+      <fraction n="0.19" ref="Chromium"/>
+      <fraction n="0.10" ref="Nickel"/>
+      <fraction n="0.01" ref="Carbon"/>
+    </material>
+
+    <!-- Iron -->
+    <material name="G4_Fe" formula="Fe">
+      <D value="7.874" unit="g/cm3"/>
+      <fraction n="1.0" ref="Iron_el"/>
+    </material>
+
+    <!-- Lead -->
+    <material name="G4_Pb" formula="Pb">
+      <D value="11.35" unit="g/cm3"/>
+      <fraction n="1.0" ref="Lead_el"/>
+    </material>
+
+    <!-- Tungsten -->
+    <material name="G4_W" formula="W">
+      <D value="19.3" unit="g/cm3"/>
+      <fraction n="1.0" ref="Tungsten_el"/>
+    </material>
+
+    <!-- Plastic Scintillator (polyvinyltoluene based) -->
+    <material name="G4_PLASTIC_SC_VINYLTOLUENE" formula="C9H10">
+      <D value="1.032" unit="g/cm3"/>
+      <fraction n="0.915" ref="Carbon"/>
+      <fraction n="0.085" ref="Hydrogen"/>
+    </material>
+
+    <!-- Polystyrene -->
+    <material name="G4_POLYSTYRENE" formula="C8H8">
+      <D value="1.06" unit="g/cm3"/>
+      <fraction n="0.923" ref="Carbon"/>
+      <fraction n="0.077" ref="Hydrogen"/>
+    </material>
+
+    <!-- Silicon -->
+    <element name="Silicon_el" formula="Si" Z="14">
+      <atom value="28.0855"/>
+    </element>
+    <material name="G4_Si" formula="Si">
+      <D value="2.33" unit="g/cm3"/>
+      <fraction n="1.0" ref="Silicon_el"/>
+    </material>
+
+    <!-- Crystal calorimeter materials -->
+    <element name="Cesium" formula="Cs" Z="55">
+      <atom value="132.905"/>
+    </element>
+    <element name="Iodine" formula="I" Z="53">
+      <atom value="126.904"/>
+    </element>
+    <material name="G4_CESIUM_IODIDE" formula="CsI">
+      <D value="4.51" unit="g/cm3"/>
+      <fraction n="0.512" ref="Cesium"/>
+      <fraction n="0.488" ref="Iodine"/>
+    </material>
+
+    <element name="Bismuth" formula="Bi" Z="83">
+      <atom value="208.98"/>
+    </element>
+    <element name="Germanium" formula="Ge" Z="32">
+      <atom value="72.63"/>
+    </element>
+    <material name="G4_BGO" formula="Bi4Ge3O12">
+      <D value="7.13" unit="g/cm3"/>
+      <fraction n="0.671" ref="Bismuth"/>
+      <fraction n="0.175" ref="Germanium"/>
+      <fraction n="0.154" ref="Oxygen"/>
+    </material>
+
+    <material name="G4_PbWO4" formula="PbWO4">
+      <D value="8.28" unit="g/cm3"/>
+      <fraction n="0.455" ref="Lead_el"/>
+      <fraction n="0.404" ref="Tungsten_el"/>
+      <fraction n="0.141" ref="Oxygen"/>
+    </material>
+
+  </materials>
+
+  <solids>
+    <box name="world_solid" x="50000.0" y="50000.0" z="50000.0" lunit="mm"/>
+    <tube name="absorber_tube_0" rmin="50.0" rmax="55.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_0" rmin="55.0" rmax="55.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_1" rmin="55.1" rmax="60.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_1" rmin="60.1" rmax="60.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_2" rmin="60.3" rmax="65.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_2" rmin="65.3" rmax="65.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_3" rmin="65.5" rmax="70.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_3" rmin="70.5" rmax="70.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_4" rmin="70.6" rmax="75.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_4" rmin="75.6" rmax="75.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_5" rmin="75.8" rmax="80.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_5" rmin="80.8" rmax="80.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_6" rmin="80.9" rmax="85.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_6" rmin="85.9" rmax="86.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_7" rmin="86.1" rmax="91.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_7" rmin="91.1" rmax="91.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_8" rmin="91.2" rmax="96.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_8" rmin="96.2" rmax="96.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_9" rmin="96.4" rmax="101.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_9" rmin="101.4" rmax="101.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_10" rmin="101.5" rmax="106.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_10" rmin="106.5" rmax="106.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_11" rmin="106.7" rmax="111.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_11" rmin="111.7" rmax="111.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_12" rmin="111.8" rmax="116.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_12" rmin="116.8" rmax="117.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_13" rmin="117.0" rmax="122.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_13" rmin="122.0" rmax="122.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_14" rmin="122.1" rmax="127.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_14" rmin="127.1" rmax="127.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_15" rmin="127.3" rmax="132.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_15" rmin="132.3" rmax="132.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_16" rmin="132.4" rmax="137.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_16" rmin="137.4" rmax="137.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_17" rmin="137.6" rmax="142.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_17" rmin="142.6" rmax="142.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_18" rmin="142.7" rmax="147.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_18" rmin="147.7" rmax="147.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_19" rmin="147.9" rmax="152.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_19" rmin="152.9" rmax="153.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_20" rmin="153.0" rmax="158.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_20" rmin="158.0" rmax="158.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_21" rmin="158.2" rmax="163.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_21" rmin="163.2" rmax="163.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_22" rmin="163.3" rmax="168.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_22" rmin="168.3" rmax="168.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_23" rmin="168.5" rmax="173.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_23" rmin="173.5" rmax="173.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_24" rmin="173.6" rmax="178.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_24" rmin="178.6" rmax="178.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_25" rmin="178.8" rmax="183.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_25" rmin="183.8" rmax="183.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_26" rmin="183.9" rmax="188.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_26" rmin="188.9" rmax="189.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_27" rmin="189.1" rmax="194.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_27" rmin="194.1" rmax="194.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_28" rmin="194.2" rmax="199.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_28" rmin="199.2" rmax="199.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_29" rmin="199.4" rmax="204.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_29" rmin="204.4" rmax="204.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_30" rmin="204.5" rmax="209.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_30" rmin="209.5" rmax="209.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_31" rmin="209.7" rmax="214.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_31" rmin="214.7" rmax="214.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_32" rmin="214.8" rmax="219.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_32" rmin="219.8" rmax="220.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_33" rmin="220.0" rmax="225.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_33" rmin="225.0" rmax="225.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_34" rmin="225.1" rmax="230.1" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_34" rmin="230.1" rmax="230.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_35" rmin="230.3" rmax="235.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_35" rmin="235.3" rmax="235.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_36" rmin="235.4" rmax="240.4" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_36" rmin="240.4" rmax="240.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_37" rmin="240.6" rmax="245.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_37" rmin="245.6" rmax="245.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_38" rmin="245.7" rmax="250.7" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_38" rmin="250.7" rmax="250.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_39" rmin="250.9" rmax="255.9" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_39" rmin="255.9" rmax="256.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_40" rmin="256.0" rmax="261.0" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_40" rmin="261.0" rmax="261.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_41" rmin="261.2" rmax="266.2" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_41" rmin="266.2" rmax="266.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_42" rmin="266.3" rmax="271.3" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_42" rmin="271.3" rmax="271.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_43" rmin="271.5" rmax="276.5" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_43" rmin="276.5" rmax="276.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_44" rmin="276.6" rmax="281.6" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_44" rmin="281.6" rmax="281.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="calor_envelope" rmin="50.0" rmax="281.8" z="200.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+  </solids>
+
+  <structure>
+    <volume name="absorber_log_0">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_0"/>
+    </volume>
+    <volume name="active_log_0">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_1">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_1"/>
+    </volume>
+    <volume name="active_log_1">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_1"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_2">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_2"/>
+    </volume>
+    <volume name="active_log_2">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_2"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_3">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_3"/>
+    </volume>
+    <volume name="active_log_3">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_3"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_4">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_4"/>
+    </volume>
+    <volume name="active_log_4">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_4"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_5">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_5"/>
+    </volume>
+    <volume name="active_log_5">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_5"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_6">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_6"/>
+    </volume>
+    <volume name="active_log_6">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_6"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_7">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_7"/>
+    </volume>
+    <volume name="active_log_7">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_7"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_8">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_8"/>
+    </volume>
+    <volume name="active_log_8">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_8"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_9">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_9"/>
+    </volume>
+    <volume name="active_log_9">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_9"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_10">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_10"/>
+    </volume>
+    <volume name="active_log_10">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_10"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_11">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_11"/>
+    </volume>
+    <volume name="active_log_11">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_11"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_12">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_12"/>
+    </volume>
+    <volume name="active_log_12">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_12"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_13">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_13"/>
+    </volume>
+    <volume name="active_log_13">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_13"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_14">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_14"/>
+    </volume>
+    <volume name="active_log_14">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_14"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_15">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_15"/>
+    </volume>
+    <volume name="active_log_15">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_15"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_16">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_16"/>
+    </volume>
+    <volume name="active_log_16">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_16"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_17">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_17"/>
+    </volume>
+    <volume name="active_log_17">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_17"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_18">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_18"/>
+    </volume>
+    <volume name="active_log_18">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_18"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_19">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_19"/>
+    </volume>
+    <volume name="active_log_19">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_19"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_20">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_20"/>
+    </volume>
+    <volume name="active_log_20">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_20"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_21">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_21"/>
+    </volume>
+    <volume name="active_log_21">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_21"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_22">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_22"/>
+    </volume>
+    <volume name="active_log_22">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_22"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_23">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_23"/>
+    </volume>
+    <volume name="active_log_23">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_23"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_24">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_24"/>
+    </volume>
+    <volume name="active_log_24">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_24"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_25">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_25"/>
+    </volume>
+    <volume name="active_log_25">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_25"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_26">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_26"/>
+    </volume>
+    <volume name="active_log_26">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_26"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_27">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_27"/>
+    </volume>
+    <volume name="active_log_27">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_27"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_28">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_28"/>
+    </volume>
+    <volume name="active_log_28">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_28"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_29">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_29"/>
+    </volume>
+    <volume name="active_log_29">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_29"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_30">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_30"/>
+    </volume>
+    <volume name="active_log_30">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_30"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_31">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_31"/>
+    </volume>
+    <volume name="active_log_31">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_31"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_32">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_32"/>
+    </volume>
+    <volume name="active_log_32">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_32"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_33">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_33"/>
+    </volume>
+    <volume name="active_log_33">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_33"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_34">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_34"/>
+    </volume>
+    <volume name="active_log_34">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_34"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_35">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_35"/>
+    </volume>
+    <volume name="active_log_35">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_35"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_36">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_36"/>
+    </volume>
+    <volume name="active_log_36">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_36"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_37">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_37"/>
+    </volume>
+    <volume name="active_log_37">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_37"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_38">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_38"/>
+    </volume>
+    <volume name="active_log_38">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_38"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_39">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_39"/>
+    </volume>
+    <volume name="active_log_39">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_39"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_40">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_40"/>
+    </volume>
+    <volume name="active_log_40">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_40"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_41">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_41"/>
+    </volume>
+    <volume name="active_log_41">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_41"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_42">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_42"/>
+    </volume>
+    <volume name="active_log_42">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_42"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_43">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_43"/>
+    </volume>
+    <volume name="active_log_43">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_43"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_44">
+      <materialref ref="G4_W"/>
+      <solidref ref="absorber_tube_44"/>
+    </volume>
+    <volume name="active_log_44">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE"/>
+      <solidref ref="active_tube_44"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="calor_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="calor_envelope"/>
+      <physvol name="absorber_0">
+        <volumeref ref="absorber_log_0"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_0">
+        <volumeref ref="active_log_0"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_1">
+        <volumeref ref="absorber_log_1"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_1">
+        <volumeref ref="active_log_1"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_2">
+        <volumeref ref="absorber_log_2"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_2">
+        <volumeref ref="active_log_2"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_3">
+        <volumeref ref="absorber_log_3"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_3">
+        <volumeref ref="active_log_3"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_4">
+        <volumeref ref="absorber_log_4"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_4">
+        <volumeref ref="active_log_4"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_5">
+        <volumeref ref="absorber_log_5"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_5">
+        <volumeref ref="active_log_5"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_6">
+        <volumeref ref="absorber_log_6"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_6">
+        <volumeref ref="active_log_6"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_7">
+        <volumeref ref="absorber_log_7"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_7">
+        <volumeref ref="active_log_7"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_8">
+        <volumeref ref="absorber_log_8"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_8">
+        <volumeref ref="active_log_8"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_9">
+        <volumeref ref="absorber_log_9"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_9">
+        <volumeref ref="active_log_9"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_10">
+        <volumeref ref="absorber_log_10"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_10">
+        <volumeref ref="active_log_10"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_11">
+        <volumeref ref="absorber_log_11"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_11">
+        <volumeref ref="active_log_11"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_12">
+        <volumeref ref="absorber_log_12"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_12">
+        <volumeref ref="active_log_12"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_13">
+        <volumeref ref="absorber_log_13"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_13">
+        <volumeref ref="active_log_13"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_14">
+        <volumeref ref="absorber_log_14"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_14">
+        <volumeref ref="active_log_14"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_15">
+        <volumeref ref="absorber_log_15"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_15">
+        <volumeref ref="active_log_15"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_16">
+        <volumeref ref="absorber_log_16"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_16">
+        <volumeref ref="active_log_16"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_17">
+        <volumeref ref="absorber_log_17"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_17">
+        <volumeref ref="active_log_17"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_18">
+        <volumeref ref="absorber_log_18"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_18">
+        <volumeref ref="active_log_18"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_19">
+        <volumeref ref="absorber_log_19"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_19">
+        <volumeref ref="active_log_19"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_20">
+        <volumeref ref="absorber_log_20"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_20">
+        <volumeref ref="active_log_20"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_21">
+        <volumeref ref="absorber_log_21"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_21">
+        <volumeref ref="active_log_21"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_22">
+        <volumeref ref="absorber_log_22"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_22">
+        <volumeref ref="active_log_22"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_23">
+        <volumeref ref="absorber_log_23"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_23">
+        <volumeref ref="active_log_23"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_24">
+        <volumeref ref="absorber_log_24"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_24">
+        <volumeref ref="active_log_24"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_25">
+        <volumeref ref="absorber_log_25"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_25">
+        <volumeref ref="active_log_25"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_26">
+        <volumeref ref="absorber_log_26"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_26">
+        <volumeref ref="active_log_26"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_27">
+        <volumeref ref="absorber_log_27"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_27">
+        <volumeref ref="active_log_27"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_28">
+        <volumeref ref="absorber_log_28"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_28">
+        <volumeref ref="active_log_28"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_29">
+        <volumeref ref="absorber_log_29"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_29">
+        <volumeref ref="active_log_29"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_30">
+        <volumeref ref="absorber_log_30"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_30">
+        <volumeref ref="active_log_30"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_31">
+        <volumeref ref="absorber_log_31"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_31">
+        <volumeref ref="active_log_31"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_32">
+        <volumeref ref="absorber_log_32"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_32">
+        <volumeref ref="active_log_32"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_33">
+        <volumeref ref="absorber_log_33"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_33">
+        <volumeref ref="active_log_33"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_34">
+        <volumeref ref="absorber_log_34"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_34">
+        <volumeref ref="active_log_34"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_35">
+        <volumeref ref="absorber_log_35"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_35">
+        <volumeref ref="active_log_35"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_36">
+        <volumeref ref="absorber_log_36"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_36">
+        <volumeref ref="active_log_36"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_37">
+        <volumeref ref="absorber_log_37"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_37">
+        <volumeref ref="active_log_37"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_38">
+        <volumeref ref="absorber_log_38"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_38">
+        <volumeref ref="active_log_38"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_39">
+        <volumeref ref="absorber_log_39"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_39">
+        <volumeref ref="active_log_39"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_40">
+        <volumeref ref="absorber_log_40"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_40">
+        <volumeref ref="active_log_40"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_41">
+        <volumeref ref="absorber_log_41"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_41">
+        <volumeref ref="active_log_41"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_42">
+        <volumeref ref="absorber_log_42"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_42">
+        <volumeref ref="active_log_42"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_43">
+        <volumeref ref="absorber_log_43"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_43">
+        <volumeref ref="active_log_43"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_44">
+        <volumeref ref="absorber_log_44"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_44">
+        <volumeref ref="active_log_44"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+
+    <volume name="world_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="world_solid"/>
+      <physvol name="calorimeter">
+        <volumeref ref="calor_log"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="world_log"/>
+  </setup>
+
+</gdml>

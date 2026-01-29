@@ -1,0 +1,55 @@
+{
+  "material_name": "BGO",
+  "energy_points": [
+    0.5,
+    2.0,
+    5.0
+  ],
+  "resolutions": [
+    0.02630940089327931,
+    0.021725156779150576,
+    0.01792523950266181
+  ],
+  "resolution_errors": [
+    0.0002630940089327931,
+    0.00021725156779150577,
+    0.0001792523950266181
+  ],
+  "mean_deposits_mev": [
+    481.23213218728864,
+    1922.8028447066717,
+    4795.157829460935
+  ],
+  "detailed_results": [
+    {
+      "energy_gev": 0.5,
+      "beam_energy_mev": 500.0,
+      "mean_deposit_mev": 481.23213218728864,
+      "std_deposit_mev": 12.660929088442957,
+      "energy_resolution": 0.02630940089327931,
+      "resolution_err": 0.0002630940089327931,
+      "linearity": 0.9624642643745773,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 2.0,
+      "beam_energy_mev": 2000.0,
+      "mean_deposit_mev": 1922.8028447066717,
+      "std_deposit_mev": 41.773193256649165,
+      "energy_resolution": 0.021725156779150576,
+      "resolution_err": 0.00021725156779150577,
+      "linearity": 0.9614014223533359,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 5.0,
+      "beam_energy_mev": 5000.0,
+      "mean_deposit_mev": 4795.157829460935,
+      "std_deposit_mev": 85.95435254615123,
+      "energy_resolution": 0.01792523950266181,
+      "resolution_err": 0.0001792523950266181,
+      "linearity": 0.9590315658921871,
+      "num_events": 5000
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "discrimination_plots_generated": true,
+  "average_quenching_factor": 0.6314,
+  "quenching_factor_uncertainty": 0.2639,
+  "nuclear_light_yield_5mev": 1.03,
+  "electronic_light_yield_5mev": 1.03,
+  "discrimination_capability": "Good",
+  "plots_with_error_bars": true
+}

@@ -1,0 +1,44 @@
+{
+  "energies_gev": [
+    0.0001,
+    0.001,
+    0.005
+  ],
+  "position_resolutions_mm": [
+    1.23,
+    25.27,
+    106.19
+  ],
+  "radial_resolutions_mm": [
+    1.1,
+    21.86,
+    82.84
+  ],
+  "component_resolutions": {
+    "x_mm": [
+      0.21,
+      15.46,
+      65.12
+    ],
+    "y_mm": [
+      1.08,
+      15.87,
+      59.66
+    ],
+    "z_mm": [
+      0.55,
+      12.14,
+      58.96
+    ]
+  },
+  "spatial_uniformity": 2.6993,
+  "best_position_resolution_mm": 1.23,
+  "worst_position_resolution_mm": 106.19,
+  "energy_dependence": "Resolution degrades with increasing energy",
+  "debug_info": {
+    "available_keys_found": 16,
+    "energy_points_extracted": 3,
+    "flexible_matching_used": true,
+    "energy_format_checked": true
+  }
+}

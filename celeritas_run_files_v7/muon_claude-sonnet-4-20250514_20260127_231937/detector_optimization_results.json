@@ -1,0 +1,49 @@
+{
+  "recommended_configuration": "Planar",
+  "optimization_score": 3.147331952291274,
+  "performance_metrics": {
+    "muon_resolution": 0.1593,
+    "pion_rejection": 1.72,
+    "muon_efficiency": 1.0,
+    "geometry": "Box topology, 6 layers, 1.5m absorber + 1.5mm active per layer",
+    "total_depth": 9.009,
+    "material": "Fe absorber + plastic scintillator"
+  },
+  "criteria_compliance": {
+    "muon_efficiency_requirement": 0.95,
+    "muon_efficiency_achieved": 1.0,
+    "pion_rejection_target": 100,
+    "pion_rejection_achieved": 1.72
+  },
+  "all_configurations": {
+    "Planar": {
+      "muon_resolution": 0.1593,
+      "pion_rejection": 1.72,
+      "muon_efficiency": 1.0,
+      "geometry": "Box topology, 6 layers, 1.5m absorber + 1.5mm active per layer",
+      "total_depth": 9.009,
+      "material": "Fe absorber + plastic scintillator"
+    },
+    "Cylindrical": {
+      "muon_resolution": 0.298,
+      "pion_rejection": 4.06,
+      "muon_efficiency": 1.0,
+      "geometry": "Cylinder barrel, 8 layers, 5mm absorber + 2mm active per layer",
+      "total_depth": 0.056,
+      "material": "Fe absorber + plastic scintillator"
+    },
+    "Thick_Absorber": {
+      "muon_resolution": 0.4628,
+      "pion_rejection": 12.75,
+      "muon_efficiency": 1.0,
+      "geometry": "Box topology, 3 layers, 300mm absorber + 20mm active per layer",
+      "total_depth": 0.96,
+      "material": "Fe absorber + plastic scintillator"
+    }
+  },
+  "optimization_scores": {
+    "Planar": 3.147331952291274,
+    "Cylindrical": 1.6981523489932886,
+    "Thick_Absorber": 1.14413029386344
+  }
+}

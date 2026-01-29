@@ -1,0 +1,9 @@
+{
+  "original_features": 32,
+  "engineered_features": 12,
+  "total_features": 44,
+  "numeric_features": 43,
+  "missing_value_strategy": "physics_aware",
+  "weight_column": "Weight",
+  "target_column": "Label"
+}

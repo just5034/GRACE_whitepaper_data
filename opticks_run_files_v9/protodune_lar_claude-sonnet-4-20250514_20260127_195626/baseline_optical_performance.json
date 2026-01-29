@@ -1,0 +1,37 @@
+{
+  "baseline_light_yield_pe_per_mev": 652.6439399999999,
+  "baseline_light_yield_std": 0.8933295527780716,
+  "baseline_detection_efficiency": 1.0,
+  "baseline_spatial_uniformity_cv": 2.7688105731172703,
+  "baseline_sensor_count": 75,
+  "baseline_sensor_area_m2": 5.30144,
+  "energy_sweep_results": [
+    {
+      "energy_gev": 0.001,
+      "energy_mev": 1.0,
+      "light_yield_pe_per_mev": 651.3836,
+      "light_yield_err": 0.36586268094499835,
+      "detection_efficiency": 1.0,
+      "detection_eff_err": 0.0,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 0.002,
+      "energy_mev": 2.0,
+      "light_yield_pe_per_mev": 653.3497,
+      "light_yield_err": 0.2589034533984364,
+      "detection_efficiency": 1.0,
+      "detection_eff_err": 0.0,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 0.005,
+      "energy_mev": 5.0,
+      "light_yield_pe_per_mev": 653.19852,
+      "light_yield_err": 0.22861415452296396,
+      "detection_efficiency": 1.0,
+      "detection_eff_err": 0.0,
+      "num_events": 5000
+    }
+  ]
+}

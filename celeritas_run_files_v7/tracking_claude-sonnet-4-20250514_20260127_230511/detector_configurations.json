@@ -1,0 +1,57 @@
+[
+  {
+    "name": "config1_box_minimal",
+    "topology": "box",
+    "layer_count": 4,
+    "silicon_thickness_um": 150,
+    "layer_spacing_cm": 3.0,
+    "transverse_size_cm": 20.0,
+    "optimization_target": "material_budget_minimization",
+    "physics_justification": "Minimal material budget (0.64% X0 total) optimized for low momentum tracks (1-10 GeV/c) where multiple scattering dominates",
+    "material_budget_percent": 0.6403415154749199,
+    "momentum_resolution_10gev": 8.794091462567892e-05
+  },
+  {
+    "name": "config2_cylinder_balanced",
+    "topology": "cylinder_barrel",
+    "layer_count": 6,
+    "silicon_thickness_um": 300,
+    "inner_radius_cm": 5.0,
+    "outer_radius_cm": 25.0,
+    "half_length_cm": 30.0,
+    "optimization_target": "momentum_resolution",
+    "physics_justification": "Cylindrical geometry provides full azimuthal coverage with 6 measurement points for optimal momentum resolution at medium energies (10-30 GeV/c)",
+    "layer_radii_cm": [
+      5.0,
+      9.0,
+      13.0,
+      17.0,
+      21.0,
+      25.0
+    ],
+    "material_budget_percent": 1.9210245464247595,
+    "momentum_resolution_10gev": 0.00016018738349916908
+  },
+  {
+    "name": "config3_forward_disks",
+    "topology": "forward_disks",
+    "layer_count": 8,
+    "silicon_thickness_um": 500,
+    "disk_z_positions_cm": [
+      10,
+      15,
+      25,
+      40,
+      60,
+      85,
+      115,
+      150
+    ],
+    "inner_radius_cm": 3.0,
+    "outer_radius_cm": 40.0,
+    "optimization_target": "momentum_resolution",
+    "physics_justification": "Forward disk geometry with 8 layers and increasing Z spacing optimized for high momentum tracks (30-50 GeV/c) where measurement precision dominates over multiple scattering",
+    "material_budget_percent": 4.268943436499466,
+    "momentum_resolution_10gev": 0.0002473195760302634
+  }
+]

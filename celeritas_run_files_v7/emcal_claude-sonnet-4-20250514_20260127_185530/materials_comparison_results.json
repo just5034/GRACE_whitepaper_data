@@ -1,0 +1,22 @@
+{
+  "optimal_material": "PbWO4",
+  "optimal_resolution_2gev": 0.014936,
+  "target_resolution_2gev": 0.014142135623730949,
+  "materials_ranking": [
+    [
+      "PbWO4",
+      0.014936
+    ],
+    [
+      "CsI",
+      0.019525
+    ],
+    [
+      "BGO",
+      0.021725
+    ]
+  ],
+  "target_min_scalar": 0.004472135954999579,
+  "target_max_scalar": 0.04242640687119285,
+  "comparison_plot": "materials_comparison.png"
+}

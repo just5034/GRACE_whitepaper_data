@@ -1,0 +1,12 @@
+{
+  "planar_muon_resolution": 0.1593,
+  "cylindrical_muon_resolution": 0.298,
+  "thick_absorber_muon_resolution": 0.4628,
+  "planar_pion_rejection": 1.72,
+  "cylindrical_pion_rejection": 4.06,
+  "thick_absorber_pion_rejection": 12.75,
+  "best_muon_detector": "Planar",
+  "best_pion_rejection": "Thick Absorber",
+  "comparison_plot": "detector_configuration_comparison.png",
+  "scatter_plot": "efficiency_vs_rejection_scatter.png"
+}

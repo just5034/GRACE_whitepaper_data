@@ -1,0 +1,124 @@
+{
+  "detector_type": "cylindrical",
+  "light_yield_per_mev": 10000,
+  "path_length_m": 1.06,
+  "particles_analyzed": 3,
+  "energy_points": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "total_events_analyzed": 45000,
+  "results_by_particle": {
+    "pion": [
+      {
+        "particle": "pion",
+        "energy_gev": 1.0,
+        "beam_energy_mev": 1000.0,
+        "mean_edep_mev": 7.767841073704982,
+        "std_edep_mev": 16.316892821183142,
+        "energy_resolution": 2.1005698580031025,
+        "resolution_err": 0.021005698580031026,
+        "linearity": 0.007767841073704982,
+        "num_events": 5000
+      },
+      {
+        "particle": "pion",
+        "energy_gev": 2.0,
+        "beam_energy_mev": 2000.0,
+        "mean_edep_mev": 8.5194668181353,
+        "std_edep_mev": 25.097887647821214,
+        "energy_resolution": 2.9459458183927194,
+        "resolution_err": 0.029459458183927194,
+        "linearity": 0.0042597334090676495,
+        "num_events": 5000
+      },
+      {
+        "particle": "pion",
+        "energy_gev": 3.0,
+        "beam_energy_mev": 3000.0,
+        "mean_edep_mev": 9.754229858448776,
+        "std_edep_mev": 37.22442840259513,
+        "energy_resolution": 3.8162344893228677,
+        "resolution_err": 0.03816234489322868,
+        "linearity": 0.0032514099528162584,
+        "num_events": 5000
+      }
+    ],
+    "kaon": [
+      {
+        "particle": "kaon",
+        "energy_gev": 1.0,
+        "beam_energy_mev": 1000.0,
+        "mean_edep_mev": 7.53478962479974,
+        "std_edep_mev": 15.471218765717586,
+        "energy_resolution": 2.0533046755275244,
+        "resolution_err": 0.020533046755275244,
+        "linearity": 0.00753478962479974,
+        "num_events": 5000
+      },
+      {
+        "particle": "kaon",
+        "energy_gev": 2.0,
+        "beam_energy_mev": 2000.0,
+        "mean_edep_mev": 7.857170488673425,
+        "std_edep_mev": 21.74032601335998,
+        "energy_resolution": 2.7669408529062647,
+        "resolution_err": 0.027669408529062647,
+        "linearity": 0.003928585244336712,
+        "num_events": 5000
+      },
+      {
+        "particle": "kaon",
+        "energy_gev": 3.0,
+        "beam_energy_mev": 3000.0,
+        "mean_edep_mev": 9.528876127438936,
+        "std_edep_mev": 36.667387058625934,
+        "energy_resolution": 3.848028515455262,
+        "resolution_err": 0.03848028515455262,
+        "linearity": 0.0031762920424796455,
+        "num_events": 5000
+      }
+    ],
+    "proton": [
+      {
+        "particle": "proton",
+        "energy_gev": 1.0,
+        "beam_energy_mev": 1000.0,
+        "mean_edep_mev": 8.61461270644993,
+        "std_edep_mev": 15.068961771623103,
+        "energy_resolution": 1.7492326451705338,
+        "resolution_err": 0.01749232645170534,
+        "linearity": 0.00861461270644993,
+        "num_events": 5000
+      },
+      {
+        "particle": "proton",
+        "energy_gev": 2.0,
+        "beam_energy_mev": 2000.0,
+        "mean_edep_mev": 9.261766597904451,
+        "std_edep_mev": 29.751555393065885,
+        "energy_resolution": 3.2122981159768607,
+        "resolution_err": 0.03212298115976861,
+        "linearity": 0.0046308832989522255,
+        "num_events": 5000
+      },
+      {
+        "particle": "proton",
+        "energy_gev": 3.0,
+        "beam_energy_mev": 3000.0,
+        "mean_edep_mev": 9.112213541980658,
+        "std_edep_mev": 31.623723055101834,
+        "energy_resolution": 3.4704765103900326,
+        "resolution_err": 0.034704765103900324,
+        "linearity": 0.0030374045139935526,
+        "num_events": 5000
+      }
+    ]
+  },
+  "average_resolutions": {
+    "pion": 2.9542500552395636,
+    "kaon": 2.8894246812963504,
+    "proton": 2.810669090512476
+  }
+}

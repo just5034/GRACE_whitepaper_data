@@ -1,0 +1,29 @@
+{
+  "name": "optimized_pds_v2_enhanced_uniformity",
+  "detector_type": "optical",
+  "include_optical": true,
+  "vessel": {
+    "shape": "box",
+    "diameter": 1.0,
+    "height": 6.1,
+    "fill_material": "G4_lAr"
+  },
+  "sensors": {
+    "type": "PMT",
+    "count": 90,
+    "diameter": 0.3,
+    "placement_strategy": "enhanced_uniformity",
+    "barrel_fraction": 0.5,
+    "endcap_fraction": 0.25
+  },
+  "tpb_coating": {
+    "enhanced_coverage": true,
+    "light_yield_enhancement": 1.15,
+    "uniformity_improvement": 0.8
+  },
+  "predicted_performance": {
+    "light_yield_pe_per_mev": 900.588,
+    "spatial_uniformity_cv": 2.2152000000000003,
+    "coverage_fraction": 0.023918058213096213
+  }
+}

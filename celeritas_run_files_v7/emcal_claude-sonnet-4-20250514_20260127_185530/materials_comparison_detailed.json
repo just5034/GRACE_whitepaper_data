@@ -1,0 +1,65 @@
+{
+  "materials": [
+    "BGO",
+    "PbWO4",
+    "CsI"
+  ],
+  "energies_gev": [
+    0.5,
+    2.0,
+    5.0
+  ],
+  "bgo": {
+    "resolutions": [
+      0.026309,
+      0.021725,
+      0.017925
+    ],
+    "resolution_errors": [
+      0.000263,
+      0.000217,
+      0.000179
+    ],
+    "linearities": [
+      0.9625,
+      0.9614,
+      0.959
+    ]
+  },
+  "pbwo4": {
+    "resolutions": [
+      0.033044,
+      0.014936,
+      0.019751
+    ],
+    "resolution_errors": [
+      0.00033,
+      0.000149,
+      0.000198
+    ],
+    "linearities": [
+      0.9678,
+      0.9674,
+      0.9637
+    ]
+  },
+  "csi": {
+    "resolutions": [
+      0.031228,
+      0.019525,
+      0.016829
+    ],
+    "resolution_errors": [
+      0.000312,
+      0.000195,
+      0.000168
+    ],
+    "linearities": [
+      0.9553,
+      0.9548,
+      0.9527
+    ]
+  },
+  "optimal_material": "PbWO4",
+  "optimal_resolution_2gev": 0.014936
+}

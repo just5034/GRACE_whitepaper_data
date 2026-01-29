@@ -1,0 +1,48 @@
+{
+  "detector_config": "thick_absorber",
+  "geometry": {
+    "total_depth_m": 0.96,
+    "num_layers": 3,
+    "absorber_thickness_mm": 300,
+    "active_thickness_mm": 20
+  },
+  "analysis_results": {
+    "5.0": {
+      "muon_mean_edep": 1298.4519702518771,
+      "muon_resolution": 0.14126136012484314,
+      "muon_resolution_err": 0.0014126136012484313,
+      "muon_efficiency": 1.0,
+      "muon_efficiency_err": 0.0,
+      "pion_mean_edep": 3968.3250616118116,
+      "pion_resolution": 0.14636805988869853,
+      "muon_events": 5000,
+      "pion_events": 5000
+    },
+    "20.0": {
+      "muon_mean_edep": 1468.9003320726524,
+      "muon_resolution": 0.44545977339397846,
+      "muon_resolution_err": 0.004454597733939785,
+      "muon_efficiency": 1.0,
+      "muon_efficiency_err": 0.0,
+      "pion_mean_edep": 16097.512032497245,
+      "pion_resolution": 0.17642999511198765,
+      "muon_events": 5000,
+      "pion_events": 5000
+    },
+    "50.0": {
+      "muon_mean_edep": 1631.0300849058121,
+      "muon_resolution": 0.8014807311210445,
+      "muon_resolution_err": 0.008014807311210445,
+      "muon_efficiency": 1.0,
+      "muon_efficiency_err": 0.0,
+      "pion_mean_edep": 39526.95944049829,
+      "pion_resolution": 0.20605532316392042,
+      "muon_events": 5000,
+      "pion_events": 5000
+    }
+  },
+  "summary": {
+    "avg_pion_rejection_factor": 12.749812305923385,
+    "muon_efficiency_range": "1.000-1.000"
+  }
+}

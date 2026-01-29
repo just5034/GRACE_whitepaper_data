@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <constant name="PI" value="1.0*pi"/>
+    <constant name="TWOPI" value="2.0*pi"/>
+    <position name="center" x="0" y="0" z="0" unit="mm"/>
+  </define>
+
+  <materials>
+    <!-- Element definitions -->
+    <element name="Hydrogen" formula="H" Z="1">
+      <atom value="1.00794"/>
+    </element>
+    <element name="Carbon" formula="C" Z="6">
+      <atom value="12.0107"/>
+    </element>
+    <element name="Nitrogen" formula="N" Z="7">
+      <atom value="14.0067"/>
+    </element>
+    <element name="Oxygen" formula="O" Z="8">
+      <atom value="15.9994"/>
+    </element>
+    <element name="Iron_el" formula="Fe" Z="26">
+      <atom value="55.845"/>
+    </element>
+    <element name="Chromium" formula="Cr" Z="24">
+      <atom value="51.9961"/>
+    </element>
+    <element name="Nickel" formula="Ni" Z="28">
+      <atom value="58.6934"/>
+    </element>
+    <element name="Lead_el" formula="Pb" Z="82">
+      <atom value="207.2"/>
+    </element>
+    <element name="Tungsten_el" formula="W" Z="74">
+      <atom value="183.84"/>
+    </element>
+
+    <!-- Air -->
+    <material name="G4_AIR" formula="Air">
+      <D value="0.00120479" unit="g/cm3"/>
+      <fraction n="0.7" ref="Nitrogen"/>
+      <fraction n="0.3" ref="Oxygen"/>
+    </material>
+
+    <!-- Stainless Steel (typical 304) -->
+    <material name="G4_STAINLESS-STEEL" formula="Steel">
+      <D value="7.93" unit="g/cm3"/>
+      <fraction n="0.70" ref="Iron_el"/>
+      <fraction n="0.19" ref="Chromium"/>
+      <fraction n="0.10" ref="Nickel"/>
+      <fraction n="0.01" ref="Carbon"/>
+    </material>
+
+    <!-- Iron -->
+    <material name="G4_Fe" formula="Fe">
+      <D value="7.874" unit="g/cm3"/>
+      <fraction n="1.0" ref="Iron_el"/>
+    </material>
+
+    <!-- Lead -->
+    <material name="G4_Pb" formula="Pb">
+      <D value="11.35" unit="g/cm3"/>
+      <fraction n="1.0" ref="Lead_el"/>
+    </material>
+
+    <!-- Tungsten -->
+    <material name="G4_W" formula="W">
+      <D value="19.3" unit="g/cm3"/>
+      <fraction n="1.0" ref="Tungsten_el"/>
+    </material>
+
+    <!-- Plastic Scintillator (polyvinyltoluene based) -->
+    <material name="G4_PLASTIC_SC_VINYLTOLUENE" formula="C9H10">
+      <D value="1.032" unit="g/cm3"/>
+      <fraction n="0.915" ref="Carbon"/>
+      <fraction n="0.085" ref="Hydrogen"/>
+    </material>
+
+    <!-- Polystyrene -->
+    <material name="G4_POLYSTYRENE" formula="C8H8">
+      <D value="1.06" unit="g/cm3"/>
+      <fraction n="0.923" ref="Carbon"/>
+      <fraction n="0.077" ref="Hydrogen"/>
+    </material>
+
+    <!-- Silicon -->
+    <element name="Silicon_el" formula="Si" Z="14">
+      <atom value="28.0855"/>
+    </element>
+    <material name="G4_Si" formula="Si">
+      <D value="2.33" unit="g/cm3"/>
+      <fraction n="1.0" ref="Silicon_el"/>
+    </material>
+
+    <!-- Crystal calorimeter materials -->
+    <element name="Cesium" formula="Cs" Z="55">
+      <atom value="132.905"/>
+    </element>
+    <element name="Iodine" formula="I" Z="53">
+      <atom value="126.904"/>
+    </element>
+    <material name="G4_CESIUM_IODIDE" formula="CsI">
+      <D value="4.51" unit="g/cm3"/>
+      <fraction n="0.512" ref="Cesium"/>
+      <fraction n="0.488" ref="Iodine"/>
+    </material>
+
+    <element name="Bismuth" formula="Bi" Z="83">
+      <atom value="208.98"/>
+    </element>
+    <element name="Germanium" formula="Ge" Z="32">
+      <atom value="72.63"/>
+    </element>
+    <material name="G4_BGO" formula="Bi4Ge3O12">
+      <D value="7.13" unit="g/cm3"/>
+      <fraction n="0.671" ref="Bismuth"/>
+      <fraction n="0.175" ref="Germanium"/>
+      <fraction n="0.154" ref="Oxygen"/>
+    </material>
+
+    <material name="G4_PbWO4" formula="PbWO4">
+      <D value="8.28" unit="g/cm3"/>
+      <fraction n="0.455" ref="Lead_el"/>
+      <fraction n="0.404" ref="Tungsten_el"/>
+      <fraction n="0.141" ref="Oxygen"/>
+    </material>
+
+  </materials>
+
+  <solids>
+    <box name="world_solid" x="50000.0" y="50000.0" z="50000.0" lunit="mm"/>
+    <tube name="absorber_tube_0" rmin="3000.0" rmax="3000.3" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_0" rmin="3000.3" rmax="3000.6" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_1" rmin="3000.6" rmax="3000.9" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_1" rmin="3000.9" rmax="3001.2" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_2" rmin="3001.2" rmax="3001.5" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_2" rmin="3001.5" rmax="3001.8" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_3" rmin="3001.8" rmax="3002.1" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_3" rmin="3002.1" rmax="3002.4" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="absorber_tube_4" rmin="3002.4" rmax="3002.7" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="active_tube_4" rmin="3002.7" rmax="3003.0" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+    <tube name="calor_envelope" rmin="3000.0" rmax="3003.0" z="30000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+  </solids>
+
+  <structure>
+    <volume name="absorber_log_0">
+      <materialref ref="G4_Si"/>
+      <solidref ref="absorber_tube_0"/>
+    </volume>
+    <volume name="active_log_0">
+      <materialref ref="G4_Si"/>
+      <solidref ref="active_tube_0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_1">
+      <materialref ref="G4_Si"/>
+      <solidref ref="absorber_tube_1"/>
+    </volume>
+    <volume name="active_log_1">
+      <materialref ref="G4_Si"/>
+      <solidref ref="active_tube_1"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_2">
+      <materialref ref="G4_Si"/>
+      <solidref ref="absorber_tube_2"/>
+    </volume>
+    <volume name="active_log_2">
+      <materialref ref="G4_Si"/>
+      <solidref ref="active_tube_2"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_3">
+      <materialref ref="G4_Si"/>
+      <solidref ref="absorber_tube_3"/>
+    </volume>
+    <volume name="active_log_3">
+      <materialref ref="G4_Si"/>
+      <solidref ref="active_tube_3"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_4">
+      <materialref ref="G4_Si"/>
+      <solidref ref="absorber_tube_4"/>
+    </volume>
+    <volume name="active_log_4">
+      <materialref ref="G4_Si"/>
+      <solidref ref="active_tube_4"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="calor_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="calor_envelope"/>
+      <physvol name="absorber_0">
+        <volumeref ref="absorber_log_0"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_0">
+        <volumeref ref="active_log_0"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_1">
+        <volumeref ref="absorber_log_1"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_1">
+        <volumeref ref="active_log_1"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_2">
+        <volumeref ref="absorber_log_2"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_2">
+        <volumeref ref="active_log_2"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_3">
+        <volumeref ref="absorber_log_3"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_3">
+        <volumeref ref="active_log_3"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="absorber_4">
+        <volumeref ref="absorber_log_4"/>
+        <positionref ref="center"/>
+      </physvol>
+      <physvol name="active_4">
+        <volumeref ref="active_log_4"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+
+    <volume name="world_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="world_solid"/>
+      <physvol name="calorimeter">
+        <volumeref ref="calor_log"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="world_log"/>
+  </setup>
+
+</gdml>

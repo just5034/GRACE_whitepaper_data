@@ -1,0 +1,20 @@
+{
+  "detector_type": "segmented_tof",
+  "analysis_summary": {
+    "overall_avg_resolution_percent": 3.276713321958074,
+    "overall_avg_timing_ps": 916.3206511230778,
+    "resolution_improvement_percent": 0,
+    "timing_improvement_factor": 0.7
+  },
+  "performance_metrics": {
+    "path_length_m": 1.0,
+    "tile_size_mm": 10,
+    "light_yield_per_mev": 10000
+  },
+  "plots_generated": [
+    "energy_deposits",
+    "timing_resolution",
+    "particle_identification",
+    "timing_separations"
+  ]
+}

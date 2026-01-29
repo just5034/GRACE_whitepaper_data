@@ -1,0 +1,42 @@
+{
+  "optimal_configuration": "Baseline (Fe)",
+  "optimal_score": 0.7725,
+  "configuration_scores": {
+    "baseline": 0.7725,
+    "projective": 0.3942,
+    "tungsten": 0.4886
+  },
+  "performance_metrics": {
+    "baseline": {
+      "mean_resolution": 0.081189,
+      "mean_linearity": 0.833191,
+      "depth_m": 1.67022
+    },
+    "projective": {
+      "mean_resolution": 1.26645,
+      "mean_linearity": 0.126326,
+      "depth_m": 0.1675
+    },
+    "tungsten": {
+      "mean_resolution": 0.673957,
+      "mean_linearity": 0.439712,
+      "depth_m": 0.23175
+    }
+  },
+  "design_rationale": {
+    "selection_criteria": [
+      "energy_resolution",
+      "linearity",
+      "compactness",
+      "cost",
+      "maturity"
+    ],
+    "winner_advantages": [
+      "best_resolution",
+      "good_linearity",
+      "cost_effective",
+      "mature_technology"
+    ],
+    "trade_offs": "Baseline sacrifices some compactness for superior performance and cost-effectiveness"
+  }
+}

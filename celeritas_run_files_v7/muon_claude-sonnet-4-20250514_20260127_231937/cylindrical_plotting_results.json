@@ -1,0 +1,17 @@
+{
+  "cylindrical_detector_performance": {
+    "muon_efficiency_avg": 1.0,
+    "muon_resolution_20gev": 0.3146,
+    "pion_rejection_factor": 4.06,
+    "energy_range_gev": [
+      5.0,
+      20.0,
+      50.0
+    ],
+    "plots_generated": [
+      "cylindrical_energy_deposition.png",
+      "cylindrical_efficiency_vs_energy.png",
+      "cylindrical_layer_by_layer.png"
+    ]
+  }
+}

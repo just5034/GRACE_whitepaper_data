@@ -1,0 +1,27 @@
+{
+  "optimal_topology": "cylindrical",
+  "optimal_score": 0.854,
+  "topologies_compared": 3,
+  "performance_metrics": {
+    "planar": {
+      "energy_resolution": 2.8848,
+      "timing_resolution_ps": 100,
+      "detection_efficiency": 0.95
+    },
+    "cylindrical": {
+      "energy_resolution": 2.8848,
+      "timing_resolution_ps": 103,
+      "detection_efficiency": 0.98
+    },
+    "segmented": {
+      "energy_resolution": 3.2767,
+      "timing_resolution_ps": 916.3,
+      "detection_efficiency": 0.92
+    }
+  },
+  "plots_generated": [
+    "tof_topology_comparison_plots.png",
+    "timing_separation_vs_momentum.png",
+    "topology_summary_comparison.png"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "baseline_metrics": {
+    "light_yield_pe_per_mev": 652.6,
+    "light_yield_std": 0.9,
+    "detection_efficiency": 1.0,
+    "spatial_uniformity_cv": 2.769,
+    "sensor_count": 75
+  },
+  "plot_files": {
+    "combined_plot_png": "baseline_optical_performance.png",
+    "combined_plot_pdf": "baseline_optical_performance.pdf",
+    "light_yield_png": "light_yield_vs_energy.png",
+    "light_yield_pdf": "light_yield_vs_energy.pdf",
+    "efficiency_map_png": "detection_efficiency_map.png",
+    "efficiency_map_pdf": "detection_efficiency_map.pdf",
+    "hit_distribution_png": "photon_hit_distribution.png",
+    "hit_distribution_pdf": "photon_hit_distribution.pdf"
+  }
+}

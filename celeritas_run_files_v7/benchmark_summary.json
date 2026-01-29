@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-28T03:06:21.675400",
+  "total_runs": 1,
+  "successes": 0,
+  "average_progress": 25.0,
+  "results": [
+    {
+      "benchmark_name": "Higgs Data Analysis Benchmark",
+      "model": "claude-sonnet-4-20250514",
+      "backend": "anthropic",
+      "success": false,
+      "progress_pct": 25.0,
+      "steps_planned": 10,
+      "steps_completed": 4,
+      "steps_failed": 1,
+      "task_confidence": 0.98,
+      "duration_seconds": 2237.96994,
+      "error": "Task incomplete. Failed steps: optimize_classifier_hyperparameters",
+      "trace_file": "/u/jhill5/grace/work/benchmarks/celeritas_20260127_185459/higgs_claude-sonnet-4-20250514_20260128_022903/reasoning_trace.json",
+      "artifacts": [
+        "scientific_memory",
+        "academic_report"
+      ],
+      "timestamp": "2026-01-28T02:29:03.679907"
+    }
+  ]
+}

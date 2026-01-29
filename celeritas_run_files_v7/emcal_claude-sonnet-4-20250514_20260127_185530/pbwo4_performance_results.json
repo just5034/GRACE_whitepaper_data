@@ -1,0 +1,41 @@
+{
+  "material": "PbWO4",
+  "sampling_fraction": 0.994413,
+  "containment_radius_cm": 5.475,
+  "energy_points": [
+    {
+      "energy_gev": 0.5,
+      "beam_energy_mev": 500.0,
+      "mean_deposit_mev": 483.9092594041687,
+      "std_deposit_mev": 15.990293893257283,
+      "energy_resolution": 0.0330439924066465,
+      "resolution_err": 0.00033043992406646503,
+      "linearity": 0.9678185188083375,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 2.0,
+      "beam_energy_mev": 2000.0,
+      "mean_deposit_mev": 1934.8848760029434,
+      "std_deposit_mev": 28.900342143027082,
+      "energy_resolution": 0.014936465988988958,
+      "resolution_err": 0.0001493646598898896,
+      "linearity": 0.9674424380014717,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 5.0,
+      "beam_energy_mev": 5000.0,
+      "mean_deposit_mev": 4818.502958198363,
+      "std_deposit_mev": 95.17142205012607,
+      "energy_resolution": 0.019751242839479474,
+      "resolution_err": 0.00019751242839479474,
+      "linearity": 0.9637005916396725,
+      "num_events": 5000
+    }
+  ],
+  "plots": {
+    "energy_distributions": "pbwo4_energy_distributions.png",
+    "resolution_curve": "pbwo4_resolution_curve.png"
+  }
+}

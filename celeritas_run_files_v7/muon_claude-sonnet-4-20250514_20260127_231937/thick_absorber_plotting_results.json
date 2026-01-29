@@ -1,0 +1,52 @@
+{
+  "detector_type": "thick_absorber",
+  "energy_points_gev": [
+    5.0,
+    20.0,
+    50.0
+  ],
+  "muon_performance": {
+    "mean_energy_deposits_mev": [
+      1298.45,
+      1468.9,
+      1631.03
+    ],
+    "energy_resolutions": [
+      0.1413,
+      0.4455,
+      0.8015
+    ],
+    "detection_efficiencies": [
+      1,
+      1,
+      1
+    ]
+  },
+  "pion_performance": {
+    "mean_energy_deposits_mev": [
+      3968.33,
+      16097.5,
+      39527
+    ],
+    "energy_resolutions": [
+      0.1464,
+      0.1764,
+      0.2061
+    ],
+    "avg_rejection_factor": 12.75
+  },
+  "plots_generated": {
+    "energy_deposition": [
+      "thick_absorber_energy_deposition.png",
+      "thick_absorber_energy_deposition.pdf"
+    ],
+    "layer_profile": [
+      "thick_absorber_layer_by_layer.png",
+      "thick_absorber_layer_by_layer.pdf"
+    ],
+    "efficiency": [
+      "thick_absorber_efficiency_vs_energy.png",
+      "thick_absorber_efficiency_vs_energy.pdf"
+    ]
+  }
+}

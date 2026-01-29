@@ -1,0 +1,25 @@
+{
+  "baseline": {
+    "pmt_count": 75,
+    "coverage": 0.0408163,
+    "light_yield": 2.011344511427431,
+    "total_hits": 61341,
+    "energy_resolution": 0.0258
+  },
+  "optimized": {
+    "pmt_count": 100,
+    "coverage": 0.0544218,
+    "light_yield": 6.126950819672131,
+    "total_hits": 186872
+  },
+  "improvements": {
+    "pmt_count_percent": 33.33333333333333,
+    "coverage_percent": 33.33349666677283,
+    "light_yield_percent": 204.61966037453703
+  },
+  "statistics": {
+    "z_score": 508.22951506748603,
+    "p_value": 0.0,
+    "significant": true
+  }
+}

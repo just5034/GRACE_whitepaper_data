@@ -1,0 +1,20 @@
+[
+  {
+    "energy_mev": 0.1,
+    "mean_photons": 145.7764,
+    "mean_pe": 29.15528,
+    "light_yield_pe_per_kev": 0.2915528,
+    "pe_resolution": 0.08303311151790112,
+    "pe_resolution_err": 0.0008303311151790112,
+    "num_events": 5000
+  },
+  {
+    "energy_mev": 1.0,
+    "mean_photons": 1479.2338,
+    "mean_pe": 295.84676,
+    "light_yield_pe_per_kev": 0.29584676000000004,
+    "pe_resolution": 0.02584915571524986,
+    "pe_resolution_err": 0.00025849155715249863,
+    "num_events": 5000
+  }
+]

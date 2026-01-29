@@ -1,0 +1,327 @@
+{
+  "timing_separations": {
+    "path_0.5m": {
+      "p_0.5GeV": {
+        "tof_pi": 1.7316062379472608,
+        "tof_kaon": 2.3438419182069348,
+        "tof_proton": 3.5464733038920455,
+        "sep_pi_kaon_ns": 0.612235680259674,
+        "sep_kaon_proton_ns": 1.2026313856851107,
+        "sep_pi_proton_ns": 1.8148670659447848
+      },
+      "p_1.0GeV": {
+        "tof_pi": 1.6839934370195748,
+        "tof_kaon": 1.8600047283505825,
+        "tof_proton": 2.287047677444717,
+        "sep_pi_kaon_ns": 0.17601129133100768,
+        "sep_kaon_proton_ns": 0.42704294909413454,
+        "sep_pi_proton_ns": 0.6030542404251422
+      },
+      "p_1.5GeV": {
+        "tof_pi": 1.6750277372287246,
+        "tof_kaon": 1.7558345928999224,
+        "tof_proton": 1.967244943690748,
+        "sep_pi_kaon_ns": 0.08080685567119783,
+        "sep_kaon_proton_ns": 0.2114103507908256,
+        "sep_pi_proton_ns": 0.2922172064620234
+      },
+      "p_2.0GeV": {
+        "tof_pi": 1.6718783834602877,
+        "tof_kaon": 1.7178833640477937,
+        "tof_proton": 1.8422447244670979,
+        "sep_pi_kaon_ns": 0.04600498058750602,
+        "sep_kaon_proton_ns": 0.12436136041930412,
+        "sep_pi_proton_ns": 0.17036634100681014
+      },
+      "p_2.5GeV": {
+        "tof_pi": 1.6704186723874344,
+        "tof_kaon": 1.700030567969424,
+        "tof_proton": 1.781420514740257,
+        "sep_pi_kaon_ns": 0.029611895581989733,
+        "sep_kaon_proton_ns": 0.081389946770833,
+        "sep_pi_proton_ns": 0.11100184235282273
+      },
+      "p_3.0GeV": {
+        "tof_pi": 1.6696252080098484,
+        "tof_kaon": 1.6902537189743274,
+        "tof_proton": 1.7474930678602814,
+        "sep_pi_kaon_ns": 0.02062851096447904,
+        "sep_kaon_proton_ns": 0.057239348885953945,
+        "sep_pi_proton_ns": 0.07786785985043299
+      }
+    },
+    "path_1.0m": {
+      "p_0.5GeV": {
+        "tof_pi": 3.4632124758945215,
+        "tof_kaon": 4.6876838364138695,
+        "tof_proton": 7.092946607784091,
+        "sep_pi_kaon_ns": 1.224471360519348,
+        "sep_kaon_proton_ns": 2.4052627713702215,
+        "sep_pi_proton_ns": 3.6297341318895695
+      },
+      "p_1.0GeV": {
+        "tof_pi": 3.3679868740391496,
+        "tof_kaon": 3.720009456701165,
+        "tof_proton": 4.574095354889434,
+        "sep_pi_kaon_ns": 0.35202258266201536,
+        "sep_kaon_proton_ns": 0.8540858981882691,
+        "sep_pi_proton_ns": 1.2061084808502844
+      },
+      "p_1.5GeV": {
+        "tof_pi": 3.350055474457449,
+        "tof_kaon": 3.5116691857998448,
+        "tof_proton": 3.934489887381496,
+        "sep_pi_kaon_ns": 0.16161371134239566,
+        "sep_kaon_proton_ns": 0.4228207015816512,
+        "sep_pi_proton_ns": 0.5844344129240469
+      },
+      "p_2.0GeV": {
+        "tof_pi": 3.3437567669205754,
+        "tof_kaon": 3.4357667280955875,
+        "tof_proton": 3.6844894489341957,
+        "sep_pi_kaon_ns": 0.09200996117501203,
+        "sep_kaon_proton_ns": 0.24872272083860825,
+        "sep_pi_proton_ns": 0.3407326820136203
+      },
+      "p_2.5GeV": {
+        "tof_pi": 3.3408373447748687,
+        "tof_kaon": 3.400061135938848,
+        "tof_proton": 3.562841029480514,
+        "sep_pi_kaon_ns": 0.05922379116397947,
+        "sep_kaon_proton_ns": 0.162779893541666,
+        "sep_pi_proton_ns": 0.22200368470564547
+      },
+      "p_3.0GeV": {
+        "tof_pi": 3.3392504160196967,
+        "tof_kaon": 3.380507437948655,
+        "tof_proton": 3.4949861357205627,
+        "sep_pi_kaon_ns": 0.04125702192895808,
+        "sep_kaon_proton_ns": 0.11447869777190789,
+        "sep_pi_proton_ns": 0.15573571970086597
+      }
+    },
+    "path_1.5m": {
+      "p_0.5GeV": {
+        "tof_pi": 5.194818713841782,
+        "tof_kaon": 7.0315257546208025,
+        "tof_proton": 10.639419911676136,
+        "sep_pi_kaon_ns": 1.8367070407790207,
+        "sep_kaon_proton_ns": 3.607894157055333,
+        "sep_pi_proton_ns": 5.444601197834354
+      },
+      "p_1.0GeV": {
+        "tof_pi": 5.051980311058725,
+        "tof_kaon": 5.5800141850517475,
+        "tof_proton": 6.861143032334152,
+        "sep_pi_kaon_ns": 0.5280338739930226,
+        "sep_kaon_proton_ns": 1.281128847282404,
+        "sep_pi_proton_ns": 1.8091627212754267
+      },
+      "p_1.5GeV": {
+        "tof_pi": 5.025083211686173,
+        "tof_kaon": 5.267503778699767,
+        "tof_proton": 5.901734831072243,
+        "sep_pi_kaon_ns": 0.24242056701359438,
+        "sep_kaon_proton_ns": 0.6342310523724759,
+        "sep_pi_proton_ns": 0.8766516193860703
+      },
+      "p_2.0GeV": {
+        "tof_pi": 5.015635150380862,
+        "tof_kaon": 5.153650092143382,
+        "tof_proton": 5.526734173401294,
+        "sep_pi_kaon_ns": 0.1380149417625196,
+        "sep_kaon_proton_ns": 0.3730840812579119,
+        "sep_pi_proton_ns": 0.5110990230204315
+      },
+      "p_2.5GeV": {
+        "tof_pi": 5.011256017162303,
+        "tof_kaon": 5.100091703908272,
+        "tof_proton": 5.344261544220772,
+        "sep_pi_kaon_ns": 0.08883568674596898,
+        "sep_kaon_proton_ns": 0.2441698403124999,
+        "sep_pi_proton_ns": 0.33300552705846886
+      },
+      "p_3.0GeV": {
+        "tof_pi": 5.008875624029545,
+        "tof_kaon": 5.070761156922981,
+        "tof_proton": 5.242479203580844,
+        "sep_pi_kaon_ns": 0.061885532893436235,
+        "sep_kaon_proton_ns": 0.17171804665786272,
+        "sep_pi_proton_ns": 0.23360357955129896
+      }
+    },
+    "path_2.0m": {
+      "p_0.5GeV": {
+        "tof_pi": 6.926424951789043,
+        "tof_kaon": 9.375367672827739,
+        "tof_proton": 14.185893215568182,
+        "sep_pi_kaon_ns": 2.448942721038696,
+        "sep_kaon_proton_ns": 4.810525542740443,
+        "sep_pi_proton_ns": 7.259468263779139
+      },
+      "p_1.0GeV": {
+        "tof_pi": 6.735973748078299,
+        "tof_kaon": 7.44001891340233,
+        "tof_proton": 9.148190709778868,
+        "sep_pi_kaon_ns": 0.7040451653240307,
+        "sep_kaon_proton_ns": 1.7081717963765382,
+        "sep_pi_proton_ns": 2.412216961700569
+      },
+      "p_1.5GeV": {
+        "tof_pi": 6.700110948914898,
+        "tof_kaon": 7.0233383715996895,
+        "tof_proton": 7.868979774762992,
+        "sep_pi_kaon_ns": 0.3232274226847913,
+        "sep_kaon_proton_ns": 0.8456414031633024,
+        "sep_pi_proton_ns": 1.1688688258480937
+      },
+      "p_2.0GeV": {
+        "tof_pi": 6.687513533841151,
+        "tof_kaon": 6.871533456191175,
+        "tof_proton": 7.368978897868391,
+        "sep_pi_kaon_ns": 0.18401992235002407,
+        "sep_kaon_proton_ns": 0.4974454416772165,
+        "sep_pi_proton_ns": 0.6814653640272406
+      },
+      "p_2.5GeV": {
+        "tof_pi": 6.681674689549737,
+        "tof_kaon": 6.800122271877696,
+        "tof_proton": 7.125682058961028,
+        "sep_pi_kaon_ns": 0.11844758232795893,
+        "sep_kaon_proton_ns": 0.325559787083332,
+        "sep_pi_proton_ns": 0.44400736941129093
+      },
+      "p_3.0GeV": {
+        "tof_pi": 6.6785008320393935,
+        "tof_kaon": 6.76101487589731,
+        "tof_proton": 6.989972271441125,
+        "sep_pi_kaon_ns": 0.08251404385791616,
+        "sep_kaon_proton_ns": 0.22895739554381578,
+        "sep_pi_proton_ns": 0.31147143940173194
+      }
+    }
+  },
+  "optimal_parameters": {
+    "p_0.5GeV": {
+      "pi_kaon": {
+        "min_path_length_m": 0.5,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "kaon_proton": {
+        "min_path_length_m": 0.5,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "pi_proton": {
+        "min_path_length_m": 0.5,
+        "required_separation_ns": 0.30000000000000004
+      }
+    },
+    "p_1.0GeV": {
+      "pi_kaon": {
+        "min_path_length_m": 1.0,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "kaon_proton": {
+        "min_path_length_m": 0.5,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "pi_proton": {
+        "min_path_length_m": 0.5,
+        "required_separation_ns": 0.30000000000000004
+      }
+    },
+    "p_1.5GeV": {
+      "pi_kaon": {
+        "min_path_length_m": 2.0,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "kaon_proton": {
+        "min_path_length_m": 1.0,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "pi_proton": {
+        "min_path_length_m": 1.0,
+        "required_separation_ns": 0.30000000000000004
+      }
+    },
+    "p_2.0GeV": {
+      "pi_kaon": {
+        "min_path_length_m": null,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "kaon_proton": {
+        "min_path_length_m": 1.5,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "pi_proton": {
+        "min_path_length_m": 1.0,
+        "required_separation_ns": 0.30000000000000004
+      }
+    },
+    "p_2.5GeV": {
+      "pi_kaon": {
+        "min_path_length_m": null,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "kaon_proton": {
+        "min_path_length_m": 2.0,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "pi_proton": {
+        "min_path_length_m": 1.5,
+        "required_separation_ns": 0.30000000000000004
+      }
+    },
+    "p_3.0GeV": {
+      "pi_kaon": {
+        "min_path_length_m": null,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "kaon_proton": {
+        "min_path_length_m": null,
+        "required_separation_ns": 0.30000000000000004
+      },
+      "pi_proton": {
+        "min_path_length_m": 2.0,
+        "required_separation_ns": 0.30000000000000004
+      }
+    }
+  },
+  "topology_recommendations": {
+    "barrel_tof": {
+      "path_range": [
+        1.0,
+        2.0
+      ],
+      "thickness_range": [
+        2,
+        4
+      ]
+    },
+    "endcap_tof": {
+      "path_range": [
+        1.5,
+        2.0
+      ],
+      "thickness_range": [
+        3,
+        5
+      ]
+    },
+    "forward_tof": {
+      "path_range": [
+        0.5,
+        1.0
+      ],
+      "thickness_range": [
+        1,
+        3
+      ]
+    }
+  },
+  "analysis_parameters": {
+    "timing_resolution_assumption_ns": 0.1,
+    "min_separation_3sigma_ns": 0.30000000000000004,
+    "light_yield_per_mev": 10000
+  }
+}

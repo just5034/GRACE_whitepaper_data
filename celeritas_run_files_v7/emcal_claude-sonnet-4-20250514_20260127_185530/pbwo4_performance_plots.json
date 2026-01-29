@@ -1,0 +1,35 @@
+{
+  "material": "PbWO4",
+  "stochastic_term_percent": 1.62,
+  "constant_term_percent": 0.87,
+  "energy_points_gev": [
+    0.5,
+    2.0,
+    5.0
+  ],
+  "resolutions_percent": [
+    3.304,
+    1.494,
+    1.975
+  ],
+  "resolution_errors_percent": [
+    0.033,
+    0.0149,
+    0.0198
+  ],
+  "linearities_percent": [
+    96.78,
+    96.74,
+    96.37
+  ],
+  "plots_generated": [
+    "pbwo4_performance_plots.png",
+    "pbwo4_performance_plots.pdf",
+    "pbwo4_energy_distributions.png",
+    "pbwo4_energy_distributions.pdf",
+    "pbwo4_resolution_curve.png",
+    "pbwo4_resolution_curve.pdf",
+    "pbwo4_shower_profile.png",
+    "pbwo4_shower_profile.pdf"
+  ]
+}

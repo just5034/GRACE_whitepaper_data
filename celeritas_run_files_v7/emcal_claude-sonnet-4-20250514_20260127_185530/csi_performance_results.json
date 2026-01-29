@@ -1,0 +1,41 @@
+{
+  "material": "CsI",
+  "sampling_fraction": 0.997319,
+  "energy_points": [
+    {
+      "energy_gev": 0.5,
+      "beam_energy_mev": 500.0,
+      "mean_deposit_mev": 477.6663651920164,
+      "std_deposit_mev": 14.9166096828054,
+      "energy_resolution": 0.031228093015946586,
+      "resolution_err": 0.00031228093015946585,
+      "linearity": 0.9553327303840329,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 2.0,
+      "beam_energy_mev": 2000.0,
+      "mean_deposit_mev": 1909.5491142875665,
+      "std_deposit_mev": 37.28322455056401,
+      "energy_resolution": 0.019524621949550642,
+      "resolution_err": 0.00019524621949550643,
+      "linearity": 0.9547745571437832,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 5.0,
+      "beam_energy_mev": 5000.0,
+      "mean_deposit_mev": 4763.592839762151,
+      "std_deposit_mev": 80.16882942605459,
+      "energy_resolution": 0.016829488187335814,
+      "resolution_err": 0.00016829488187335812,
+      "linearity": 0.9527185679524302,
+      "num_events": 5000
+    }
+  ],
+  "plots": {
+    "resolution_curve": "csi_resolution_curve.png",
+    "energy_distributions": "csi_energy_distributions.png",
+    "linearity_curve": "csi_linearity_curve.png"
+  }
+}

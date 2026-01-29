@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <constant name="HALFPI" value="pi/2"/>
+    <constant name="PI" value="1.0*pi"/>
+    <constant name="TWOPI" value="2.0*pi"/>
+    <position name="center" x="0" y="0" z="0" unit="mm"/>
+    <rotation name="identity" x="0" y="0" z="0" unit="deg"/>
+    <position name="sensor_pos_0" x="-2137.5" y="-2137.5" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_1" x="-712.4999999999999" y="-2137.5" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_2" x="712.4999999999999" y="-2137.5" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_3" x="2137.4999999999995" y="-2137.5" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_4" x="-2137.5" y="-712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_5" x="-712.4999999999999" y="-712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_6" x="712.4999999999999" y="-712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_7" x="2137.4999999999995" y="-712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_8" x="-2137.5" y="712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_9" x="-712.4999999999999" y="712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_10" x="712.4999999999999" y="712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_11" x="2137.4999999999995" y="712.4999999999999" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_12" x="-2137.5" y="2137.4999999999995" z="3350.0" unit="mm"/>
+    <position name="sensor_pos_13" x="-2137.5" y="-2137.5" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_14" x="-712.4999999999999" y="-2137.5" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_15" x="712.4999999999999" y="-2137.5" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_16" x="2137.4999999999995" y="-2137.5" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_17" x="-2137.5" y="-712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_18" x="-712.4999999999999" y="-712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_19" x="712.4999999999999" y="-712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_20" x="2137.4999999999995" y="-712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_21" x="-2137.5" y="712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_22" x="-712.4999999999999" y="712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_23" x="712.4999999999999" y="712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_24" x="2137.4999999999995" y="712.4999999999999" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_25" x="-2137.5" y="2137.4999999999995" z="-3350.0" unit="mm"/>
+    <position name="sensor_pos_26" x="-2137.5" y="2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_27" x="-712.4999999999999" y="2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_28" x="712.4999999999999" y="2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_29" x="2137.4999999999995" y="2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_30" x="-2137.5" y="2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_31" x="-712.4999999999999" y="2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_32" x="712.4999999999999" y="2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_33" x="2137.4999999999995" y="2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_34" x="-2137.5" y="2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_35" x="-712.4999999999999" y="2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_36" x="712.4999999999999" y="2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_37" x="2137.4999999999995" y="2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_38" x="-2137.5" y="2850.0" z="2512.4999999999995" unit="mm"/>
+    <position name="sensor_pos_39" x="-2137.5" y="-2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_40" x="-712.4999999999999" y="-2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_41" x="712.4999999999999" y="-2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_42" x="2137.4999999999995" y="-2850.0" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_43" x="-2137.5" y="-2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_44" x="-712.4999999999999" y="-2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_45" x="712.4999999999999" y="-2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_46" x="2137.4999999999995" y="-2850.0" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_47" x="-2137.5" y="-2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_48" x="-712.4999999999999" y="-2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_49" x="712.4999999999999" y="-2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_50" x="2137.4999999999995" y="-2850.0" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_51" x="2850.0" y="-2137.5" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_52" x="2850.0" y="-712.4999999999999" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_53" x="2850.0" y="712.4999999999999" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_54" x="2850.0" y="2137.4999999999995" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_55" x="2850.0" y="-2137.5" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_56" x="2850.0" y="-712.4999999999999" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_57" x="2850.0" y="712.4999999999999" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_58" x="2850.0" y="2137.4999999999995" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_59" x="2850.0" y="-2137.5" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_60" x="2850.0" y="-712.4999999999999" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_61" x="2850.0" y="712.4999999999999" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_62" x="2850.0" y="2137.4999999999995" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_63" x="-2850.0" y="-2137.5" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_64" x="-2850.0" y="-712.4999999999999" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_65" x="-2850.0" y="712.4999999999999" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_66" x="-2850.0" y="2137.4999999999995" z="-2512.5" unit="mm"/>
+    <position name="sensor_pos_67" x="-2850.0" y="-2137.5" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_68" x="-2850.0" y="-712.4999999999999" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_69" x="-2850.0" y="712.4999999999999" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_70" x="-2850.0" y="2137.4999999999995" z="-837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_71" x="-2850.0" y="-2137.5" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_72" x="-2850.0" y="-712.4999999999999" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_73" x="-2850.0" y="712.4999999999999" z="837.4999999999999" unit="mm"/>
+    <position name="sensor_pos_74" x="-2850.0" y="2137.4999999999995" z="837.4999999999999" unit="mm"/>
+
+    <!-- ============================================================== -->
+    <!-- VISIBLE LIGHT RANGE (1.8-3.5 eV) for organic scintillators    -->
+    <!-- ============================================================== -->
+    <!-- Energy range: 1.8 eV (690 nm) to 3.5 eV (354 nm) -->
+    <!-- NOTE: Geant4 GDML parser requires single-line values! -->
+    <matrix name="LS_RINDEX" coldim="2" values="1.8*eV 1.49 2.0*eV 1.49 2.5*eV 1.50 3.0*eV 1.51 3.5*eV 1.52"/>
+    <matrix name="LS_ABSLENGTH" coldim="2" values="1.8*eV 20.0*m 2.0*eV 20.0*m 2.5*eV 15.0*m 3.0*eV 10.0*m 3.5*eV 5.0*m"/>
+    <!-- Constant scintillation properties (Geant4 requires coldim=1 for these) -->
+    <matrix name="LS_SCINTILLATIONYIELD" coldim="1" values="10000/MeV"/>
+    <matrix name="LS_RESOLUTIONSCALE" coldim="1" values="1.0"/>
+    <matrix name="LS_SCINTILLATIONTIMECONSTANT1" coldim="1" values="2.1*ns"/>
+    <matrix name="LS_SCINTILLATIONTIMECONSTANT2" coldim="1" values="14.2*ns"/>
+    <matrix name="LS_SCINTILLATIONYIELD1" coldim="1" values="0.8"/>
+    <matrix name="LS_SCINTILLATIONYIELD2" coldim="1" values="0.2"/>
+    <!-- Scintillation emission spectrum (fast component) -->
+    <matrix name="LS_SCINTILLATIONCOMPONENT1" coldim="2" values="1.8*eV 0.00 2.2*eV 0.10 2.5*eV 0.50 2.8*eV 1.00 3.0*eV 0.70 3.2*eV 0.30 3.5*eV 0.05"/>
+    <!-- Scintillation emission spectrum (slow component, same shape) -->
+    <matrix name="LS_SCINTILLATIONCOMPONENT2" coldim="2" values="1.8*eV 0.00 2.2*eV 0.10 2.5*eV 0.50 2.8*eV 1.00 3.0*eV 0.70 3.2*eV 0.30 3.5*eV 0.05"/>
+
+    <!-- Optical properties for water-based LS (lower light yield) -->
+    <matrix name="WBLS_RINDEX" coldim="2" values="1.8*eV 1.34 2.0*eV 1.34 2.5*eV 1.35 3.0*eV 1.35 3.5*eV 1.36"/>
+    <matrix name="WBLS_ABSLENGTH" coldim="2" values="1.8*eV 10.0*m 2.0*eV 10.0*m 2.5*eV 8.0*m 3.0*eV 5.0*m 3.5*eV 2.0*m"/>
+    <matrix name="WBLS_SCINTILLATIONYIELD" coldim="1" values="1000/MeV"/>
+
+    <!-- Glass optical properties for photosensor window (visible range) -->
+    <!-- Use same energy grid as LS for Opticks compatibility; no ABSLENGTH like VUV glass -->
+    <matrix name="GLASS_RINDEX" coldim="2" values="1.8*eV 1.49 2.0*eV 1.49 2.5*eV 1.50 3.0*eV 1.51 3.5*eV 1.52"/>
+
+    <!-- Photosensor surface properties for visible light -->
+    <!-- CaTS-style: REFLECTIVITY=1.0 required for Opticks sensor detection -->
+    <!-- Use same energy grid as LS_RINDEX for Opticks consistency -->
+    <matrix name="SENSOR_EFFICIENCY" coldim="2" values="1.8*eV 1.0 2.0*eV 1.0 2.5*eV 1.0 3.0*eV 1.0 3.5*eV 1.0"/>
+    <matrix name="SENSOR_REFLECTIVITY" coldim="2" values="1.8*eV 1.0 2.0*eV 1.0 2.5*eV 1.0 3.0*eV 1.0 3.5*eV 1.0"/>
+
+    <!-- ============================================================== -->
+    <!-- VUV RANGE (7.7-11.6 eV) for Liquid Argon scintillation        -->
+    <!-- LAr scintillates at 128nm = 9.69 eV (VUV)                     -->
+    <!-- ============================================================== -->
+    <!-- LAr optical properties - refractive index increases with energy in VUV -->
+    <matrix name="LAR_RINDEX" coldim="2" values="7.75*eV 1.23 8.0*eV 1.24 8.5*eV 1.26 9.0*eV 1.29 9.5*eV 1.32 9.7*eV 1.33 10.0*eV 1.36 10.5*eV 1.42 11.0*eV 1.50 11.5*eV 1.60"/>
+    <matrix name="LAR_ABSLENGTH" coldim="2" values="7.75*eV 10.0*m 8.0*eV 10.0*m 8.5*eV 10.0*m 9.0*eV 10.0*m 9.5*eV 10.0*m 10.0*eV 10.0*m 10.5*eV 10.0*m 11.0*eV 10.0*m 11.5*eV 10.0*m"/>
+    <matrix name="LAR_RAYLEIGH" coldim="2" values="7.75*eV 90.0*cm 8.0*eV 90.0*cm 8.5*eV 90.0*cm 9.0*eV 90.0*cm 9.5*eV 90.0*cm 10.0*eV 90.0*cm 10.5*eV 90.0*cm 11.0*eV 90.0*cm 11.5*eV 90.0*cm"/>
+    <!-- LAr scintillation spectrum peaks at 128nm (9.69 eV) -->
+    <matrix name="LAR_SCINTILLATION" coldim="2" values="7.75*eV 0.001 8.0*eV 0.01 8.5*eV 0.05 9.0*eV 0.15 9.5*eV 0.35 9.7*eV 0.40 10.0*eV 0.35 10.5*eV 0.15 11.0*eV 0.05 11.5*eV 0.01"/>
+    <!-- LAr constant properties -->
+    <matrix name="LAR_SCINTILLATIONYIELD" coldim="1" values="40000/MeV"/>
+    <matrix name="LAR_RESOLUTIONSCALE" coldim="1" values="1.0"/>
+    <matrix name="LAR_SCINTILLATIONTIMECONSTANT1" coldim="1" values="7.*ns"/>
+    <matrix name="LAR_SCINTILLATIONTIMECONSTANT2" coldim="1" values="1400.*ns"/>
+    <matrix name="LAR_SCINTILLATIONYIELD1" coldim="1" values="0.75"/>
+    <matrix name="LAR_SCINTILLATIONYIELD2" coldim="1" values="0.25"/>
+    <matrix name="LAR_YIELDRATIO" coldim="1" values="0.8"/>
+
+    <!-- Air optical properties for VUV (needed for world volume) -->
+    <matrix name="AIR_RINDEX_VUV" coldim="2" values="7.75*eV 1.0 8.0*eV 1.0 8.5*eV 1.0 9.0*eV 1.0 9.5*eV 1.0 10.0*eV 1.0 10.5*eV 1.0 11.0*eV 1.0 11.5*eV 1.0"/>
+
+    <!-- Glass/Pyrex optical properties for VUV (photosensor windows) -->
+    <!-- Note: Real glass is opaque to VUV; using simplified model for Opticks -->
+    <matrix name="GLASS_RINDEX_VUV" coldim="2" values="7.75*eV 1.50 8.0*eV 1.51 8.5*eV 1.52 9.0*eV 1.53 9.5*eV 1.54 10.0*eV 1.55 10.5*eV 1.56 11.0*eV 1.57 11.5*eV 1.58"/>
+
+    <!-- Photosensor surface properties for VUV (LAr detectors use SiPM/PMT with wavelength shifter) -->
+    <!-- High efficiency assumed (wavelength-shifted photons or VUV-sensitive PMTs) -->
+    <matrix name="SENSOR_EFFICIENCY_VUV" coldim="2" values="7.75*eV 1.0 8.0*eV 1.0 8.5*eV 1.0 9.0*eV 1.0 9.5*eV 1.0 10.0*eV 1.0 10.5*eV 1.0 11.0*eV 1.0 11.5*eV 1.0"/>
+    <matrix name="SENSOR_REFLECTIVITY_VUV" coldim="2" values="7.75*eV 1.0 8.0*eV 1.0 8.5*eV 1.0 9.0*eV 1.0 9.5*eV 1.0 10.0*eV 1.0 10.5*eV 1.0 11.0*eV 1.0 11.5*eV 1.0"/>
+  </define>
+
+  <materials>
+    <!-- Element definitions for composite materials -->
+    <element name="Hydrogen" formula="H" Z="1">
+      <atom value="1.00794"/>
+    </element>
+    <element name="Carbon" formula="C" Z="6">
+      <atom value="12.0107"/>
+    </element>
+    <element name="Nitrogen" formula="N" Z="7">
+      <atom value="14.0067"/>
+    </element>
+    <element name="Oxygen" formula="O" Z="8">
+      <atom value="15.9994"/>
+    </element>
+    <element name="Silicon" formula="Si" Z="14">
+      <atom value="28.0855"/>
+    </element>
+    <element name="Argon_el" formula="Ar" Z="18">
+      <atom value="39.948"/>
+    </element>
+
+    <!-- Standard materials -->
+    <material name="G4_AIR" formula="Air">
+      <D value="0.00120479" unit="g/cm3"/>
+      <fraction n="0.7" ref="Nitrogen"/>
+      <fraction n="0.3" ref="Oxygen"/>
+      <property name="RINDEX" ref="AIR_RINDEX_VUV"/>
+    </material>
+
+    <material name="G4_WATER" formula="H2O">
+      <D value="1.0" unit="g/cm3"/>
+      <composite n="2" ref="Hydrogen"/>
+      <composite n="1" ref="Oxygen"/>
+    </material>
+
+    <material name="G4_PLEXIGLASS" formula="PMMA">
+      <D value="1.19" unit="g/cm3"/>
+      <fraction n="0.60" ref="Carbon"/>
+      <fraction n="0.08" ref="Hydrogen"/>
+      <fraction n="0.32" ref="Oxygen"/>
+    </material>
+
+    <material name="G4_GLASS_PLATE" formula="SiO2">
+      <D value="2.4" unit="g/cm3"/>
+      <composite n="1" ref="Silicon"/>
+      <composite n="2" ref="Oxygen"/>
+    </material>
+
+    <!-- Glass with optical properties for photosensor windows (visible light) -->
+    <!-- No ABSLENGTH to match VUV glass structure for Opticks compatibility -->
+    <material name="G4_GLASS_OPTICAL" formula="SiO2">
+      <D value="2.4" unit="g/cm3"/>
+      <composite n="1" ref="Silicon"/>
+      <composite n="2" ref="Oxygen"/>
+      <property name="RINDEX" ref="GLASS_RINDEX"/>
+    </material>
+
+    <!-- Glass with VUV optical properties for LAr photosensor windows -->
+    <!-- Note: Real glass is opaque to VUV; models wavelength-shifted or VUV-transparent window -->
+    <material name="G4_GLASS_VUV" formula="SiO2">
+      <D value="2.4" unit="g/cm3"/>
+      <composite n="1" ref="Silicon"/>
+      <composite n="2" ref="Oxygen"/>
+      <property name="RINDEX" ref="GLASS_RINDEX_VUV"/>
+    </material>
+
+    <!-- Liquid Argon with VUV optical properties for scintillation -->
+    <!-- LAr scintillates at 128nm (9.69 eV) - requires VUV energy range properties -->
+    <material name="G4_lAr" formula="LAr">
+      <D value="1.40" unit="g/cm3"/>
+      <fraction n="1.0" ref="Argon_el"/>
+      <property name="RINDEX" ref="LAR_RINDEX"/>
+      <property name="ABSLENGTH" ref="LAR_ABSLENGTH"/>
+      <property name="RAYLEIGH" ref="LAR_RAYLEIGH"/>
+      <property name="SCINTILLATIONYIELD" ref="LAR_SCINTILLATIONYIELD"/>
+      <property name="SCINTILLATIONYIELD1" ref="LAR_SCINTILLATIONYIELD1"/>
+      <property name="SCINTILLATIONYIELD2" ref="LAR_SCINTILLATIONYIELD2"/>
+      <property name="SCINTILLATIONCOMPONENT1" ref="LAR_SCINTILLATION"/>
+      <property name="SCINTILLATIONCOMPONENT2" ref="LAR_SCINTILLATION"/>
+      <property name="RESOLUTIONSCALE" ref="LAR_RESOLUTIONSCALE"/>
+      <property name="SCINTILLATIONTIMECONSTANT1" ref="LAR_SCINTILLATIONTIMECONSTANT1"/>
+      <property name="SCINTILLATIONTIMECONSTANT2" ref="LAR_SCINTILLATIONTIMECONSTANT2"/>
+      <property name="REEMISSIONPROB" ref="LAR_SCINTILLATION"/>
+      <property name="SLOWTIMECONSTANT" ref="LAR_SCINTILLATIONTIMECONSTANT2"/>
+      <property name="FASTTIMECONSTANT" ref="LAR_SCINTILLATIONTIMECONSTANT1"/>
+      <property name="FASTCOMPONENT" ref="LAR_SCINTILLATION"/>
+      <property name="SLOWCOMPONENT" ref="LAR_SCINTILLATION"/>
+      <property name="YIELDRATIO" ref="LAR_YIELDRATIO"/>
+    </material>
+  </materials>
+
+  <solids>
+    <box name="world_solid" x="20000.0" y="20000.0" z="20000.0" lunit="mm"/>
+    <box name="vessel_outer" x="6000.0" y="6000.0" z="7000.0" lunit="mm"/>
+    <box name="vessel_inner" x="5900.0" y="5900.0" z="6900.0" lunit="mm"/>
+    <tube name="sensor_solid" rmin="0" rmax="100.0" z="10.0" deltaphi="TWOPI" startphi="0" aunit="rad" lunit="mm"/>
+
+    <!-- Optical surface for photon detection (PMT/SiPM) -->
+    <!-- Use numeric codes for Opticks compatibility: model=0(glisur), finish=0(polished), type=0(dielectric_dielectric) -->
+    <opticalsurface name="SensorSurface" model="0" finish="0" type="0" value="1">
+      <property name="EFFICIENCY" ref="SENSOR_EFFICIENCY_VUV"/>
+      <property name="REFLECTIVITY" ref="SENSOR_REFLECTIVITY_VUV"/>
+    </opticalsurface>
+  </solids>
+
+  <structure>
+    <volume name="sensor_log">
+      <materialref ref="G4_GLASS_VUV"/>
+      <solidref ref="sensor_solid"/>
+      <auxiliary auxtype="SensDet" auxvalue="PhotonDetector"/>
+    </volume>
+    <volume name="fill_log">
+      <materialref ref="G4_lAr"/>
+      <solidref ref="vessel_inner"/>
+      <physvol name="sensor_0">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_0"/>
+      </physvol>
+      <physvol name="sensor_1">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_1"/>
+      </physvol>
+      <physvol name="sensor_2">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_2"/>
+      </physvol>
+      <physvol name="sensor_3">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_3"/>
+      </physvol>
+      <physvol name="sensor_4">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_4"/>
+      </physvol>
+      <physvol name="sensor_5">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_5"/>
+      </physvol>
+      <physvol name="sensor_6">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_6"/>
+      </physvol>
+      <physvol name="sensor_7">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_7"/>
+      </physvol>
+      <physvol name="sensor_8">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_8"/>
+      </physvol>
+      <physvol name="sensor_9">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_9"/>
+      </physvol>
+      <physvol name="sensor_10">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_10"/>
+      </physvol>
+      <physvol name="sensor_11">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_11"/>
+      </physvol>
+      <physvol name="sensor_12">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_12"/>
+      </physvol>
+      <physvol name="sensor_13">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_13"/>
+      </physvol>
+      <physvol name="sensor_14">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_14"/>
+      </physvol>
+      <physvol name="sensor_15">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_15"/>
+      </physvol>
+      <physvol name="sensor_16">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_16"/>
+      </physvol>
+      <physvol name="sensor_17">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_17"/>
+      </physvol>
+      <physvol name="sensor_18">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_18"/>
+      </physvol>
+      <physvol name="sensor_19">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_19"/>
+      </physvol>
+      <physvol name="sensor_20">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_20"/>
+      </physvol>
+      <physvol name="sensor_21">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_21"/>
+      </physvol>
+      <physvol name="sensor_22">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_22"/>
+      </physvol>
+      <physvol name="sensor_23">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_23"/>
+      </physvol>
+      <physvol name="sensor_24">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_24"/>
+      </physvol>
+      <physvol name="sensor_25">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_25"/>
+      </physvol>
+      <physvol name="sensor_26">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_26"/>
+      </physvol>
+      <physvol name="sensor_27">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_27"/>
+      </physvol>
+      <physvol name="sensor_28">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_28"/>
+      </physvol>
+      <physvol name="sensor_29">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_29"/>
+      </physvol>
+      <physvol name="sensor_30">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_30"/>
+      </physvol>
+      <physvol name="sensor_31">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_31"/>
+      </physvol>
+      <physvol name="sensor_32">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_32"/>
+      </physvol>
+      <physvol name="sensor_33">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_33"/>
+      </physvol>
+      <physvol name="sensor_34">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_34"/>
+      </physvol>
+      <physvol name="sensor_35">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_35"/>
+      </physvol>
+      <physvol name="sensor_36">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_36"/>
+      </physvol>
+      <physvol name="sensor_37">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_37"/>
+      </physvol>
+      <physvol name="sensor_38">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_38"/>
+      </physvol>
+      <physvol name="sensor_39">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_39"/>
+      </physvol>
+      <physvol name="sensor_40">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_40"/>
+      </physvol>
+      <physvol name="sensor_41">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_41"/>
+      </physvol>
+      <physvol name="sensor_42">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_42"/>
+      </physvol>
+      <physvol name="sensor_43">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_43"/>
+      </physvol>
+      <physvol name="sensor_44">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_44"/>
+      </physvol>
+      <physvol name="sensor_45">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_45"/>
+      </physvol>
+      <physvol name="sensor_46">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_46"/>
+      </physvol>
+      <physvol name="sensor_47">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_47"/>
+      </physvol>
+      <physvol name="sensor_48">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_48"/>
+      </physvol>
+      <physvol name="sensor_49">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_49"/>
+      </physvol>
+      <physvol name="sensor_50">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_50"/>
+      </physvol>
+      <physvol name="sensor_51">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_51"/>
+      </physvol>
+      <physvol name="sensor_52">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_52"/>
+      </physvol>
+      <physvol name="sensor_53">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_53"/>
+      </physvol>
+      <physvol name="sensor_54">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_54"/>
+      </physvol>
+      <physvol name="sensor_55">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_55"/>
+      </physvol>
+      <physvol name="sensor_56">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_56"/>
+      </physvol>
+      <physvol name="sensor_57">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_57"/>
+      </physvol>
+      <physvol name="sensor_58">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_58"/>
+      </physvol>
+      <physvol name="sensor_59">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_59"/>
+      </physvol>
+      <physvol name="sensor_60">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_60"/>
+      </physvol>
+      <physvol name="sensor_61">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_61"/>
+      </physvol>
+      <physvol name="sensor_62">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_62"/>
+      </physvol>
+      <physvol name="sensor_63">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_63"/>
+      </physvol>
+      <physvol name="sensor_64">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_64"/>
+      </physvol>
+      <physvol name="sensor_65">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_65"/>
+      </physvol>
+      <physvol name="sensor_66">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_66"/>
+      </physvol>
+      <physvol name="sensor_67">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_67"/>
+      </physvol>
+      <physvol name="sensor_68">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_68"/>
+      </physvol>
+      <physvol name="sensor_69">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_69"/>
+      </physvol>
+      <physvol name="sensor_70">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_70"/>
+      </physvol>
+      <physvol name="sensor_71">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_71"/>
+      </physvol>
+      <physvol name="sensor_72">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_72"/>
+      </physvol>
+      <physvol name="sensor_73">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_73"/>
+      </physvol>
+      <physvol name="sensor_74">
+        <volumeref ref="sensor_log"/>
+        <positionref ref="sensor_pos_74"/>
+      </physvol>
+    </volume>
+    <volume name="vessel_log">
+      <materialref ref="G4_PLEXIGLASS"/>
+      <solidref ref="vessel_outer"/>
+      <physvol name="fill_phys">
+        <volumeref ref="fill_log"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+    <volume name="world_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="world_solid"/>
+      <physvol name="vessel_phys">
+        <volumeref ref="vessel_log"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+
+    <!-- Skin surface on all sensor volumes - required for Opticks sensor detection -->
+    <!-- The EFFICIENCY property marks these volumes as sensitive detectors -->
+    <skinsurface name="SensorSkin" surfaceproperty="SensorSurface">
+      <volumeref ref="sensor_log"/>
+    </skinsurface>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="world_log"/>
+  </setup>
+
+</gdml>

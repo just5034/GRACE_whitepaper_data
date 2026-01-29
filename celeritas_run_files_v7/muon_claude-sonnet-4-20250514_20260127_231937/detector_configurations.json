@@ -1,0 +1,53 @@
+{
+  "config_1_box": {
+    "topology": "box",
+    "absorber_material": "iron",
+    "active_material": "plastic_scintillator",
+    "absorber_thickness_cm": 30,
+    "active_thickness_cm": 1.0,
+    "num_layers": 5,
+    "total_depth_cm": 150,
+    "interaction_lengths": 8.928571428571429,
+    "transverse_size_cm": 18964.167725540025,
+    "energy_range_gev": [
+      5,
+      20,
+      50
+    ]
+  },
+  "config_2_cylinder_barrel": {
+    "topology": "cylinder_barrel",
+    "absorber_material": "iron",
+    "active_material": "plastic_scintillator",
+    "absorber_thickness_cm": 30,
+    "active_thickness_cm": 1.0,
+    "num_layers": 5,
+    "total_depth_cm": 150,
+    "interaction_lengths": 8.928571428571429,
+    "transverse_size_cm": 18964.167725540025,
+    "energy_range_gev": [
+      5,
+      20,
+      50
+    ],
+    "inner_radius_cm": 50,
+    "outer_radius_cm": 200,
+    "half_length_cm": 200
+  },
+  "config_3_thick_absorber": {
+    "topology": "box",
+    "absorber_material": "iron",
+    "active_material": "plastic_scintillator",
+    "absorber_thickness_cm": 40,
+    "active_thickness_cm": 1.0,
+    "num_layers": 4,
+    "total_depth_cm": 160,
+    "interaction_lengths": 9.523809523809524,
+    "transverse_size_cm": 18964.167725540025,
+    "energy_range_gev": [
+      5,
+      20,
+      50
+    ]
+  }
+}

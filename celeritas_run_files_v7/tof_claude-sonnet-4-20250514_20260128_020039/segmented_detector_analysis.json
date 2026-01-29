@@ -1,0 +1,97 @@
+{
+  "detector_type": "segmented",
+  "light_yield_per_mev": 10000,
+  "tile_size_mm": 10,
+  "path_length_m": 1.0,
+  "overall_avg_resolution": 3.276713321958074,
+  "overall_avg_timing_ps": 916.3206511230778,
+  "resolution_improvement_vs_cylindrical_percent": -13.58545902516896,
+  "timing_improvement_factor": 0.7,
+  "particles_analyzed": 3,
+  "total_events_analyzed": 45000,
+  "energy_points": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "detailed_results": {
+    "pion": {
+      "1.0": {
+        "mean_edep_mev": 0.0006122230052115474,
+        "energy_resolution": 4.074381822409407,
+        "resolution_err": 0.04074381822409407,
+        "num_events": 5000,
+        "timing_resolution_ps": 894.6295058847967,
+        "npe": 0.006122230052115474
+      },
+      "2.0": {
+        "mean_edep_mev": 0.000590168000571731,
+        "energy_resolution": 1.7912249526784383,
+        "resolution_err": 0.01791224952678438,
+        "num_events": 5000,
+        "timing_resolution_ps": 911.1926565339996,
+        "npe": 0.00590168000571731
+      },
+      "3.0": {
+        "mean_edep_mev": 0.0006081663986263093,
+        "energy_resolution": 1.921085030370785,
+        "resolution_err": 0.01921085030370785,
+        "num_events": 5000,
+        "timing_resolution_ps": 897.6082368905925,
+        "npe": 0.006081663986263093
+      }
+    },
+    "kaon": {
+      "1.0": {
+        "mean_edep_mev": 0.0004986373207619786,
+        "energy_resolution": 2.264377262263552,
+        "resolution_err": 0.02264377262263552,
+        "num_events": 5000,
+        "timing_resolution_ps": 991.3012409081006,
+        "npe": 0.0049863732076197865
+      },
+      "2.0": {
+        "mean_edep_mev": 0.000514980409561724,
+        "energy_resolution": 1.915263975849218,
+        "resolution_err": 0.01915263975849218,
+        "num_events": 5000,
+        "timing_resolution_ps": 975.444772991128,
+        "npe": 0.00514980409561724
+      },
+      "3.0": {
+        "mean_edep_mev": 0.0005481555137268843,
+        "energy_resolution": 2.1699777243964826,
+        "resolution_err": 0.021699777243964827,
+        "num_events": 5000,
+        "timing_resolution_ps": 945.4665024785621,
+        "npe": 0.005481555137268844
+      }
+    },
+    "proton": {
+      "1.0": {
+        "mean_edep_mev": 0.0006489568522940674,
+        "energy_resolution": 3.2459700630615385,
+        "resolution_err": 0.03245970063061539,
+        "num_events": 5000,
+        "timing_resolution_ps": 868.9406786155121,
+        "npe": 0.006489568522940673
+      },
+      "2.0": {
+        "mean_edep_mev": 0.0006618531420580694,
+        "energy_resolution": 9.610636058822633,
+        "resolution_err": 0.09610636058822633,
+        "num_events": 5000,
+        "timing_resolution_ps": 860.4333251188223,
+        "npe": 0.006618531420580694
+      },
+      "3.0": {
+        "mean_edep_mev": 0.0006024336454132084,
+        "energy_resolution": 2.4975030077706117,
+        "resolution_err": 0.024975030077706118,
+        "num_events": 5000,
+        "timing_resolution_ps": 901.8689406861861,
+        "npe": 0.006024336454132085
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "energies_mev": [
+    0.1,
+    1.0,
+    5.0
+  ],
+  "light_yields_pe_per_mev": [
+    1457.764,
+    1479.2338,
+    1486.16508
+  ],
+  "light_yield_errors": [
+    1.7116308190728513,
+    0.5406979817902042,
+    0.33672405455910037
+  ],
+  "energy_resolutions": [
+    0.08302480779154224,
+    0.025846570670419632,
+    0.016021091167568603
+  ],
+  "resolution_errors": [
+    0.0008302480779154224,
+    0.00025846570670419634,
+    0.00016021091167568602
+  ],
+  "average_light_yield": 1474.3876266666666,
+  "best_resolution": 0.016021091167568603,
+  "plots_generated": [
+    "light_yield_curve.png",
+    "energy_resolution_vs_energy.png",
+    "photoelectron_distributions.png"
+  ]
+}

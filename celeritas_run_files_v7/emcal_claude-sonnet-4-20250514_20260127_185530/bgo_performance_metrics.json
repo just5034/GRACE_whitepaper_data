@@ -1,0 +1,44 @@
+{
+  "material": "BGO",
+  "geometry": {
+    "transverse_size_m": 0.1115,
+    "depth_m": 0.225,
+    "sampling_fraction": 0.995556
+  },
+  "energy_points": [
+    {
+      "energy_gev": 0.5,
+      "beam_energy_mev": 500.0,
+      "mean_edep_mev": 481.23213218728864,
+      "std_edep_mev": 12.660929088442957,
+      "energy_resolution": 0.02630940089327931,
+      "resolution_err": 0.0002630940089327931,
+      "linearity": 0.9624642643745773,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 2.0,
+      "beam_energy_mev": 2000.0,
+      "mean_edep_mev": 1922.8028447066717,
+      "std_edep_mev": 41.773193256649165,
+      "energy_resolution": 0.021725156779150576,
+      "resolution_err": 0.00021725156779150577,
+      "linearity": 0.9614014223533359,
+      "num_events": 5000
+    },
+    {
+      "energy_gev": 5.0,
+      "beam_energy_mev": 5000.0,
+      "mean_edep_mev": 4795.157829460935,
+      "std_edep_mev": 85.95435254615123,
+      "energy_resolution": 0.01792523950266181,
+      "resolution_err": 0.0001792523950266181,
+      "linearity": 0.9590315658921871,
+      "num_events": 5000
+    }
+  ],
+  "resolution_fit": {
+    "stochastic_term": 0.0046508500241321865,
+    "constant_term": 0.020163971220516084,
+    "noise_term": -0.000863731015855499,
+    "fit_errors": 

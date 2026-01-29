@@ -1,0 +1,13 @@
+{
+  "total_events": 100000,
+  "signal_events": 30106,
+  "background_events": 69894,
+  "signal_fraction": 0.30106,
+  "background_fraction": 0.69894,
+  "plots_created": [
+    "kinematic_distributions.png",
+    "missing_energy_distributions.png",
+    "tau_features_distributions.png"
+  ],
+  "event_weights_used": false
+}

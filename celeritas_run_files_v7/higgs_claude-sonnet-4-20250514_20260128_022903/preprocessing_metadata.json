@@ -1,0 +1,14 @@
+{
+  "original_shape": [
+    100000,
+    44
+  ],
+  "final_shape": [
+    100000,
+    48
+  ],
+  "missing_values_handled": 0,
+  "features_engineered": 4,
+  "weight_preservation": 1.0,
+  "preprocessing_strategy": "physics_aware"
+}

@@ -1,0 +1,42 @@
+{
+  "detector_type": "planar_sampling_calorimeter",
+  "geometry_parameters": {
+    "topology": "box",
+    "num_layers": 6,
+    "absorber_thickness_mm": 1500,
+    "active_thickness_mm": 1.5,
+    "total_depth_m": 9.009,
+    "transverse_size_m": 2.0
+  },
+  "performance_results": {
+    "muon_5.0gev": {
+      "resolution": 0.0044,
+      "mean_edep": 5021.32
+    },
+    "pion_5.0gev": {
+      "resolution": 0.0564,
+      "mean_edep": 4414.98
+    },
+    "muon_20.0gev": {
+      "resolution": 0.1429,
+      "mean_edep": 10417.1
+    },
+    "pion_20.0gev": {
+      "resolution": 0.0407,
+      "mean_edep": 17905.7
+    },
+    "muon_50.0gev": {
+      "resolution": 0.3306,
+      "mean_edep": 11905.4
+    },
+    "pion_50.0gev": {
+      "resolution": 0.0331,
+      "mean_edep": 45285.3
+    }
+  },
+  "plots_generated": [
+    "planar_energy_deposition.png",
+    "planar_efficiency_vs_energy.png",
+    "planar_layer_by_layer.png"
+  ]
+}

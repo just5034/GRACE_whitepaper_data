@@ -1,0 +1,309 @@
+{
+  "experiment_name": "DarkSide-50",
+  "detector_description": "Two-phase (liquid and gas) argon TPC for dark matter detection with PMT arrays viewing through fused-silica windows",
+  "geometry": {
+    "shape": "cylindrical",
+    "dimensions": {
+      "gas_pocket_thickness": {
+        "value": 1,
+        "unit": "cm"
+      },
+      "grid_distance_from_interface": {
+        "value": 4.7,
+        "unit": "mm"
+      }
+    }
+  },
+  "materials": [
+    {
+      "name": "Underground Argon (UAr)",
+      "purpose": "Active detection medium in TPC",
+      "properties": {
+        "scintillation_wavelength": "128 nm"
+      }
+    },
+    {
+      "name": "Liquid Argon (LAr)",
+      "purpose": "Active detection medium and PMT immersion medium",
+      "properties": {}
+    },
+    {
+      "name": "Fused-silica",
+      "purpose": "Window material for PMT viewing",
+      "properties": {}
+    },
+    {
+      "name": "Indium-Tin-Oxide (ITO)",
+      "purpose": "Coating on windows acting as cathode (bottom) and anode (top) electrodes",
+      "properties": {}
+    },
+    {
+      "name": "Teflon",
+      "purpose": "Reflector for side wall of active LAr volume",
+      "properties": {}
+    },
+    {
+      "name": "Tetraphenylbutadiene (TPB)",
+      "purpose": "Wavelength shifter coating on Teflon reflector and windows",
+      "properties": {
+        "shifts_from": "128 nm",
+        "shifts_to": "420 nm"
+      }
+    },
+    {
+      "name": "Borated liquid scintillator",
+      "purpose": "Neutron detection in LSV via thermalization and capture",
+      "properties": {}
+    }
+  ],
+  "physics_processes": [],
+  "simulation_params": {
+    "software": null,
+    "physics_list": null,
+    "num_events": null
+  },
+  "quoted_values": {
+    "pmt_count_top": {
+      "value": 19,
+      "unit": "PMTs",
+      "context": "top array configuration"
+    },
+    "pmt_count_bottom": {
+      "value": 19,
+      "unit": "PMTs",
+      "context": "bottom array configuration"
+    },
+    "pmt_size": {
+      "value": 3,
+      "unit": "inches",
+      "context": "Hamamatsu R11065 PMT diameter"
+    },
+    "drift_field": {
+      "value": 200,
+      "unit": "V/cm",
+      "context": "electric field in main active volume"
+    },
+    "trigger_threshold": {
+      "value": 0.6,
+      "unit": "PE",
+      "context": "PMT threshold for trigger"
+    },
+    "minimum_pmts_for_trigger": {
+      "value": 2,
+      "unit": "PMTs",
+      "context": "trigger requirement"
+    },
+    "lsv_mass": {
+      "value": 30,
+      "unit": "t",
+      "context": "borated liquid scintillator mass"
+    },
+    "wcv_mass": {
+      "value": 1,
+      "unit": "kt",
+      "context": "water Cherenkov veto mass"
+    },
+    "pulser_trigger_rate": {
+      "value": 0.05,
+      "unit": "Hz",
+      "context": "calibration trigger rate"
+    }
+  },
+  "analysis_methods": [
+    "S1 and S2 signal analysis",
+    "Energy measurement via S1 or linear combination of S1 and S2",
+    "Drift time measurement for z-coordinate determination",
+    "PMT pattern analysis for x-y coordinate reconstruction",
+    "ER/NR discrimination",
+    "Neutron detection via prompt and delayed signals",
+    "Cosmic ray muon veto"
+  ],
+  "relevant_text": {
+    "the darkside-50 detectors": "The DarkSide-50 experiment is located in Hall C\nof the Gran Sasso National Laboratory (LNGS) in\nItaly, at a depth of 3800 m.w.e. [3].\nThe DarkSide-50 DM detector is a two-phase (liq-\nuid and gas) argon TPC, described in Ref. [4] and\nshown schematically in Fig. 1. Brie\ufb02y, a cylindri-\ncal volume containing UAr is viewed through fused-\nsilica windows by top and bottom arrays of 19 3 \u2032\u2032\nHamamatsu R11065 photomultiplier tubes (PMTs).\nThe windows are coated with Indium-Tin-Oxide\n(ITO) which acts as the cathode (bottom) and anode\n(top) of the TPC. The PMTs operate immersed in\nLAr and are \ufb01tted with cryogenic preampli\ufb01ers [5].\nThe pre-ampli\ufb01ers allow operation at reduced PMT\ngain, taming breakdown issues in these PMTs.\nLAr is boiled to form a 1 cm-thick gas pocket un-\nder the anode window. A grid 4.7 mm beneath the\nliquid-gas interface separates a 200 V/cm drift re-\ngion in the main active volume from a higher-\ufb01eld\nextraction region.\nThe side wall of the active LAr volume is a Te\ufb02on\nre\ufb02ector. The inner surfaces of the Te\ufb02on re\ufb02ector\nand the windows are coated with tetraphenylbutadi-\nene (TPB), which shifts the 128 nm argon scintilla-\ntion light to 420 nm, allowing transmission through\nthe windows and detection by the PMTs.\nInteractions in the active volume result in ER or\nNR events which produce primary scintillation (S1)\nas well as ionization in the LAr.\nIonization elec-\ntrons surviving recombination at the event site are\ndrifted to the liquid-gas interface, where the extrac-\ntion \ufb01eld injects them into the gas region. In the\ngas, the electric \ufb01eld is large enough to cause the\nelectrons to produce a second signal (S2) by gas pro-\nportional scintillation. S1 and S2 are both measured\nwith the PMT arrays. S1 (or, for higher resolution,\na linear combination of S1 and S2) measures energy;\nthe drift time (tdrift), the time between the detection\nof S1 and S2, measures the vertical (z) location of\nthe event; and the pattern of S2 on the PMT arrays\nmeasures the x and y coordinates of the event.\nThe DarkSide-50 veto system is described in de-\ntail in Ref. [7]. The LSV is \ufb01lled with 30 t of bo-\nrated liquid scintillator that detects neutrons via\nboth prompt signals from thermalization and de-\nlayed signals from capture products. It detects neu-\ntrons producing NR in the LAr TPC with extremely\nhigh e\ufb03ciency (see Sec. V C) and also detects about\na third of the \u03b3-rays giving ER in the TPC. The\nLSV is surrounded by the 1 kt WCV, which pro-\nvides shielding for the LSV and a veto for cosmic\nray muons. Radioactive calibration sources for the\ncharacterization of the TPC and LSV are deployed\nthrough the WCV and LSV to the side of the cryo-\nstat using an articulated arm described in Ref. [8].\nUnder normal running conditions for the WIMP\nsearch, all three detectors are read out upon a trig-\nger from the TPC that requires at least two PMTs\nabove a threshold of 0.6 PE [5]. Much of the data re-\nported here also includes 0.05 Hz of pulser-generated\ntriggers, which provides an unbiased sample of detec-\ntor baselines and signals. Timestamps are recorded\nwith the data from each detector to allow later syn-\nchronization."
+  },
+  "source": {
+    "arxiv_id": "1802.07198",
+    "pdf_path": null,
+    "doi": null,
+    "title": "DarkSide-50 532-day Dark Matter Search with Low-Radioactivity Argon",
+    "authors": [
+      " The DarkSide Collaboration",
+      "P. Agnes",
+      "I. F. M. Albuquerque",
+      "T. Alexander",
+      "A. K. Alton",
+      "G. R. Araujo",
+      "M. Ave",
+      "H. O. Back",
+      "B. Baldin",
+      "G. Batignani",
+      "K. Biery",
+      "V. Bocci",
+      "G. Bonfini",
+      "W. Bonivento",
+      "B. Bottino",
+      "F. Budano",
+      "S. Bussino",
+      "M. Cadeddu",
+      "M. Cadoni",
+      "F. Calaprice",
+      "A. Caminata",
+      "N. Canci",
+      "A. Candela",
+      "M. Caravati",
+      "M. Cariello",
+      "M. Carlini",
+      "M. Carpinelli",
+      "S. Catalanotti",
+      "V. Cataudella",
+      "P. Cavalcante",
+      "S. Cavuoti",
+      "A. Chepurnov",
+      "C. Cical\u00f2",
+      "A. G. Cocco",
+      "G. Covone",
+      "D. D'Angelo",
+      "M. D'Incecco",
+      "D. D'Urso",
+      "S. Davini",
+      "A. De Candia",
+      "S. De Cecco",
+      "M. De Deo",
+      "G. De Filippis",
+      "G. De Rosa",
+      "M. De Vincenzi",
+      "A. V. Derbin",
+      "A. Devoto",
+      "F. Di Eusanio",
+      "G. Di Pietro",
+      "C. Dionisi",
+      "M. Downing",
+      "E. Edkins",
+      "A. Empl",
+      "A. Fan",
+      "G. Fiorillo",
+      "R. S. Fitzpatrick",
+      "K. Fomenko",
+      "D. Franco",
+      "F. Gabriele",
+      "C. Galbiati",
+      "C. Ghiano",
+      "S. Giagu",
+      "C. Giganti",
+      "G. K. Giovanetti",
+      "O. Gorchakov",
+      "A. M. Goretti",
+      "F. Granato",
+      "M. Gromov",
+      "M. Guan",
+      "Y. Guardincerri",
+      "M. Gulino",
+      "B. R. Hackett",
+      "K. Herner",
+      "B. Hosseini",
+      "D. Hughes",
+      "P. Humble",
+      "E. V. Hungerford",
+      "An. Ianni",
+      "V. Ippolito",
+      "I. James",
+      "T. N. Johnson",
+      "K. Keeter",
+      "C. L. Kendziora",
+      "I. Kochanek",
+      "G. Koh",
+      "D. Korablev",
+      "G. Korga",
+      "A. Kubankin",
+      "M. Kuss",
+      "M. La Commara",
+      "M. Lai",
+      "X. Li",
+      "M. Lissia",
+      "G. Longo",
+      "Y. Ma",
+      "A. A. Machado",
+      "I. N. Machulin",
+      "A. Mandarano",
+      "L. Mapelli",
+      "S. M. Mari",
+      "J. Maricic",
+      "C. J. Martoff",
+      "A. Messina",
+      "P. D. Meyers",
+      "R. Milincic",
+      "A. Monte",
+      "M. Morrocchi",
+      "B. J. Mount",
+      "V. N. Muratova",
+      "P. Musico",
+      "A. Navrer Agasson",
+      "A. O. Nozdrina",
+      "A. Oleinik",
+      "M. Orsini",
+      "F. Ortica",
+      "L. Pagani",
+      "M. Pallavicini",
+      "L. Pandola",
+      "E. Pantic",
+      "E. Paoloni",
+      "K. Pelczar",
+      "N. Pelliccia",
+      "A. Pocar",
+      "S. Pordes",
+      "S. S. Poudel",
+      "D. A. Pugachev",
+      "H. Qian",
+      "F. Ragusa",
+      "M. Razeti",
+      "A. Razeto",
+      "B. Reinhold",
+      "A. L. Renshaw",
+      "M. Rescigno",
+      "Q. Riffard",
+      "A. Romani",
+      "B. Rossi",
+      "N. Rossi",
+      "D. Sablone",
+      "O. Samoylov",
+      "W. Sands",
+      "S. Sanfilippo",
+      "C. Savarese",
+      "B. Schlitzer",
+      "E. Segreto",
+      "D. A. Semenov",
+      "A. Shchagin",
+      "A. Sheshukov",
+      "P. N. Singh",
+      "M. D. Skorokhvatov",
+      "O. Smirnov",
+      "A. Sotnikov",
+      "C. Stanford",
+      "S. Stracka",
+      "Y. Suvorov",
+      "R. Tartaglia",
+      "G. Testera",
+      "A. Tonazzo",
+      "P. Trinchese",
+      "E. V. Unzhakov",
+      "M. Verducci",
+      "A. Vishneva",
+      "B. Vogelaar",
+      "M. Wada",
+      "T. J. Waldrop",
+      "H. Wang",
+      "Y. Wang",
+      "A. W. Watson",
+      "S. Westerdale",
+      "M. M. Wojcik",
+      "X. Xiang",
+      "X. Xiao",
+      "C. Yang",
+      "Z. Ye",
+      "C. Zhu",
+      "G. Zuzel"
+    ]
+  },
+  "paper_date": "2018-02-20",
+  "knowledge_cutoff": "2018-02-20"
+}

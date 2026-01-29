@@ -1,0 +1,24 @@
+{
+  "name": "optimized_pds_v1_enhanced_coverage",
+  "detector_type": "optical",
+  "include_optical": true,
+  "vessel": {
+    "shape": "box",
+    "diameter": 1.0,
+    "height": 6.1,
+    "fill_material": "G4_lAr"
+  },
+  "sensors": {
+    "type": "PMT",
+    "count": 100,
+    "diameter": 0.3,
+    "placement_strategy": "enhanced_coverage",
+    "barrel_fraction": 0.4,
+    "endcap_fraction": 0.3
+  },
+  "predicted_performance": {
+    "light_yield_pe_per_mev": 870.1333333333333,
+    "spatial_uniformity_cv": 2.35365,
+    "coverage_fraction": 0.02657562023677357
+  }
+}

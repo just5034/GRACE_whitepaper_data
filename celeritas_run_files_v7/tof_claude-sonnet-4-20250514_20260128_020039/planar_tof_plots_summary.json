@@ -1,0 +1,20 @@
+{
+  "plot_file": "planar_tof_performance_plots.png",
+  "timing_resolution_ps": 100,
+  "path_length_m": 1.0,
+  "energies_analyzed": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "particles_analyzed": [
+    "pip",
+    "kaonp",
+    "proton"
+  ],
+  "plots_generated": [
+    "energy_deposits",
+    "timing_separations",
+    "particle_identification"
+  ]
+}

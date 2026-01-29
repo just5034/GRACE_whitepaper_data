@@ -1,0 +1,19 @@
+{
+  "energy_distribution_plot": "csi_energy_distribution.png",
+  "resolution_curve_plot": "csi_resolution_curve.png",
+  "shower_profile_plot": "csi_shower_profile.png",
+  "performance_summary_plot": "csi_performance_distributions.png",
+  "stochastic_term_percent": 1.4778893081887847,
+  "constant_term_percent": 0.9816877779890993,
+  "material_label": "CsI",
+  "energies_analyzed": [
+    0.5,
+    2.0,
+    5.0
+  ],
+  "resolutions_percent": [
+    3.1228,
+    1.9525000000000001,
+    1.6829
+  ]
+}

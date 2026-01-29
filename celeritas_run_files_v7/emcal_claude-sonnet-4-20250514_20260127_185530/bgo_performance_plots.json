@@ -1,0 +1,36 @@
+{
+  "material": "BGO",
+  "beam_energies_gev": [
+    0.5,
+    2.0,
+    5.0
+  ],
+  "energy_resolutions": [
+    0.026309,
+    0.021725,
+    0.017925
+  ],
+  "resolution_errors": [
+    0.000263,
+    0.000217,
+    0.000179
+  ],
+  "mean_deposits_mev": [
+    481.23,
+    1922.8,
+    4795.16
+  ],
+  "linearities": [
+    0.9625,
+    0.9614,
+    0.959
+  ],
+  "stochastic_term_percent": 0.8209786419510459,
+  "constant_term_percent": 1.4957294983018932,
+  "plots_generated": [
+    "bgo_energy_distribution.png",
+    "bgo_resolution_curve.png",
+    "bgo_shower_profile.png",
+    "bgo_performance_summary.png"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "detector_name": "baseline_steel_calorimeter",
+  "topology": "box",
+  "absorber_material": "steel",
+  "active_material": "plastic_scintillator",
+  "absorber_thickness_m": 0.02,
+  "active_thickness_m": 0.0006185567010309278,
+  "num_layers": 81,
+  "total_depth_m": 1.6701030927835052,
+  "lateral_diameter_m": 0.504,
+  "sampling_fraction": 0.03,
+  "total_interaction_lengths": 9.941089837997055,
+  "total_radiation_lengths": 92.04545454545455
+}

@@ -1,0 +1,48 @@
+{
+  "optimization_summary": {
+    "base_geometry": "/u/jhill5/grace/work/benchmarks/opticks_20260127_190934/darkside_lar_claude-sonnet-4-20250514_20260127_212110/darkside_detector.gdml",
+    "vessel_parameters": {
+      "diameter_m": 3.6,
+      "height_m": 3.6,
+      "surface_area_m2": 57.7268
+    },
+    "pmt_parameters": {
+      "diameter_m": 0.2,
+      "area_m2": 0.031416
+    }
+  },
+  "configurations_tested": [
+    {
+      "pmt_count": 50,
+      "coverage_fraction": 0.0272,
+      "light_collection_efficiency": 0.0012,
+      "efficiency_per_pmt": 2.3e-05,
+      "total_pmt_area_m2": 1.571
+    },
+    {
+      "pmt_count": 75,
+      "coverage_fraction": 0.0408,
+      "light_collection_efficiency": 0.0026,
+      "efficiency_per_pmt": 3.4e-05,
+      "total_pmt_area_m2": 2.356
+    },
+    {
+      "pmt_count": 100,
+      "coverage_fraction": 0.0544,
+      "light_collection_efficiency": 0.0045,
+      "efficiency_per_pmt": 4.5e-05,
+      "total_pmt_area_m2": 3.142
+    }
+  ],
+  "optimal_configuration": {
+    "pmt_count": 100,
+    "coverage_fraction": 0.0544,
+    "light_collection_efficiency": 0.0045,
+    "efficiency_per_pmt": 4.5e-05
+  },
+  "analysis_plots": {
+    "optimization_plot": "pmt_optimization_analysis.png",
+    "optimization_plot_pdf": "pmt_optimization_analysis.pdf"
+  },
+  "success": true
+}

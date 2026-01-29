@@ -1,0 +1,107 @@
+{
+  "endcap_heavy": {
+    "name": "endcap_heavy",
+    "strategy": "endcap-heavy placement",
+    "total_sensors": 75,
+    "endcap_sensors": 45,
+    "barrel_sensors": 30,
+    "endcap_coverage": 0.6,
+    "barrel_coverage": 0.4,
+    "sensor_positions": {
+      "endcap_top": {
+        "count": 22,
+        "z_position": 1.25
+      },
+      "endcap_bottom": {
+        "count": 22,
+        "z_position": -1.25
+      },
+      "barrel": {
+        "count": 30,
+        "z_range": [
+          -1.25,
+          1.25
+        ]
+      }
+    },
+    "geometry_parameters": {
+      "detector_diameter": 3.0,
+      "detector_height": 2.5,
+      "detector_radius": 1.5,
+      "endcap_sensor_density": 3.183098861837907,
+      "barrel_sensor_density": 1.2732395447351628,
+      "sensor_type": "SiPM with TPB coating",
+      "fill_material": "liquid_argon"
+    }
+  },
+  "barrel_heavy": {
+    "name": "barrel_heavy",
+    "strategy": "barrel-heavy placement",
+    "total_sensors": 75,
+    "endcap_sensors": 30,
+    "barrel_sensors": 45,
+    "endcap_coverage": 0.4,
+    "barrel_coverage": 0.6,
+    "sensor_positions": {
+      "endcap_top": {
+        "count": 15,
+        "z_position": 1.25
+      },
+      "endcap_bottom": {
+        "count": 15,
+        "z_position": -1.25
+      },
+      "barrel": {
+        "count": 45,
+        "z_range": [
+          -1.25,
+          1.25
+        ]
+      }
+    },
+    "geometry_parameters": {
+      "detector_diameter": 3.0,
+      "detector_height": 2.5,
+      "detector_radius": 1.5,
+      "endcap_sensor_density": 2.1220659078919377,
+      "barrel_sensor_density": 1.9098593171027443,
+      "sensor_type": "SiPM with TPB coating",
+      "fill_material": "liquid_argon"
+    }
+  },
+  "uniform": {
+    "name": "uniform",
+    "strategy": "uniform distribution",
+    "total_sensors": 75,
+    "endcap_sensors": 38,
+    "barrel_sensors": 37,
+    "endcap_coverage": 0.5066666666666667,
+    "barrel_coverage": 0.49333333333333335,
+    "sensor_positions": {
+      "endcap_top": {
+        "count": 19,
+        "z_position": 1.25
+      },
+      "endcap_bottom": {
+        "count": 19,
+        "z_position": -1.25
+      },
+      "barrel": {
+        "count": 37,
+        "z_range": [
+          -1.25,
+          1.25
+        ]
+      }
+    },
+    "geometry_parameters": {
+      "detector_diameter": 3.0,
+      "detector_height": 2.5,
+      "detector_radius": 1.5,
+      "endcap_sensor_density": 2.6879501499964547,
+      "barrel_sensor_density": 1.570328771840034,
+      "sensor_type": "SiPM with TPB coating",
+      "fill_material": "liquid_argon"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "config1_box": {
+    "name": "config1_box",
+    "topology": "box",
+    "detector_type": "silicon_pixel_tracker",
+    "silicon_thickness_um": 200.0,
+    "layer_spacing_cm": 5.0,
+    "num_layers": 6,
+    "momentum_range_gev": [
+      1,
+      50
+    ],
+    "physics_performance": {
+      "momentum_resolution_at_10gev": 0.0014078838293600069,
+      "multiple_scattering_angle_mrad": 0.048149626964112235,
+      "material_budget_percent_x0": 1.2806830309498398,
+      "lever_arm_m": 0.30000000000000004
+    },
+    "geometry": {
+      "transverse_size_m": 1.0,
+      "total_depth_m": 0.30000000000000004,
+      "layer_positions_m": [
+        0.0,
+        0.05,
+        0.1,
+        0.15000000000000002,
+        0.2,
+        0.25
+      ]
+    },
+    "physics_justification": "Planar box topology optimized for test beam and fixed-target experiments. 6 layers with 200\u03bcm thickness provide 0.14% momentum resolution at 10 GeV with 1.3% X0 material budget."
+  },
+  "config2_cylinder_barrel": {
+    "name": "config2_cylinder_barrel",
+    "topology": "cylinder_barrel",
+    "detector_type": "silicon_pixel_tracker",
+    "silicon_thickness_um": 150.0,
+    "layer_spacing_cm": 8.0,
+    "num_layers": 5,
+    "momentum_range_gev": [
+      1,
+      50
+    ],
+    "physics_performance": {
+      "momentum_resolution_at_10gev": 0.0009014023049195001,
+      "multiple_scattering_angle_mrad": 0.0411039451043292,
+      "material_budget_percent_x0": 0.8004268943436498,
+      "lever_arm_m": 0.4
+    },
+    "geometry": {
+      "inner_radius_m": 0.5,
+      "layer_radii_m": [
+        0.5,
+        0.58,
+        0.66,
+        0.74,
+        0.8200000000000001
+      ],
+      "barrel_length_m": 2.0,
+      "pixel_size_um": [
+        50,
+        400
+      ]
+    },
+    "physics_justification": "Cylindrical barrel topology for collider-like geometry with full azimuthal coverage. 5 layers at radii 50-82 cm with 150\u03bcm silicon provide 0.09% momentum resolution and uniform tracking efficiency with 0.8% X0 material budget."
+  },
+  "config3_forward_disks": {
+    "name": "config3_forward_disks",
+    "topology": "forward_disks",
+    "detector_type": "silicon_pixel_tracker",
+    "silicon_thickness_um": 300.0,
+    "layer_spacing_cm": 15.0,
+    "num_layers": 4,
+    "momentum_range_gev": [
+      1,
+      50
+    ],
+    "physics_performance": {
+      "momentum_resolution_at_10gev": 0.0008794837259440525,
+      "multiple_scattering_angle_mrad": 0.060156686854573184,
+      "material_budget_percent_x0": 1.2806830309498398,
+      "lever_arm_m": 0.6
+    },
+    "geometry": {
+      "disk_z_positions_m": [
+        1.0,
+        1.15,
+        1.3,
+        1.45
+      ],
+      "inner_radius_m": 0.2,
+      "outer_radius_m": 1.0,
+      "pixel_size_um": [
+        100,
+        100
+      ]
+    },
+    "physics_justification": "Forward disk topology for extended pseudorapidity coverage (\u03b7 > 2.5). 4 disks at z = 1.0-1.45m with 300\u03bcm thickness provide forward tracking with 0.09% resolution and minimal 1.3% X0 material budget."
+  }
+}

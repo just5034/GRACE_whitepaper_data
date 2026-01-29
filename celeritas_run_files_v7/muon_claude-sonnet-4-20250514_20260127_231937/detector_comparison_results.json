@@ -1,0 +1,70 @@
+{
+  "configurations": [
+    "Planar",
+    "Cylindrical",
+    "Thick Absorber"
+  ],
+  "average_muon_resolution": [
+    0.1593,
+    0.29796666666666666,
+    0.4627666666666667
+  ],
+  "average_pion_resolution": [
+    0.043399999999999994,
+    1.9335666666666667,
+    0.17629999999999998
+  ],
+  "pion_rejection_factors": [
+    1.7188756947710975,
+    4.06,
+    12.75
+  ],
+  "best_muon_detector": "Planar",
+  "best_pion_rejection": "Thick Absorber",
+  "detailed_metrics": {
+    "planar": {
+      "muon_5gev_resolution": 0.0044,
+      "muon_20gev_resolution": 0.1429,
+      "muon_50gev_resolution": 0.3306,
+      "pion_5gev_resolution": 0.0564,
+      "pion_20gev_resolution": 0.0407,
+      "pion_50gev_resolution": 0.0331,
+      "muon_5gev_edep": 5021.32,
+      "muon_20gev_edep": 10417.1,
+      "muon_50gev_edep": 11905.4,
+      "pion_5gev_edep": 4414.98,
+      "pion_20gev_edep": 17905.7,
+      "pion_50gev_edep": 45285.3
+    },
+    "cylindrical": {
+      "muon_5gev_resolution": 0.2653,
+      "muon_20gev_resolution": 0.3146,
+      "muon_50gev_resolution": 0.314,
+      "pion_5gev_resolution": 1.6311,
+      "pion_20gev_resolution": 1.9645,
+      "pion_50gev_resolution": 2.2051,
+      "muon_5gev_edep": 62.29,
+      "muon_20gev_edep": 63.83,
+      "muon_50gev_edep": 65.13,
+      "pion_5gev_edep": 184.91,
+      "pion_20gev_edep": 264.93,
+      "pion_50gev_edep": 330.48,
+      "pion_rejection_factor": 4.06
+    },
+    "thick_absorber": {
+      "muon_5gev_resolution": 0.1413,
+      "muon_20gev_resolution": 0.4455,
+      "muon_50gev_resolution": 0.8015,
+      "pion_5gev_resolution": 0.1464,
+      "pion_20gev_resolution": 0.1764,
+      "pion_50gev_resolution": 0.2061,
+      "muon_5gev_edep": 1298.45,
+      "muon_20gev_edep": 1468.9,
+      "muon_50gev_edep": 1631.03,
+      "pion_5gev_edep": 3968.33,
+      "pion_20gev_edep": 16097.5,
+      "pion_50gev_edep": 39527,
+      "pion_rejection_factor": 12.75
+    }
+  }
+}

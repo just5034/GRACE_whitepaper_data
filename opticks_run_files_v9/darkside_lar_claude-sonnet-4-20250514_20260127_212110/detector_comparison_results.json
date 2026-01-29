@@ -1,0 +1,21 @@
+{
+  "baseline_metrics": {
+    "pmt_count": 75,
+    "coverage_fraction": 0.0408163,
+    "light_yield_pe_per_mev": 1474.39
+  },
+  "optimized_metrics": {
+    "pmt_count": 100,
+    "coverage_fraction": 0.0544218,
+    "light_yield_pe_per_mev": 4491.2868180000005
+  },
+  "improvements": {
+    "pmt_count_percent": 33.33,
+    "coverage_percent": 33.33,
+    "light_yield_percent": 204.62
+  },
+  "statistical_analysis": {
+    "significant": true,
+    "p_value": 0
+  }
+}

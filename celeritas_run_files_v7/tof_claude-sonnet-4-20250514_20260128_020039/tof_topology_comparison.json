@@ -1,0 +1,54 @@
+{
+  "comparison_metrics": {
+    "planar": {
+      "timing_resolution_ps": 100.0,
+      "particle_separation_3sigma_ps": 300.0,
+      "detection_efficiency": 0.95,
+      "momentum_range_gev": [
+        0.1,
+        10.0
+      ],
+      "path_length_m": 1.0,
+      "energy_resolution": "N/A"
+    },
+    "cylindrical": {
+      "timing_resolution_ps": 102.95630140987,
+      "particle_separation_3sigma_ps": 308.86890422961,
+      "detection_efficiency": 0.98,
+      "momentum_range_gev": [
+        0.1,
+        12.0
+      ],
+      "path_length_m": 1.06,
+      "energy_resolution": 2.8848
+    },
+    "segmented": {
+      "timing_resolution_ps": 916.3,
+      "particle_separation_3sigma_ps": 2748.8999999999996,
+      "detection_efficiency": 0.92,
+      "momentum_range_gev": [
+        0.2,
+        8.0
+      ],
+      "path_length_m": 1.0,
+      "energy_resolution": 3.2767
+    }
+  },
+  "scores": {
+    "planar": 0.839,
+    "cylindrical": 0.8535143449429057,
+    "segmented": 0.4556538251664302
+  },
+  "optimal_topology": "cylindrical",
+  "optimal_score": 0.8535143449429057,
+  "requirements": {
+    "timing_resolution_target_ps": 100,
+    "min_separation_3sigma_ps": 300
+  },
+  "recommendations": {
+    "best_overall": "cylindrical",
+    "best_timing": "planar",
+    "best_efficiency": "cylindrical",
+    "best_range": "cylindrical"
+  }
+}

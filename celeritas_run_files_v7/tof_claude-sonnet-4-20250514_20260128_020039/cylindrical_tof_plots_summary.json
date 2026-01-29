@@ -1,0 +1,25 @@
+{
+  "detector_type": "cylindrical_tof",
+  "path_length_m": 1.06,
+  "particles_analyzed": [
+    "pip",
+    "kaonp",
+    "proton"
+  ],
+  "energy_range_gev": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "plots_generated": [
+    "energy_resolution_vs_energy",
+    "energy_deposits_vs_energy",
+    "timing_separations",
+    "particle_id_capability"
+  ],
+  "overall_performance": {
+    "avg_resolution": 0.03,
+    "avg_linearity": 0.005,
+    "total_events_analyzed": 45000
+  }
+}

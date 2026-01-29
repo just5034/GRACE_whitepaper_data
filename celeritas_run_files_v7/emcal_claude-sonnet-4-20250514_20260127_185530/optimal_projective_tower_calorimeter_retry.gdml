@@ -1,0 +1,2860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <constant name="PI" value="1.0*pi"/>
+    <constant name="TWOPI" value="2.0*pi"/>
+    <position name="center" x="0" y="0" z="0" unit="mm"/>
+    <rotation name="rot_phi_0" x="0" y="0" z="0.0" unit="deg"/>
+    <rotation name="rot_phi_1" x="0" y="0" z="11.25" unit="deg"/>
+    <rotation name="rot_phi_2" x="0" y="0" z="22.5" unit="deg"/>
+    <rotation name="rot_phi_3" x="0" y="0" z="33.75" unit="deg"/>
+    <rotation name="rot_phi_4" x="0" y="0" z="45.0" unit="deg"/>
+    <rotation name="rot_phi_5" x="0" y="0" z="56.25" unit="deg"/>
+    <rotation name="rot_phi_6" x="0" y="0" z="67.5" unit="deg"/>
+    <rotation name="rot_phi_7" x="0" y="0" z="78.75" unit="deg"/>
+    <rotation name="rot_phi_8" x="0" y="0" z="90.0" unit="deg"/>
+    <rotation name="rot_phi_9" x="0" y="0" z="101.25" unit="deg"/>
+    <rotation name="rot_phi_10" x="0" y="0" z="112.5" unit="deg"/>
+    <rotation name="rot_phi_11" x="0" y="0" z="123.74999999999999" unit="deg"/>
+    <rotation name="rot_phi_12" x="0" y="0" z="135.0" unit="deg"/>
+    <rotation name="rot_phi_13" x="0" y="0" z="146.25" unit="deg"/>
+    <rotation name="rot_phi_14" x="0" y="0" z="157.5" unit="deg"/>
+    <rotation name="rot_phi_15" x="0" y="0" z="168.75" unit="deg"/>
+    <rotation name="rot_phi_16" x="0" y="0" z="180.0" unit="deg"/>
+    <rotation name="rot_phi_17" x="0" y="0" z="191.25" unit="deg"/>
+    <rotation name="rot_phi_18" x="0" y="0" z="202.5" unit="deg"/>
+    <rotation name="rot_phi_19" x="0" y="0" z="213.75" unit="deg"/>
+    <rotation name="rot_phi_20" x="0" y="0" z="225.0" unit="deg"/>
+    <rotation name="rot_phi_21" x="0" y="0" z="236.25" unit="deg"/>
+    <rotation name="rot_phi_22" x="0" y="0" z="247.49999999999997" unit="deg"/>
+    <rotation name="rot_phi_23" x="0" y="0" z="258.75" unit="deg"/>
+    <rotation name="rot_phi_24" x="0" y="0" z="270.0" unit="deg"/>
+    <rotation name="rot_phi_25" x="0" y="0" z="281.25" unit="deg"/>
+    <rotation name="rot_phi_26" x="0" y="0" z="292.5" unit="deg"/>
+    <rotation name="rot_phi_27" x="0" y="0" z="303.75" unit="deg"/>
+    <rotation name="rot_phi_28" x="0" y="0" z="315.0" unit="deg"/>
+    <rotation name="rot_phi_29" x="0" y="0" z="326.25" unit="deg"/>
+    <rotation name="rot_phi_30" x="0" y="0" z="337.5" unit="deg"/>
+    <rotation name="rot_phi_31" x="0" y="0" z="348.75" unit="deg"/>
+  </define>
+
+  <materials>
+    <!-- Element definitions -->
+    <element name="Hydrogen" formula="H" Z="1">
+      <atom value="1.00794"/>
+    </element>
+    <element name="Carbon" formula="C" Z="6">
+      <atom value="12.0107"/>
+    </element>
+    <element name="Nitrogen" formula="N" Z="7">
+      <atom value="14.0067"/>
+    </element>
+    <element name="Oxygen" formula="O" Z="8">
+      <atom value="15.9994"/>
+    </element>
+    <element name="Iron_el" formula="Fe" Z="26">
+      <atom value="55.845"/>
+    </element>
+    <element name="Chromium" formula="Cr" Z="24">
+      <atom value="51.9961"/>
+    </element>
+    <element name="Nickel" formula="Ni" Z="28">
+      <atom value="58.6934"/>
+    </element>
+    <element name="Lead_el" formula="Pb" Z="82">
+      <atom value="207.2"/>
+    </element>
+    <element name="Tungsten_el" formula="W" Z="74">
+      <atom value="183.84"/>
+    </element>
+
+    <!-- Air -->
+    <material name="G4_AIR" formula="Air">
+      <D value="0.00120479" unit="g/cm3"/>
+      <fraction n="0.7" ref="Nitrogen"/>
+      <fraction n="0.3" ref="Oxygen"/>
+    </material>
+
+    <!-- Stainless Steel (typical 304) -->
+    <material name="G4_STAINLESS-STEEL" formula="Steel">
+      <D value="7.93" unit="g/cm3"/>
+      <fraction n="0.70" ref="Iron_el"/>
+      <fraction n="0.19" ref="Chromium"/>
+      <fraction n="0.10" ref="Nickel"/>
+      <fraction n="0.01" ref="Carbon"/>
+    </material>
+
+    <!-- Iron -->
+    <material name="G4_Fe" formula="Fe">
+      <D value="7.874" unit="g/cm3"/>
+      <fraction n="1.0" ref="Iron_el"/>
+    </material>
+
+    <!-- Lead -->
+    <material name="G4_Pb" formula="Pb">
+      <D value="11.35" unit="g/cm3"/>
+      <fraction n="1.0" ref="Lead_el"/>
+    </material>
+
+    <!-- Tungsten -->
+    <material name="G4_W" formula="W">
+      <D value="19.3" unit="g/cm3"/>
+      <fraction n="1.0" ref="Tungsten_el"/>
+    </material>
+
+    <!-- Plastic Scintillator (polyvinyltoluene based) -->
+    <material name="G4_PLASTIC_SC_VINYLTOLUENE" formula="C9H10">
+      <D value="1.032" unit="g/cm3"/>
+      <fraction n="0.915" ref="Carbon"/>
+      <fraction n="0.085" ref="Hydrogen"/>
+    </material>
+
+    <!-- Polystyrene -->
+    <material name="G4_POLYSTYRENE" formula="C8H8">
+      <D value="1.06" unit="g/cm3"/>
+      <fraction n="0.923" ref="Carbon"/>
+      <fraction n="0.077" ref="Hydrogen"/>
+    </material>
+
+    <!-- Silicon -->
+    <element name="Silicon_el" formula="Si" Z="14">
+      <atom value="28.0855"/>
+    </element>
+    <material name="G4_Si" formula="Si">
+      <D value="2.33" unit="g/cm3"/>
+      <fraction n="1.0" ref="Silicon_el"/>
+    </material>
+
+    <!-- Crystal calorimeter materials -->
+    <element name="Cesium" formula="Cs" Z="55">
+      <atom value="132.905"/>
+    </element>
+    <element name="Iodine" formula="I" Z="53">
+      <atom value="126.904"/>
+    </element>
+    <material name="G4_CESIUM_IODIDE" formula="CsI">
+      <D value="4.51" unit="g/cm3"/>
+      <fraction n="0.512" ref="Cesium"/>
+      <fraction n="0.488" ref="Iodine"/>
+    </material>
+
+    <element name="Bismuth" formula="Bi" Z="83">
+      <atom value="208.98"/>
+    </element>
+    <element name="Germanium" formula="Ge" Z="32">
+      <atom value="72.63"/>
+    </element>
+    <material name="G4_BGO" formula="Bi4Ge3O12">
+      <D value="7.13" unit="g/cm3"/>
+      <fraction n="0.671" ref="Bismuth"/>
+      <fraction n="0.175" ref="Germanium"/>
+      <fraction n="0.154" ref="Oxygen"/>
+    </material>
+
+    <material name="G4_PbWO4" formula="PbWO4">
+      <D value="8.28" unit="g/cm3"/>
+      <fraction n="0.455" ref="Lead_el"/>
+      <fraction n="0.404" ref="Tungsten_el"/>
+      <fraction n="0.141" ref="Oxygen"/>
+    </material>
+
+  </materials>
+
+  <solids>
+    <box name="world_solid" x="10000.0" y="10000.0" z="10000.0" lunit="mm"/>
+    <tube name="abs_eta0_layer0" rmin="1500.0" rmax="1501.0" z="5000.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta0_layer0" rmin="1501.0" rmax="1679.0" z="5000.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta1_layer0" rmin="1500.0" rmax="1501.0" z="3193.9" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta1_layer0" rmin="1501.0" rmax="1679.0" z="3193.9" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta2_layer0" rmin="1500.0" rmax="1501.0" z="1762.8" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta2_layer0" rmin="1501.0" rmax="1679.0" z="1762.8" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta3_layer0" rmin="1500.0" rmax="1501.0" z="781.6" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta3_layer0" rmin="1501.0" rmax="1679.0" z="781.6" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta4_layer0" rmin="1500.0" rmax="1501.0" z="1679.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta4_layer0" rmin="1501.0" rmax="1679.0" z="1679.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta5_layer0" rmin="1500.0" rmax="1501.0" z="781.6" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta5_layer0" rmin="1501.0" rmax="1679.0" z="781.6" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta6_layer0" rmin="1500.0" rmax="1501.0" z="1762.8" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta6_layer0" rmin="1501.0" rmax="1679.0" z="1762.8" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta7_layer0" rmin="1500.0" rmax="1501.0" z="3193.9" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta7_layer0" rmin="1501.0" rmax="1679.0" z="3193.9" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta8_layer0" rmin="1500.0" rmax="1501.0" z="5000.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta8_layer0" rmin="1501.0" rmax="1679.0" z="5000.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="abs_eta9_layer0" rmin="1500.0" rmax="1501.0" z="5000.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="act_eta9_layer0" rmin="1501.0" rmax="1679.0" z="5000.0" startphi="0" deltaphi="11.25" aunit="deg" lunit="mm"/>
+    <tube name="calor_envelope" rmin="1500.0" rmax="1679.0" z="10000.0" deltaphi="TWOPI" aunit="rad" lunit="mm"/>
+  </solids>
+
+  <structure>
+    <volume name="absorber_log_eta0_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta0_layer0"/>
+    </volume>
+    <volume name="active_log_eta0_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta0_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta1_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta1_layer0"/>
+    </volume>
+    <volume name="active_log_eta1_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta1_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta2_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta2_layer0"/>
+    </volume>
+    <volume name="active_log_eta2_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta2_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta3_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta3_layer0"/>
+    </volume>
+    <volume name="active_log_eta3_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta3_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta4_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta4_layer0"/>
+    </volume>
+    <volume name="active_log_eta4_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta4_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta5_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta5_layer0"/>
+    </volume>
+    <volume name="active_log_eta5_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta5_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta6_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta6_layer0"/>
+    </volume>
+    <volume name="active_log_eta6_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta6_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta7_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta7_layer0"/>
+    </volume>
+    <volume name="active_log_eta7_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta7_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta8_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta8_layer0"/>
+    </volume>
+    <volume name="active_log_eta8_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta8_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="absorber_log_eta9_layer0">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="abs_eta9_layer0"/>
+    </volume>
+    <volume name="active_log_eta9_layer0">
+      <materialref ref="G4_PbWO4"/>
+      <solidref ref="act_eta9_layer0"/>
+      <auxiliary auxtype="SensDet" auxvalue="CalorimeterSD"/>
+    </volume>
+    <volume name="calor_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="calor_envelope"/>
+      <physvol name="absorber_0">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_0">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_1">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_1">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_2">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_2">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_3">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_3">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_4">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_4">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_5">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_5">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_6">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_6">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_7">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_7">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_8">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_8">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_9">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="active_9">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_0"/>
+      </physvol>
+      <physvol name="absorber_10">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_10">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_11">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_11">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_12">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_12">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_13">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_13">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_14">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_14">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_15">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_15">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_16">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_16">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_17">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_17">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_18">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_18">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_19">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="active_19">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_1"/>
+      </physvol>
+      <physvol name="absorber_20">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_20">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_21">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_21">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_22">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_22">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_23">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_23">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_24">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_24">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_25">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_25">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_26">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_26">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_27">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_27">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_28">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_28">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_29">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="active_29">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_2"/>
+      </physvol>
+      <physvol name="absorber_30">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_30">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_31">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_31">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_32">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_32">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_33">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_33">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_34">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_34">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_35">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_35">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_36">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_36">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_37">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_37">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_38">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_38">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_39">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="active_39">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_3"/>
+      </physvol>
+      <physvol name="absorber_40">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_40">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_41">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_41">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_42">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_42">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_43">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_43">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_44">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_44">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_45">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_45">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_46">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_46">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_47">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_47">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_48">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_48">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_49">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="active_49">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_4"/>
+      </physvol>
+      <physvol name="absorber_50">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_50">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_51">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_51">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_52">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_52">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_53">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_53">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_54">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_54">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_55">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_55">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_56">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_56">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_57">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_57">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_58">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_58">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_59">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="active_59">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_5"/>
+      </physvol>
+      <physvol name="absorber_60">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_60">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_61">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_61">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_62">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_62">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_63">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_63">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_64">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_64">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_65">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_65">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_66">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_66">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_67">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_67">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_68">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_68">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_69">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="active_69">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_6"/>
+      </physvol>
+      <physvol name="absorber_70">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_70">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_71">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_71">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_72">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_72">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_73">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_73">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_74">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_74">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_75">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_75">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_76">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_76">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_77">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_77">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_78">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_78">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_79">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="active_79">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_7"/>
+      </physvol>
+      <physvol name="absorber_80">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_80">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_81">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_81">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_82">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_82">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_83">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_83">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_84">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_84">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_85">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_85">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_86">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_86">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_87">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_87">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_88">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_88">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_89">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="active_89">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_8"/>
+      </physvol>
+      <physvol name="absorber_90">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_90">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_91">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_91">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_92">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_92">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_93">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_93">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_94">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_94">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_95">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_95">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_96">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_96">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_97">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_97">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_98">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_98">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_99">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="active_99">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_9"/>
+      </physvol>
+      <physvol name="absorber_100">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_100">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_101">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_101">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_102">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_102">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_103">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_103">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_104">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_104">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_105">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_105">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_106">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_106">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_107">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_107">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_108">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_108">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_109">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="active_109">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_10"/>
+      </physvol>
+      <physvol name="absorber_110">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_110">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_111">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_111">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_112">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_112">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_113">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_113">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_114">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_114">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_115">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_115">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_116">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_116">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_117">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_117">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_118">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_118">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_119">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="active_119">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_11"/>
+      </physvol>
+      <physvol name="absorber_120">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_120">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_121">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_121">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_122">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_122">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_123">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_123">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_124">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_124">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_125">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_125">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_126">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_126">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_127">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_127">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_128">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_128">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_129">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="active_129">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_12"/>
+      </physvol>
+      <physvol name="absorber_130">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_130">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_131">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_131">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_132">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_132">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_133">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_133">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_134">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_134">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_135">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_135">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_136">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_136">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_137">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_137">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_138">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_138">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_139">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="active_139">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_13"/>
+      </physvol>
+      <physvol name="absorber_140">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_140">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_141">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_141">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_142">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_142">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_143">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_143">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_144">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_144">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_145">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_145">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_146">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_146">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_147">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_147">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_148">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_148">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_149">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="active_149">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_14"/>
+      </physvol>
+      <physvol name="absorber_150">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_150">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_151">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_151">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_152">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_152">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_153">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_153">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_154">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_154">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_155">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_155">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_156">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_156">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_157">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_157">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_158">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_158">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_159">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="active_159">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_15"/>
+      </physvol>
+      <physvol name="absorber_160">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_160">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_161">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_161">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_162">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_162">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_163">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_163">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_164">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_164">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_165">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_165">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_166">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_166">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_167">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_167">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_168">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_168">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_169">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="active_169">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_16"/>
+      </physvol>
+      <physvol name="absorber_170">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_170">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_171">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_171">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_172">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_172">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_173">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_173">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_174">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_174">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_175">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_175">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_176">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_176">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_177">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_177">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_178">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_178">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_179">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="active_179">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_17"/>
+      </physvol>
+      <physvol name="absorber_180">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_180">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_181">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_181">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_182">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_182">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_183">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_183">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_184">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_184">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_185">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_185">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_186">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_186">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_187">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_187">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_188">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_188">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_189">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="active_189">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_18"/>
+      </physvol>
+      <physvol name="absorber_190">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_190">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_191">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_191">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_192">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_192">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_193">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_193">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_194">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_194">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_195">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_195">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_196">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_196">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_197">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_197">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_198">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_198">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_199">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="active_199">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_19"/>
+      </physvol>
+      <physvol name="absorber_200">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_200">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_201">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_201">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_202">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_202">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_203">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_203">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_204">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_204">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_205">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_205">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_206">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_206">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_207">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_207">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_208">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_208">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_209">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="active_209">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_20"/>
+      </physvol>
+      <physvol name="absorber_210">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_210">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_211">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_211">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_212">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_212">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_213">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_213">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_214">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_214">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_215">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_215">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_216">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_216">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_217">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_217">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_218">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_218">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_219">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="active_219">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_21"/>
+      </physvol>
+      <physvol name="absorber_220">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_220">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_221">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_221">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_222">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_222">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_223">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_223">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_224">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_224">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_225">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_225">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_226">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_226">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_227">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_227">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_228">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_228">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_229">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="active_229">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_22"/>
+      </physvol>
+      <physvol name="absorber_230">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_230">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_231">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_231">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_232">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_232">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_233">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_233">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_234">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_234">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_235">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_235">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_236">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_236">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_237">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_237">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_238">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_238">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_239">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="active_239">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_23"/>
+      </physvol>
+      <physvol name="absorber_240">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_240">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_241">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_241">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_242">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_242">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_243">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_243">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_244">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_244">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_245">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_245">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_246">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_246">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_247">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_247">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_248">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_248">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_249">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="active_249">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_24"/>
+      </physvol>
+      <physvol name="absorber_250">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_250">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_251">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_251">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_252">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_252">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_253">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_253">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_254">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_254">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_255">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_255">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_256">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_256">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_257">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_257">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_258">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_258">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_259">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="active_259">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_25"/>
+      </physvol>
+      <physvol name="absorber_260">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_260">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_261">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_261">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_262">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_262">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_263">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_263">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_264">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_264">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_265">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_265">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_266">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_266">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_267">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_267">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_268">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_268">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_269">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="active_269">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_26"/>
+      </physvol>
+      <physvol name="absorber_270">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_270">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_271">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_271">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_272">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_272">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_273">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_273">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_274">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_274">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_275">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_275">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_276">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_276">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_277">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_277">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_278">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_278">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_279">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="active_279">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_27"/>
+      </physvol>
+      <physvol name="absorber_280">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_280">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_281">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_281">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_282">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_282">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_283">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_283">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_284">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_284">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_285">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_285">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_286">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_286">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_287">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_287">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_288">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_288">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_289">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="active_289">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_28"/>
+      </physvol>
+      <physvol name="absorber_290">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_290">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_291">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_291">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_292">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_292">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_293">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_293">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_294">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_294">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_295">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_295">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_296">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_296">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_297">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_297">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_298">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_298">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_299">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="active_299">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_29"/>
+      </physvol>
+      <physvol name="absorber_300">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_300">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_301">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_301">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_302">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_302">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_303">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_303">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_304">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_304">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_305">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_305">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_306">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_306">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_307">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_307">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_308">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_308">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_309">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="active_309">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_30"/>
+      </physvol>
+      <physvol name="absorber_310">
+        <volumeref ref="absorber_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_310">
+        <volumeref ref="active_log_eta0_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_311">
+        <volumeref ref="absorber_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_311">
+        <volumeref ref="active_log_eta1_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_312">
+        <volumeref ref="absorber_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_312">
+        <volumeref ref="active_log_eta2_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_313">
+        <volumeref ref="absorber_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_313">
+        <volumeref ref="active_log_eta3_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_314">
+        <volumeref ref="absorber_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_314">
+        <volumeref ref="active_log_eta4_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_315">
+        <volumeref ref="absorber_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_315">
+        <volumeref ref="active_log_eta5_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_316">
+        <volumeref ref="absorber_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_316">
+        <volumeref ref="active_log_eta6_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_317">
+        <volumeref ref="absorber_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_317">
+        <volumeref ref="active_log_eta7_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_318">
+        <volumeref ref="absorber_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_318">
+        <volumeref ref="active_log_eta8_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="absorber_319">
+        <volumeref ref="absorber_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+      <physvol name="active_319">
+        <volumeref ref="active_log_eta9_layer0"/>
+        <rotationref ref="rot_phi_31"/>
+      </physvol>
+    </volume>
+
+    <volume name="world_log">
+      <materialref ref="G4_AIR"/>
+      <solidref ref="world_solid"/>
+      <physvol name="calorimeter">
+        <volumeref ref="calor_log"/>
+        <positionref ref="center"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="world_log"/>
+  </setup>
+
+</gdml>

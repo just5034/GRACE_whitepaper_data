@@ -1,0 +1,69 @@
+{
+  "materials": [
+    "BGO",
+    "PbWO4",
+    "CsI"
+  ],
+  "energies_gev": [
+    0.5,
+    2.0,
+    5.0
+  ],
+  "bgo": {
+    "resolutions": [
+      0.026309,
+      0.021725,
+      0.017925
+    ],
+    "resolution_errors": [
+      0.000263,
+      0.000217,
+      0.000179
+    ],
+    "linearities": [
+      0.9625,
+      0.9614,
+      0.959
+    ],
+    "avg_resolution": 0.021986333333333333,
+    "avg_linearity": 0.9609666666666667
+  },
+  "pbwo4": {
+    "resolutions": [
+      0.033044,
+      0.014936,
+      0.019751
+    ],
+    "resolution_errors": [
+      0.00033,
+      0.000149,
+      0.000198
+    ],
+    "linearities": [
+      0.9678,
+      0.9674,
+      0.9637
+    ],
+    "avg_resolution": 0.022577,
+    "avg_linearity": 0.9663
+  },
+  "csi": {
+    "resolutions": [
+      0.031228,
+      0.019525,
+      0.016829
+    ],
+    "resolution_errors": [
+      0.000312,
+      0.000195,
+      0.000168
+    ],
+    "linearities": [
+      0.9553,
+      0.9548,
+      0.9527
+    ],
+    "avg_resolution": 0.022527333333333333,
+    "avg_linearity": 0.9542666666666667
+  }
+}
